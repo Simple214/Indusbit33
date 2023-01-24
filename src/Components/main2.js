@@ -12,11 +12,33 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '@finastra/circular-progress';
 import './main2.css'
 
-const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,final90})=>{
+const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,amount23,final90,orderid})=>{
 	const [lgShow51, setLgShow51] = useState('');
+	const [lgShow566, setLgShow566] = useState('');
 	const [show, setShow] = useState(false);
 	const target = useRef(null);
 	useEffect(() => {
+		if(value3=="LTC"){
+			setLgShow566("#345c9c")
+		}
+		if(value3=="BTC"){
+			setLgShow566("#f6921b")
+		}
+		if(value3=="DOGE"){
+			setLgShow566("#baa133")
+		}
+		if(value3=="DASH"){
+			setLgShow566("#2673c3")
+		}
+		if(value3=="BCH"){
+			setLgShow566("#0bc18d")
+		}
+		if(value3=="XMR"){
+			setLgShow566("#f26623")
+		}
+		if(value3=="BNB"){
+			setLgShow566("#f0b80c")
+		}
 		let value178 = Math.random(0,100)
 		fetch(`https://api.hashify.net/hash/md4/hex?value=${value178}`).then(res3 => res3.json()).then( res5 => {
 			let value1056 = res5.Digest
@@ -48,13 +70,13 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 
         <article className="vh-100 dt w-100 bg-dark-pink">
         <div className="dtc v-mid tc white ph3 ph4-l">
-        <article className="mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3">
+        <article className="mw7 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3">
         <Container fluid>
         
         <Row className='d-flex justify-content-center align-items-center mt-0'>
         <Col className='col-md-12 d-flex justify-content-center align-items-center flex-column'>
-        <h3 className='b text-black text-center'>Order ID</h3>
-        <h6 className="b text-black text-center">{lgShow51}</h6>
+        <h2 className='b text-black text-center'>Order ID</h2>
+        <h5 className="b text-black text-center">{orderid}</h5>
         </Col>
         
         </Row>
@@ -62,7 +84,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
             <Row className='d-flex justify-content-center align-items-center'>
 
                 <Col className='col-md-2 m-0'>
-                    <img src={`https://cryptologos.cc/logos/${value10}-${value5}-logo.png`} width={'45px'} />
+                    <img src={`https://cryptologos.cc/logos/${value10}-${value5}-logo.png`} width={'85px'} />
                 </Col>
 
                 <Col className='col-md-2  m-0'>
@@ -74,7 +96,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
                 </Col>
 
                 <Col className='col-md-2 m-0'>
-                    <img src={`https://cryptologos.cc/logos/${value11}-${value6}-logo.png`}  width={'45px'} />
+                    <img src={`https://cryptologos.cc/logos/${value11}-${value6}-logo.png`}  width={'85px'} />
                 </Col>
 
             </Row>
@@ -82,7 +104,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
             <Row className='d-flex justify-content-center align-items-center mt-4'>
 
                 <Col className='col-md-12'>
-                    <h3 className='b text-black text-center h3_send'>Please send {value3} </h3>
+                <h3 className='b text-black text-center h3_send'>Please send <span style={{'color':`${lgShow566}`}}>{amount23}</span> {value3} </h3>
                     <p className="b text-black text-center para2005">to the following address.....</p>
                 </Col>xz
 

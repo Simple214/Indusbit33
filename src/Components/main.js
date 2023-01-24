@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { sha256 } from 'js-sha256';
 import { Carousel } from 'react-responsive-carousel';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -12,7 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './main1.css'
 
-const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,value760,value761,changetorose1,changetorose2,changetodash1,send2,first56,first66})=>{
+const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,value760,value761,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
@@ -20,6 +21,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
     const [lgShow, setLgShow] = useState(false);
     const [lgShow3, setLgShow3] = useState(false);
     const [lgShow2, setLgShow2] = useState('');
+	const [lgShow233, setLgShow233] = useState('');
     const [lgShow5, setLgShow5] = useState('');
 	const [lgShow6, setLgShow6] = useState('');
 	const [lgShow7, setLgShow7] = useState('');
@@ -32,173 +34,46 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 	const [isActive7, setActive7] = useState("false");
 
     useEffect(() => {
-		if(from1=='bitcoin-cash' && to1=='btc'){
-			setLgShow6('#0ac08d')
-			setLgShow7('#f7931b')
+		
+		if(value3=="LTC"){
+			setLgShow6("#345c9c")
+			setLgShow233("0.02")
+		}
+		if(value3=="BTC"){
+			setLgShow6("#f6921b")
+			setLgShow233("0.00009")
+		}
+		if(value3=="DOGE"){
+			setLgShow6("#baa133")
+			setLgShow233("25")
+		}
+		if(value3=="DASH"){
+			setLgShow6("#2673c3")
+			setLgShow233("0.04")
+		}
+		if(value3=="BCH"){
+			setLgShow6("#0bc18d")
+			setLgShow233("0.02")
+		}
+		if(value3=="XMR"){
+			setLgShow6("#f26623")
+			setLgShow233("0.01")
+		}
+		if(value3=="BNB"){
+			setLgShow6("#f0b80c")
+			setLgShow233("0.008")
 		}
 		
-		if(from1=='bitcoin-cash' && to1=='ltc'){
-			setLgShow6('#0ac08d')
-			setLgShow7('#355d9c')
-		}
-		
-		if (from1=='litecoin' && to1=='btc') {
-			setLgShow6('#355d9c')
-			setLgShow7('#f7931b')
-		}
-		
-		if(from1=='litecoin' && to1=='doge'){
-			setLgShow6('#355d9c')
-			setLgShow7('#baa032')
-		}
-		
-		if (from1=='dogecoin' && to1=='btc') {
-			setLgShow7('#f7931b')
-			setLgShow6('#baa032')
-		}
-		
-		if (from1=='monero' && to1=='btc') {
-			setLgShow7('#f7931b')
-			setLgShow6('#f36723')
-		}
-		
-		if(from1=='dogecoin' && to1=='ltc'){
-			setLgShow7('#355d9c')
-			setLgShow6('#baa032')
-		}
-		
-		if(from1=='monero' && to1=='ltc'){
-			setLgShow7('#355d9c')
-			setLgShow6('#f36723')
-		}
-		
-		if(from1=='binancecoin' && to1=='btc'){
-			setLgShow6('#f0b90d')
-			setLgShow7('#f7931b')
-		}
-		
-		if(from1=='binancecoin' && to1=='ltc'){
-			setLgShow6('#f0b90d')
-			setLgShow7('#355d9c')
-		}
-		
-		if(from1=='dash' && to1=='btc'){
-			setLgShow6('#2772c3')
-			setLgShow7('#f7931b')
-		}
-		
-		if(from1=='dash' && to1=='ltc'){
-			setLgShow6('#2772c3')
-			setLgShow7('#355d9c')
-		}
-		
-		if(from1=='bitcoin' && to1=='ltc'){
-			setLgShow6('#f7931b')
-			setLgShow7('#355d9c')
-		}
-		
-		if(from1=='bitcoin' && to1=='doge'){
-			setLgShow6('#f7931b')
-			setLgShow7('#baa032')
-		}
-		
-        fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${from1}&vs_currencies=${to1}`).then(res => res.json()).then(data20 => {
-            if (from1=='litecoin' && to1=='btc') {
-                setLgShow5(data20.litecoin.btc)
-				setLgShow6('#355d9c')
-				setLgShow7('#f7931b')
-            }
-            if (from1=='litecoin' && to1=='bnb') {
-                setLgShow5(data20.litecoin.bnb)
-				setLgShow6('#355d9c')
-            }
-            if(from1=='litecoin' && to1=='doge'){
-            fetch('https://api.coingecko.com/api/v3/simple/price?ids=dogecoin&vs_currencies=usd').then(data10 => data10.json()).then(data20 => { {fetch('https://api.coingecko.com/api/v3/simple/price?ids=litecoin&vs_currencies=usd').then(data30 => data30.json()).then(data40 => setLgShow5((data40.litecoin.usd)*(1/(data20.dogecoin.usd))))}})
-			setLgShow6('#355d9c')
-			setLgShow7('#baa032')
-            }
-            if (from1=='dogecoin' && to1=='btc') {
-                setLgShow5(data20.dogecoin.btc)
-				setLgShow7('#f7931b')
-				setLgShow6('#baa032')
-            }
-            if (from1=='monero' && to1=='btc') {
-				setLgShow5(data20.monero.btc)
-				setLgShow7('#f7931b')
-				setLgShow6('#f36723')
-			}
-            if(from1=='dogecoin' && to1=='ltc'){
-                setLgShow5(data20.dogecoin.ltc)
-				setLgShow7('#355d9c')
-				setLgShow6('#baa032')
-            }
-            if(from1=='monero' && to1=='ltc'){
-				setLgShow5(data20.monero.ltc)
-				setLgShow7('#355d9c')
-				setLgShow6('#f36723')
-			}
-            if(from1=='bitcoin' && to1=='bnb'){
-				setLgShow5(data20.bitcoin.bnb)
-			}
-            if(from1=='binancecoin' && to1=='btc'){
-				setLgShow5(data20.binancecoin.btc)
-				setLgShow6('#f0b90d')
-				setLgShow7('#f7931b')
-			}
-            if(from1=='dogecoin' && to1=='bnb'){
-				setLgShow5(data20.dogecoin.bnb)
-			}
-            if(from1=='binancecoin' && to1=='ltc'){
-				setLgShow5(data20.binancecoin.ltc)
-				setLgShow6('#f0b90d')
-				setLgShow7('#355d9c')
-			}
-            if(from1=='monero' && to1=='bnb'){
-				setLgShow5(data20.monero.bnb)
-			}
-			if(from1=='bitcoin-cash' && to1=='bnb'){
-				setLgShow5(data20["bitcoin-cash"].bnb)
-			}
-			if(from1=='bitcoin-cash' && to1=='ltc'){
-				setLgShow5(data20["bitcoin-cash"].ltc)
-			}
-			if(from1=='bitcoin-cash' && to1=='btc'){
-				setLgShow5(data20["bitcoin-cash"].btc)
-				setLgShow7('#f7931b')
-			}
-			if(from1=='dogecoin' && to1=='bch'){
-				setLgShow5(data20.dogecoin.bch)
-			}
-			if(from1=='litecoin' && to1=='bch'){
-				setLgShow5(data20.litecoin.bch)
-				setLgShow6('#355d9c')
-			}
-			if(from1=='monero' && to1=='bch'){
-				setLgShow5(data20.monero.bch)
-			}
-			if(from1=='bitcoin' && to1=='bch'){
-				setLgShow5(data20.bitcoin.bch)
-			}
-			if(from1=='dash' && to1=='btc'){
-				setLgShow5(data20.dash.btc)
-				setLgShow7('#f7931b')
-			}
-			if(from1=='dash' && to1=='ltc'){
-				setLgShow5(data20.dash.ltc)
-			}
-			if(from1=='binancecoin' && to1=='bch'){
-				setLgShow5(data20.binancecoin.bch)
-				setLgShow6('#f0b90d')
-			}
-            if (from1=='bitcoin' && to1=='doge') {
-                fetch('https://api.coingecko.com/api/v3/simple/price?ids=dogecoin&vs_currencies=usd').then(data10 => data10.json()).then(data20 => { {fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd').then(data30 => data30.json()).then(data40 => setLgShow5((data40.bitcoin.usd)*(1/(data20.dogecoin.usd))))}})
-				setLgShow7('#baa032')
-				setLgShow6('#f7931b')
-            }
-            if (from1=='bitcoin'&& to1=='ltc'){
-                setLgShow5(data20.bitcoin.ltc)
-				setLgShow7('#355d9c')
-				setLgShow6('#f7931b')
+		fetch("https://rich-tan-lovebird-coat.cyclic.app/price23",{
+			'method':'post',
+			'headers':{'Content-type':'application/json'},
+			'body': JSON.stringify({
+				from:`${value3}`,
+				to:`${value4}`
+			})
+		}).then(res => res.json()).then(data20 => {
+            if (true) {
+                setLgShow5(data20.rate)
             }
         })
     },[])
@@ -321,13 +196,11 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                     <h3 className='b text-black send_r mt-4 mb-1'>YOU SEND</h3>
                     <p className='b text-black'>{value3}</p>
                 </article>
-                <p className='b fs-6 text-black'>Enter Amount that you will send</p>
-                <input id="name2" style={{'color':`white`, 'background-color':`${lgShow6}`}} className="b input-reset ba b--black-20 pa3 mb2 db w-100 tc text-center" type="number" aria-describedby="name-desc" onChange={send2} value={first56} />
                 </Col>
 
                 <Col className='col-sm-2 tc text-center col13'>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="svg56 bi bi-arrow-left-right text-black svg1" viewBox="0 0 16 16" onClick={reverse}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-arrow-left-right text-black svg1" viewBox="0 0 16 16" onClick={reverse}>
                 <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
                 </svg>
                 </Col>
@@ -341,11 +214,18 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                     <h3 className='b text-black send_r mt-4 mb-1'>YOU RECEIVE</h3>
                     <p className='b text-black'>{value4}</p>
                 </article>
-                <p className='b fs-6 text-black'>Amount that you will receive <span className='span560 b'> (Inc. fees) </span></p>
-                <input id="name23" style={{'color':`white`, 'background-color':`${lgShow7}`}} value={first66} className="b input-reset ba b--black-20 pa3 mb2 db w-100 tc text-center" type="number" aria-describedby="name-desc" />
                 </Col>
             </Row>
-
+            
+            <Row className='mt-3'>
+            <Col className='col-md-12 text-black'>
+            <p className='b text-black para258'>Enter the amount that you will send</p>
+            <input id="name2" style={{'color':`white`, 'background-color':`${lgShow6}`}} className="b input-reset ba b--black-20 pa3 mb2 db w-100 tc text-center" type="number" aria-describedby="name-desc" onFocus={value10070} onChange={send2} />
+            <p className='b text-red text-center tc para3000' style={{'display':`${value501}`}} >Min. {value3} Amount is {lgShow233}</p>
+            <p className='b text-red text-center tc para3000' style={{'display':`${value1600}`}} >Please Enter a Amount</p>
+            </Col>
+            </Row>
+            
             <Row className='mt-3'>
             <Col className='col-md-12 text-black'>
                 <p className='b text-black para10'>Receiving address</p>
