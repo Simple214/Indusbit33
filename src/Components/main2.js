@@ -21,6 +21,9 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 		if(value3=="LTC"){
 			setLgShow566("#345c9c")
 		}
+		if(value3=="TRX"){
+			setLgShow566("#fe060b")
+		}
 		if(value3=="BTC"){
 			setLgShow566("#f6921b")
 		}

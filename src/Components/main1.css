@@ -92,6 +92,12 @@ body{
   .col20{
     cursor: pointer;
   }
+  .col23{
+	  padding-right:15px;
+	  padding-left:15px;
+  }	  .h4 {
+		  height: 2rem !important;
+	  }
   .para300{
     font-family: 'Indie Flower';
     font-size: 25px !important;
@@ -122,6 +128,10 @@ body{
 }
 .col32:hover{
 	background-color: #2772c3 !important;
+	transition-duration: 200ms !important;
+}
+.col33:hover{
+	background-color: #d92f35 !important;
 	transition-duration: 200ms !important;
 }
 .white1{

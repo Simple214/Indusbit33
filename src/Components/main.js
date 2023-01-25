@@ -13,7 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './main1.css'
 
-const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,value760,value761,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66})=>{
+const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
@@ -32,12 +32,17 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
     const [isActive5, setActive5] = useState("false");
     const [isActive6, setActive6] = useState("false");
 	const [isActive7, setActive7] = useState("false");
+	const [isActive8, setActive8] = useState("false");
 
     useEffect(() => {
 		
 		if(value3=="LTC"){
 			setLgShow6("#345c9c")
 			setLgShow233("0.02")
+		}
+		if(value3=="TRX"){
+			setLgShow6("#fe060b")
+			setLgShow233("35")
 		}
 		if(value3=="BTC"){
 			setLgShow6("#f6921b")
@@ -130,6 +135,12 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 	   
 	   const ToggleClass14 = () => {
 		   setActive7(!isActive7); 
+	   };
+	   const ToggleClass150 = () => {
+		   setActive8(!isActive8); 
+	   };
+	   const ToggleClass160 = () => {
+		   setActive8(!isActive8); 
 	   };
 
        const rec =()=>{
@@ -250,70 +261,80 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
             <Modal
         size="lg"
         show={lgShow}
+        fullscreen={fullscreen}
         onHide={() => setLgShow(false)}
         aria-labelledby="example-modal-sizes-title-lg"
       >
+      <Modal.Header closeButton>
+      <Modal.Title>
+      <Row>
+      <Col className='col-md-12 tc text-center'>
+      <h3 className='b tc text-black'>YOU {lgShow2} </h3>
+      </Col>
+      </Row>
+      </Modal.Title>
+      </Modal.Header>
         <Modal.Body>
             <Row>
                 <Col className='col-md-12 tc text-center'>
-                    <h3 className='b text-black'>YOU {lgShow2} </h3>
+                    <p className="b text-black tc text-center para300">Choose your</p>
                 </Col>
             </Row>
 
             <Row>
                 <Col className='col-md-12 tc text-center'>
-                    <p className="b text-black tc text-center para300 mt-4">Choose your</p>
-                </Col>
-            </Row>
-
-            <Row>
-                <Col className='col-md-12 tc text-center'>
-                    <p className="b text-black tc text-center para200 mt-4">Crypto to {lgShow2}</p>
+                    <p className="b text-black tc text-center para200">Crypto to {lgShow2}</p>
                 </Col>
             </Row>
 
             <Row className='justify-content-center align-items-center'>
 
-                <Col className='col-md-3 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col21' onMouseEnter={ToggleClass} onMouseLeave={ToggleClass2} onClick={changetobtc} style={{'display':`${value71}`}}>
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col21' onMouseEnter={ToggleClass} onMouseLeave={ToggleClass2} onClick={changetobtc} style={{'display':`${value71}`}}>
                     <img src='https://cryptologos.cc/logos/bitcoin-btc-logo.png' width={'90px'}/>
                     <h4 className={isActive ? "notwhite1" : "white1"}>BTC</h4>
                     <p className={isActive ? "notwhite2" : "white2"}>Bitcoin</p>
                 </Col>
 
-                <Col className='col-md-3 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col22' onMouseEnter={ToggleClass3} onMouseLeave={ToggleClass4} onClick={changetoltc} style={{'display':`${value72}`}}>
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col22' onMouseEnter={ToggleClass3} onMouseLeave={ToggleClass4} onClick={changetoltc} style={{'display':`${value72}`}}>
                 <img src='https://cryptologos.cc/logos/litecoin-ltc-logo.png' width={'90px'}/>
                     <h4 className={isActive2 ? "notwhite3" : "white3"}>LTC</h4>
                     <p className={isActive2 ? "notwhite4" : "white4"}>Litecoin</p>
                 </Col>
 
-                <Col className='col-md-3 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col23' onMouseEnter={ToggleClass5} onMouseLeave={ToggleClass6} onClick={changetodoge} style={{'display':`${value73}`}}>
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col23' onMouseEnter={ToggleClass5} onMouseLeave={ToggleClass6} onClick={changetodoge} style={{'display':`${value73}`}}>
                     <img src='https://cryptologos.cc/logos/dogecoin-doge-logo.png' width={'90px'}/>
                     <h4 className={isActive3 ? "notwhite5" : "white5"}>DOGE</h4>
                     <p className={isActive3 ? "notwhite6" : "white6"}>Dogecoin</p>
                 </Col>
 
-                <Col className='col-md-3 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col28' onMouseEnter={ToggleClass7} onMouseLeave={ToggleClass8} onClick={changetoxmr} style={{'display':`${value738}`}}>
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col28' onMouseEnter={ToggleClass7} onMouseLeave={ToggleClass8} onClick={changetoxmr} style={{'display':`${value738}`}}>
                     <img src='https://cryptologos.cc/logos/monero-xmr-logo.png' width={'90px'}/>
                     <h4 className={isActive4 ? "notwhite5" : "white5"}>XMR</h4>
                     <p className={isActive4 ? "notwhite6" : "white6"}>Monero</p>
                 </Col>
 
-                <Col className='col-md-3 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col30' onMouseEnter={ToggleClass9} onMouseLeave={ToggleClass10} onClick={changetobnb1} style={{'display':`${value740}`}}>
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col30' onMouseEnter={ToggleClass9} onMouseLeave={ToggleClass10} onClick={changetobnb1} style={{'display':`${value740}`}}>
                     <img src='https://cryptologos.cc/logos/bnb-bnb-logo.png' width={'90px'}/>
                     <h4 className={isActive5 ? "notwhite5" : "white5"}>BNB</h4>
                     <p className={isActive5 ? "notwhite6" : "white6"}>Binance Coin</p>
                 </Col>
 
-                <Col className='col-md-3 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col31' onMouseEnter={ToggleClass11} onMouseLeave={ToggleClass12} onClick={changetobch1} style={{'display':`${value750}`}}>
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col31' onMouseEnter={ToggleClass11} onMouseLeave={ToggleClass12} onClick={changetobch1} style={{'display':`${value750}`}}>
                     <img src='https://cryptologos.cc/logos/bitcoin-cash-bch-logo.png' width={'90px'}/>
                     <h4 className={isActive6 ? "notwhite5" : "white5"}>BCH</h4>
                     <p className={isActive6 ? "notwhite6" : "white6"}>Bitcoin Cash</p>
                 </Col>
                 
-                <Col className='col-md-3 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col32' onMouseEnter={ToggleClass13} onMouseLeave={ToggleClass14} onClick={changetodash1} style={{'display':`${value760}`}}>
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col32' onMouseEnter={ToggleClass13} onMouseLeave={ToggleClass14} onClick={changetodash1} style={{'display':`${value760}`}}>
                 <img src='https://seeklogo.com/images/D/dash-logo-4A14989CF5-seeklogo.com.png' width={'70px'}/>
                 <h4 className={isActive7 ? "notwhite5" : "white5"}>DASH</h4>
                 <p className={isActive7 ? "notwhite6" : "white6"}>Dash</p>
+                </Col>
+                
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col33' onMouseEnter={ToggleClass150} onMouseLeave={ToggleClass160} onClick={changetotrx1} style={{'display':`${value7610}`}}>
+                <img src='https://cryptologos.cc/logos/tron-trx-logo.png?v=024' width={'70px'}/>
+                <h4 className={isActive8 ? "notwhite5" : "white5"}>TRX</h4>
+                <p className={isActive8 ? "notwhite6" : "white6"}>Tron (TRX) </p>
                 </Col>
 
             </Row>
@@ -324,43 +345,47 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
       <Modal
         size="lg"
         show={lgShow3}
+        fullscreen={fullscreen}
         onHide={() => setLgShow3(false)}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <Modal.Body>
+      <Modal.Header closeButton>
+      <Modal.Title>
+      <Row>
+      <Col className='col-md-12 tc text-center'>
+      <h3 className='b tc text-black'>YOU {lgShow2} </h3>
+      </Col>
+      </Row>
+      </Modal.Title>
+      </Modal.Header>
+        <Modal.Body >
             <Row>
                 <Col className='col-md-12 tc text-center'>
-                    <h3 className='b text-black'>YOU {lgShow2} </h3>
+                    <p className="b text-black tc text-center para300 mt-0">Choose your</p>
                 </Col>
             </Row>
 
             <Row>
                 <Col className='col-md-12 tc text-center'>
-                    <p className="b text-black tc text-center para300 mt-4">Choose your</p>
-                </Col>
-            </Row>
-
-            <Row>
-                <Col className='col-md-12 tc text-center'>
-                    <p className="b text-black tc text-center para200 mt-4">Crypto to {lgShow2}</p>
+                    <p className="b text-black tc text-center para200 mt-0">Crypto to {lgShow2}</p>
                 </Col>
             </Row>
 
             <Row className='justify-content-center align-items-center'>
 
-                <Col className='col-md-3 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col21' onMouseEnter={ToggleClass} onMouseLeave={ToggleClass2} onClick={changetobtc4} style={{'display':`${value74}`}}>
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col21' onMouseEnter={ToggleClass} onMouseLeave={ToggleClass2} onClick={changetobtc4} style={{'display':`${value74}`}}>
                     <img src='https://cryptologos.cc/logos/bitcoin-btc-logo.png' width={'90px'}/>
                     <h4 className={isActive ? "notwhite1" : "white1"}>BTC</h4>
                     <p className={isActive ? "notwhite2" : "white2"}>Bitcoin</p>
                 </Col>
 
-                <Col className='col-md-3 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col22' onMouseEnter={ToggleClass3} onMouseLeave={ToggleClass4} onClick={changetoltc4} style={{'display':`${value75}`}}>
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col22' onMouseEnter={ToggleClass3} onMouseLeave={ToggleClass4} onClick={changetoltc4} style={{'display':`${value75}`}}>
                     <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LTC-400.png/2048px-LTC-400.png' width={'90px'}/>
                     <h4 className={isActive2 ? "notwhite3" : "white3"}>LTC</h4>
                     <p className={isActive2 ? "notwhite4" : "white4"}>Litecoin</p>
                 </Col>
 
-                <Col className='col-md-3 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col23' onMouseEnter={ToggleClass5} onMouseLeave={ToggleClass6} onClick={changetodoge4} style={{'display':`${value76}`}}>
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 ps-0 pe-0 me-4 ms-3 mt-4 mb-4 col20 col23' onMouseEnter={ToggleClass5} onMouseLeave={ToggleClass6} onClick={changetodoge4} style={{'display':`${value76}`}}>
                     <img src='https://cryptologos.cc/logos/dogecoin-doge-logo.png' width={'90px'}/>
                     <h4 className={isActive3 ? "notwhite5" : "white5"}>DOGE</h4>
                     <p className={isActive3 ? "notwhite6" : "white6"}>Dogecoin</p>
