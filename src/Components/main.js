@@ -13,7 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './main1.css'
 
-const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66})=>{
+const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
@@ -33,6 +33,9 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
     const [isActive6, setActive6] = useState("false");
 	const [isActive7, setActive7] = useState("false");
 	const [isActive8, setActive8] = useState("false");
+	const [isActive9, setActive9] = useState("false");
+	const [isActive10, setActive10] = useState("false");
+	const [isActive11, setActive11] = useState("false");
 
     useEffect(() => {
 		
@@ -67,6 +70,18 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 		if(value3=="BNB"){
 			setLgShow6("#f0b80c")
 			setLgShow233("0.008")
+		}
+		if(value3=="AVAX"){
+			setLgShow6("#e64041")
+			setLgShow233("0.1")
+		}
+		if(value3=="ADA"){
+			setLgShow6("#0033af")
+			setLgShow233("7")
+		}
+		if(value3=="VET"){
+			setLgShow6("#16bdfe")
+			setLgShow233("200")
 		}
 		
 		fetch("https://rich-tan-lovebird-coat.cyclic.app/price23",{
@@ -142,6 +157,25 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 	   const ToggleClass160 = () => {
 		   setActive8(!isActive8); 
 	   };
+	   const ToggleClass170 = () => {
+		   setActive9(!isActive9); 
+	   };
+	   const ToggleClass180 = () => {
+		   setActive9(!isActive9); 
+	   };
+	   const ToggleClass190 = () => {
+		   setActive10(!isActive10); 
+	   };
+	   const ToggleClass200 = () => {
+		   setActive10(!isActive10); 
+	   };
+	   const ToggleClass210 = () => {
+		   setActive11(!isActive11); 
+	   };
+	   const ToggleClass220 = () => {
+		   setActive11(!isActive11); 
+	   };
+	   
 
        const rec =()=>{
         value2='RECEIVE'
@@ -335,6 +369,25 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                 <img src='https://cryptologos.cc/logos/tron-trx-logo.png?v=024' width={'70px'}/>
                 <h4 className={isActive8 ? "notwhite5" : "white5"}>TRX</h4>
                 <p className={isActive8 ? "notwhite6" : "white6"}>Tron (TRX) </p>
+                </Col>
+                
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col34' onMouseEnter={ToggleClass170} onMouseLeave={ToggleClass180} onClick={changetoavax1} style={{'display':`${value7610}`}}>
+                <img src='https://cryptologos.cc/logos/avalanche-avax-logo.png?v=024' width={'70px'}/>
+                <h4 className={isActive9 ? "notwhite5" : "white5"}>AVAX</h4>
+                <p className={isActive9 ? "notwhite6" : "white6"}>Avalanche (AVAX) </p>
+                </Col>
+                
+                
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col35' onMouseEnter={ToggleClass190} onMouseLeave={ToggleClass200} onClick={changetoada1} style={{'display':`${value7610}`}}>
+                <img src='https://altcoinsbox.com/wp-content/uploads/2023/01/cardano-logo.jpg' width={'70px'}/>
+                <h4 className={isActive10 ? "notwhite5" : "white5"}>ADA</h4>
+                <p className={isActive10 ? "notwhite6" : "white6"}>Cardano</p>
+                </Col>
+                
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col36' onMouseEnter={ToggleClass210} onMouseLeave={ToggleClass220} onClick={changetovet1} style={{'display':`${value7610}`}}>
+                <img src='https://cryptologos.cc/logos/vechain-vet-logo.png?v=024' width={'70px'}/>
+                <h4 className={isActive11 ? "notwhite5" : "white5"}>VET</h4>
+                <p className={isActive11 ? "notwhite6" : "white6"}>VeChain</p>
                 </Col>
 
             </Row>

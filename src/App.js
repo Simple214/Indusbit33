@@ -851,6 +851,35 @@ bnbvalidation = (event2)=>{
 			})
 		}
 
+		changetoavax = ()=>{
+			this.setState({
+				from:'avax',
+				 value3:'AVAX',
+				 value5:'avalanche',
+				 value10:'avax'
+			})
+		}
+		
+		
+		changetoada = ()=>{
+			this.setState({
+				from:'ada',
+				 value3:'ADA',
+				 value5:'cardano',
+				 value10:'ada'
+			})
+		}
+		
+		changetovet = ()=>{
+			this.setState({
+				from:'vet',
+				 value3:'VET',
+				 value5:'vechain',
+				 value10:'vet'
+			})
+		}
+		
+		
 	setvalue = (event) => {
 		const value100 = event.target.value
 		var value101
@@ -877,6 +906,15 @@ bnbvalidation = (event2)=>{
 		}
 		if(this.state.value3=='BNB'){
 			value101=0.008
+		}
+		if(this.state.value3=='AVAX'){
+			value101=0.1
+		}
+		if(this.state.value3=='ADA'){
+			value101=7
+		}
+		if(this.state.value3=='VET'){
+			value101=200
 		}
 		if (value100<value101) {
 			this.setState({
@@ -916,7 +954,7 @@ bnbvalidation = (event2)=>{
         {this.state.from=='ltc' && this.state.to=='btc'
         ?<div>
       
-      <Main1 send2={this.setvalue} changetotrx1={this.changetotrx} first66={this.state.value876} first changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc2} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} value501={this.state.show2} from1={'litecoin'} to1={'btc'} value74={'none'} value75={'none'} value76={'block'} value71={'none'} value72={'none'} value73={'block'} value738 ={'block'} call={this.calltofinal} value1006={this.hide2} value10070={this.hide3} value739={'none'} backtohome={this.home234} value751={'none'} value741={'none'}/>
+      <Main1 send2={this.setvalue} changetovet1={this.changetovet} changetoada1={this.changetoada} changetotrx1={this.changetotrx} changetoavax1={this.changetoavax} first66={this.state.value876} first changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc2} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} value501={this.state.show2} from1={'litecoin'} to1={'btc'} value74={'none'} value75={'none'} value76={'block'} value71={'none'} value72={'none'} value73={'block'} value738 ={'block'} call={this.calltofinal} value1006={this.hide2} value10070={this.hide3} value739={'none'} backtohome={this.home234} value751={'none'} value741={'none'}/>
                           {/* Footer begins */}
       <Row className='row1 d-flex justify-content-center align-items-center'>
         <Col className='col-md-12 d-flex justify-content-center align-items-center'>
@@ -1048,40 +1086,61 @@ bnbvalidation = (event2)=>{
           :<div>{this.state.from=='dash' && this.state.to=='ltc'
           ?<div>
           
-          <Main1 send2={this.setvalue} value1600={this.state.show3} value501={this.state.show2} first66={this.state.value876} changetobch1={this.changetobch13} first66={this.state.value876} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.from_doge} changetobtc={this.from_btc}  changetodoge4={this.changetodoge26} changetoltc4={this.changetoltc24} changetobtc4={this.to_btc} event1={this.ltcvalidation} value500={this.state.show} value1500={this.state.show1} from1={'dash'} to1={'ltc'} value74={'block'} value75={'none'} value76={'none'} value71={'block'} value72={'none'} value73={'block'} value738 ={'block'} call={this.calltofinal} value1006={this.hide2} value760={'none'} value751={'none'} value739={'none'} value741={'none'} value740={'block'} backtohome={this.home234}/>
+          <Main1 send2={this.setvalue} value1600={this.state.show3} value501={this.state.show2} first66={this.state.value876} changetobch1={this.changetobch13} first66={this.state.value876} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.from_doge} changetobtc={this.from_btc} reverse={this.reverse1} changetodoge4={this.changetodoge26} changetoltc4={this.changetoltc24} changetobtc4={this.to_btc} event1={this.ltcvalidation} value500={this.state.show} value1500={this.state.show1} from1={'dash'} to1={'ltc'} value74={'block'} value75={'none'} value76={'none'} value71={'block'} value72={'none'} value73={'block'} value738 ={'block'} call={this.calltofinal} value1006={this.hide2} value760={'none'} value751={'none'} value739={'none'} value741={'none'} value740={'block'} backtohome={this.home234}/>
           
           </div>
           :<div>{this.state.from=='bnb' && this.state.to=='ltc'
           ?<div>
       
-      <Main1 send2={this.setvalue} value1600={this.state.show3} value501={this.state.show2} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc148} event1={this.ltcvalidation} value500={this.state.show} value1500={this.state.show1}  from1={'binancecoin'} to1={'ltc'} value74={'block'} value75={'none'} value76={'none'} value71={'block'} value72={'none'} value73={'block'} value738 ={'block'} value751={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value741={'none'} value740={'none'} backtohome={this.home234}/>
+      <Main1 send2={this.setvalue} value1600={this.state.show3} value501={this.state.show2} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} reverse={this.reverse1}  changetobtc4={this.changetobtc148} event1={this.ltcvalidation} value500={this.state.show} value1500={this.state.show1}  from1={'binancecoin'} to1={'ltc'} value74={'block'} value75={'none'} value76={'none'} value71={'block'} value72={'none'} value73={'block'} value738 ={'block'} value751={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value741={'none'} value740={'none'} backtohome={this.home234}/>
           </div>
           :<div>{this.state.from=='trx' && this.state.to=='btc'
           ?<div>
-          <h1>TRX TO BTC</h1>
-          <Main1 send2={this.setvalue} value1600={this.state.show3} value501={this.state.show2} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc148} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1}  from1={'binancecoin'} to1={'ltc'} value74={'block'} value75={'none'} value76={'none'} value71={'block'} value72={'none'} value73={'block'} value738 ={'block'} value751={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value741={'none'} value740={'none'} backtohome={this.home234}/>
+          
+          <Main1 send2={this.setvalue} value1600={this.state.show3} value501={this.state.show2} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc148} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} reverse={this.reverse1} value74={'block'} value75={'none'} value76={'none'} value71={'block'} value72={'none'} value73={'block'} value738 ={'block'} value751={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value741={'none'} value740={'none'} backtohome={this.home234}/>
+          
           </div>
-          :<div>{ this.state.from=='xmr' && this.state.to=='bnb'
+          :<div>{ this.state.from=='avax' && this.state.to=='btc'
             ?<div>
             
+            <Main1 send2={this.setvalue} value1600={this.state.show3} value501={this.state.show2} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} reverse={this.reverse1} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc148} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value74={'block'} value75={'none'} value76={'none'} value71={'block'} value72={'none'} value73={'block'} value738 ={'block'} value751={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value741={'none'} value740={'none'} backtohome={this.home234}/>
+            
+            
             </div>
-            :<div>{this.state.from=='bch' && this.state.to=='bnb'
+            :<div>{this.state.from=='ada' && this.state.to=='btc'
 				?<div>
-				errir
+				
+				<Main1 send2={this.setvalue} value1600={this.state.show3} value501={this.state.show2} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1} reverse={this.reverse1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc148} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1}  value74={'block'} value75={'none'} value76={'none'} value71={'block'} value72={'none'} value73={'block'} value738 ={'block'} value751={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value741={'none'} value740={'none'} backtohome={this.home234}/>
+				
 				</div>
 				:<div>{this.state.from=='bch' && this.state.to=='ltc'
 					?<div>
 					 
-					 <Main1 value1600={this.state.show3} value501={this.state.show2} send2={this.setvalue} first66={this.state.value876} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc19}  changetodoge4={this.changetodoge2} changetoltc4={this.to_ltc} changetobtc4={this.to_btc} event1={this.ltcvalidation} value500={this.state.show} value1500={this.state.show1}  from1={'bitcoin-cash'} to1={'ltc'} value74={'block'} value75={'none'} value76={'none'} value71={'block'} value72={'none'} value73={'block'} value738 ={'block'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value750={'none'} value751={'none'} value741={'none'} value740={'block'} backtohome={this.home234}/>
+					 <Main1 value1600={this.state.show3} value501={this.state.show2} send2={this.setvalue} first66={this.state.value876} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc19}  changetodoge4={this.changetodoge2} changetoltc4={this.to_ltc} changetobtc4={this.to_btc} reverse={this.reverse1} event1={this.ltcvalidation} value500={this.state.show} value1500={this.state.show1}  from1={'bitcoin-cash'} to1={'ltc'} value74={'block'} value75={'none'} value76={'none'} value71={'block'} value72={'none'} value73={'block'} value738 ={'block'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value750={'none'} value751={'none'} value741={'none'} value740={'block'} backtohome={this.home234}/>
 					
 					</div>
 					:<div>{this.state.from=='bch' && this.state.to=='btc'
 						?<div>
 					
-					<Main1 value1600={this.state.show3} value501={this.state.show2} send2={this.setvalue} first66={this.state.value876} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc19} changetodoge4={this.changetodoge2} changetoltc4={this.to_ltc} changetobtc4={this.changetobtc14} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1}  from1={'bitcoin-cash'} to1={'btc'} value74={'block'} value75={'block'} value76={'none'} value71={'none'} value72={'block'} value73={'block'} value738 ={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value74={'none'} value741={'none'} value750={'none'} value751={'none'} value740={'block'} value738={'block'} backtohome={this.home234}/>
+					<Main1 value1600={this.state.show3} value501={this.state.show2} send2={this.setvalue} first66={this.state.value876} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc19} changetodoge4={this.changetodoge2} changetoltc4={this.to_ltc} changetobtc4={this.changetobtc14} reverse={this.reverse1} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value74={'block'} value75={'block'} value76={'none'} value71={'none'} value72={'block'} value73={'block'} value738 ={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value74={'none'} value741={'none'} value750={'none'} value751={'none'} value740={'block'} value738={'block'} backtohome={this.home234}/>
 						
 						</div>
-						:<div>error</div>
+						:<div>{this.state.from=='vet' && this.state.to=='btc'
+							?<div>
+							
+							<Main1 value1600={this.state.show3} value501={this.state.show2} send2={this.setvalue} first66={this.state.value876} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc19} changetodoge4={this.changetodoge2} reverse={this.reverse1} changetoltc4={this.to_ltc} changetobtc4={this.changetobtc14} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value74={'block'} value75={'block'} value76={'none'} value71={'none'} value72={'block'} value73={'block'} value738 ={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value74={'none'} value741={'none'} value750={'none'} value751={'none'} value740={'block'} value738={'block'} backtohome={this.home234}/>
+							
+							</div>
+							:<div>{this.state.from=='vet' && this.state.to=='ltc'
+								?<div>
+								
+								<Main1 value1600={this.state.show3} value501={this.state.show2} send2={this.setvalue} first66={this.state.value876} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc19} reverse={this.reverse1} changetodoge4={this.changetodoge2} changetoltc4={this.to_ltc} changetobtc4={this.changetobtc14} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value74={'block'} value75={'block'} value76={'none'} value71={'none'} value72={'block'} value73={'block'} value738 ={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value74={'none'} value741={'none'} value750={'none'} value751={'none'} value740={'block'} value738={'block'} backtohome={this.home234}/>
+								
+								
+								</div>
+								:<div>Error</div>
+							}</div>
+						}</div>
 					} </div>
 				}</div>
 			}</div>
