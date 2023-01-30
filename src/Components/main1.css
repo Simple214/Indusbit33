@@ -146,6 +146,18 @@ body{
 	background-color: #3c9cec !important;
 	transition-duration: 200ms !important;
 }
+.col37:hover{
+	background-color: #4494fc !important;
+	transition-duration: 200ms !important;
+}
+.col38:hover{
+	background-color: #393939 !important;
+	transition-duration: 200ms !important;
+}
+.col380:hover{
+	background-color: #c737f4 !important;
+	transition-duration: 200ms !important;
+}
 .white1{
     color: white !important;
     font-weight: bold !important;

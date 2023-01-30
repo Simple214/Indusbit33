@@ -13,7 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './main1.css'
 
-const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1})=>{
+const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
@@ -36,6 +36,10 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 	const [isActive9, setActive9] = useState("false");
 	const [isActive10, setActive10] = useState("false");
 	const [isActive11, setActive11] = useState("false");
+	const [isActive12, setActive12] = useState("false");
+	const [isActive14, setActive14] = useState("false");
+	const [isActive120, setActive120] = useState("false");
+	
 
     useEffect(() => {
 		
@@ -82,6 +86,18 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 		if(value3=="VET"){
 			setLgShow6("#16bdfe")
 			setLgShow233("200")
+		}
+		if(value3=="XTZ"){
+			setLgShow6("#2c7df9")
+			setLgShow233("2")
+		}
+		if(value3=="ETH"){
+			setLgShow6("#393939")
+			setLgShow233("0.01")
+		}
+		if(value3=="SOL"){
+			setLgShow6("#dc1fff")
+			setLgShow233("0.06")
 		}
 		
 		fetch("https://rich-tan-lovebird-coat.cyclic.app/price23",{
@@ -175,7 +191,24 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 	   const ToggleClass220 = () => {
 		   setActive11(!isActive11); 
 	   };
-	   
+	   const ToggleClass230 = () => {
+		   setActive12(!isActive12); 
+	   };
+	   const ToggleClass240 = () => {
+		   setActive12(!isActive12); 
+	   };
+	   const ToggleClass33 = () => {
+		   setActive14(!isActive14); 
+	   };
+	   const ToggleClass34 = () => {
+		   setActive14(!isActive14); 
+	   };
+	   const ToggleClass2300 = () => {
+		   setActive120(!isActive120); 
+	   };
+	   const ToggleClass2400 = () => {
+		   setActive120(!isActive120); 
+	   };
 
        const rec =()=>{
         value2='RECEIVE'
@@ -208,6 +241,9 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                         </Nav.Link>
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>System Status <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Icon_green_lamp_on.svg/512px-Icon_green_lamp_on.svg.png' className='ms-2' width={'15px'}/>
                             <span className="b span45 d-flex justify-content-center align-items-center">Working</span></Nav.Link>
+                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
+                            <img src="https://static.thenounproject.com/png/1664849-200.png" width="50px" />
+                            </Nav.Link>
                         </Nav>
                         </Navbar.Collapse>
                     </Container>
@@ -328,6 +364,13 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                     <h4 className={isActive ? "notwhite1" : "white1"}>BTC</h4>
                     <p className={isActive ? "notwhite2" : "white2"}>Bitcoin</p>
                 </Col>
+                
+                
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col38' onMouseEnter={ToggleClass33} onMouseLeave={ToggleClass34} onClick={changetoeth1} style={{'display':`${value81}`}}>
+                <img src='https://cryptologos.cc/logos/ethereum-eth-logo.png?v=024' width={'90px'}/>
+                <h4 className={isActive14 ? "notwhite1" : "white1"}>ETH</h4>
+                <p className={isActive14 ? "notwhite2" : "white2"}>Ethereum</p>
+                </Col>
 
                 <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col22' onMouseEnter={ToggleClass3} onMouseLeave={ToggleClass4} onClick={changetoltc} style={{'display':`${value72}`}}>
                 <img src='https://cryptologos.cc/logos/litecoin-ltc-logo.png' width={'90px'}/>
@@ -388,6 +431,18 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                 <img src='https://cryptologos.cc/logos/vechain-vet-logo.png?v=024' width={'70px'}/>
                 <h4 className={isActive11 ? "notwhite5" : "white5"}>VET</h4>
                 <p className={isActive11 ? "notwhite6" : "white6"}>VeChain</p>
+                </Col>
+                
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col37' onMouseEnter={ToggleClass230} onMouseLeave={ToggleClass240} onClick={changetoxtz1} style={{'display':`${value7610}`}}>
+                <img src='https://cryptologos.cc/logos/tezos-xtz-logo.png?v=024' width={'70px'}/>
+                <h4 className={isActive12 ? "notwhite5" : "white5"}>XTZ</h4>
+                <p className={isActive12 ? "notwhite6" : "white6"}>Tezos</p>
+                </Col>
+                
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col380' onMouseEnter={ToggleClass2300} onMouseLeave={ToggleClass2400} onClick={changetosol1} style={{'display':`${value859}`}}>
+                <img src='https://cryptologos.cc/logos/solana-sol-logo.png?v=024' width={'70px'}/>
+                <h4 className={isActive120 ? "notwhite5" : "white5"}>SOL</h4>
+                <p className={isActive120 ? "notwhite6" : "white6"}>Solana</p>
                 </Col>
 
             </Row>
