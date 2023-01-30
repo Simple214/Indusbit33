@@ -21,7 +21,6 @@ body{
 	font-size:20px;
 }
 .row_0{
-	background-color:red !important;
 	height:60px !important;
 }
 .btn45{
@@ -158,6 +157,10 @@ body{
 	background-color: #c737f4 !important;
 	transition-duration: 200ms !important;
 }
+.col381:hover{
+	background-color: #3ab93b !important;
+	transition-duration: 200ms !important;
+}
 .white1{
     color: white !important;
     font-weight: bold !important;
@@ -256,18 +259,18 @@ body{
     font-weight: bolder !important;
 }
 .navbar1{
-	height:78px;
+	height:95px;
 	background-color: white !important;
 }
 .span45{
     font-size: 10px !important;
     font-weight: bolder !important;
-    color: rgb(6, 109, 6) !important;
+    color: rgb(6, 109, 6);
 }
 .navlink{
     font-size: 20px !important;
-    color: black !important;
-        font-weight: bolder !important;
+    color: black;
+	font-weight: bolder !important;
 }
 .img25{
     width: 250px !important;

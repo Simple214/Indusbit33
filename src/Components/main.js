@@ -13,7 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './main1.css'
 
-const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1})=>{
+const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
@@ -39,6 +39,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 	const [isActive12, setActive12] = useState("false");
 	const [isActive14, setActive14] = useState("false");
 	const [isActive120, setActive120] = useState("false");
+	const [isActive17, setActive17] = useState("false");
 	
 
     useEffect(() => {
@@ -98,6 +99,10 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 		if(value3=="SOL"){
 			setLgShow6("#dc1fff")
 			setLgShow233("0.06")
+		}
+		if(value3=="ETC"){
+			setLgShow6("#3ab93b")
+			setLgShow233("0.1")
 		}
 		
 		fetch("https://rich-tan-lovebird-coat.cyclic.app/price23",{
@@ -209,6 +214,13 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 	   const ToggleClass2400 = () => {
 		   setActive120(!isActive120); 
 	   };
+	   const ToggleClass23000 = () => {
+		   setActive17(!isActive17); 
+	   };
+	   const ToggleClass24000 = () => {
+		   setActive17(!isActive17); 
+	   };
+	   
 
        const rec =()=>{
         value2='RECEIVE'
@@ -222,13 +234,13 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 
     return(
         <div>
-        <Row className='d-flex justify-content-end  align-items-center row_0'>
+        <Row className='d-flex justify-content-end  align-items-center row_0' style={{'background-color':`${value10085}`}}>
         
         <Col className='col-md-3 d-flex justify-content-center align-items-center flex-row' > <a className="btn45 mt-1 me-2 f6 grow no-underline ba bw1 ph2 pv1 mb1 dib b text-white pt-1">Search</a>
         <input id="name" placeholder='Your Order ID' className="b input-reset ba b--black-20 pt-2 pb-2 ps-2 db w-60" type="text" aria-describedby="name-desc" /> </Col>
         
         </Row>
-                <Navbar bg="light" expand="lg" className='navbar1'>
+        <Navbar bg={theme} expand="lg" className='navbar1'>
                     <Container>
                         <Navbar.Brand href="#home" className="d-flex justify-content-center align-items-center mt-1">
                             <img src={require('./logo.png')} alt='bitbarter_logo' className='img25' onClick={backtohome} />
@@ -236,13 +248,19 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto d-flex justify-content-center align-items-center">
-                        <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>Wallets <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Icon_green_lamp_on.svg/512px-Icon_green_lamp_on.svg.png'  className='ms-2' width={'15px'}/>
-                        <span className="b span45 d-flex justify-content-center align-items-center">Working</span>
+                        <Nav.Link href="#home" style={{'color':`${value1008}`}} className='d-flex justify-content-center align-items-center navlink'>Wallets <img src={require(`${value10091}`)}   className='ms-2' width={'17px'}/>
+                        <span className="b span45 d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}}>Working</span>
                         </Nav.Link>
-                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>System Status <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Icon_green_lamp_on.svg/512px-Icon_green_lamp_on.svg.png' className='ms-2' width={'15px'}/>
-                            <span className="b span45 d-flex justify-content-center align-items-center">Working</span></Nav.Link>
+                        <Nav.Link href="#home" style={{'color':`${value1008}`}} className='d-flex justify-content-center align-items-center navlink'>System Status <img src={require(`${value10091}`)} className='ms-2' width={'17px'}/>
+                        <span className="b span45 d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}} >Working</span></Nav.Link>
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
-                            <img src="https://static.thenounproject.com/png/1664849-200.png" width="50px" />
+                            <img src="https://static.thenounproject.com/png/1664849-200.png" width="50px" style={{'display':`${value10082}`}} onClick={changetodark} />
+                            </Nav.Link>
+                            
+                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
+                            <svg onClick={changetolight}  style={{'display':`${value10083}`}} xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" className="bi text-white bi-brightness-high-fill" viewBox="0 0 16 16">
+                            <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                            </svg>
                             </Nav.Link>
                         </Nav>
                         </Navbar.Collapse>
@@ -251,7 +269,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 			
                 
 
-            <article className="vh-100 dt w-100 pt-5 pb-5 bg-dark-pink">
+			<article className={`vh-100 dt w-100 pt-5 pb-5`} style={{'background-color':`${value10081}`}}>
             <div className="dtc v-mid tc white ph3 ph4-l">
             <article className="mw6 center bg-white br3 pa2 pa4-ns mv3 ba b--black-10 shadow-3">
             <Container>
@@ -443,6 +461,12 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                 <img src='https://cryptologos.cc/logos/solana-sol-logo.png?v=024' width={'70px'}/>
                 <h4 className={isActive120 ? "notwhite5" : "white5"}>SOL</h4>
                 <p className={isActive120 ? "notwhite6" : "white6"}>Solana</p>
+                </Col>
+                
+                <Col className='col-md-2 tc text-center shadow-5 pt-5 pb-5 me-4 ms-4 mt-4 mb-4 col20 col381' onMouseEnter={ToggleClass23000} onMouseLeave={ToggleClass24000} onClick={changetoetc1} style={{'display':`${value8591}`}}>
+                <img src='https://cryptologos.cc/logos/ethereum-classic-etc-logo.png?v=024' width={'70px'}/>
+                <h4 className={isActive17 ? "notwhite5" : "white5"}>ETC</h4>
+                <p className={isActive17 ? "notwhite6" : "white6"}>Ethereum Classic</p>
                 </Col>
 
             </Row>
