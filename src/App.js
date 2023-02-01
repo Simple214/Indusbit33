@@ -52,7 +52,11 @@ class App extends React.Component{
 	  url2:"./logo.png",
 	  row_bg:"#ffffff",
 	  row_color:"#d5018e",
-	  bottom_color:'#d5018e'
+	  bottom_color:'#d5018e',
+	  article_bg:"white",
+	  text_color:'black',
+	  text_body:'white',
+	  border:"0px solid white"
     }
   }
 
@@ -940,7 +944,11 @@ bnbvalidation = (event2)=>{
 				url2:"./dark_logo.png",
 				row_bg:"#21262a",
 				row_color:"white",
-				bottom_color:'#000000'
+				bottom_color:'#000000',
+				 article_bg:'#212939',
+				text_color:'white',
+				text_body:'black',
+				border:"2px solid white"
 			})
 		}
 		
@@ -957,7 +965,11 @@ bnbvalidation = (event2)=>{
 				 url2:"./logo.png",
 				 row_bg:"#f0f2f5",
 				 row_color:"#d5018e",
-				 bottom_color:'#d5018e'
+				 bottom_color:'#d5018e',
+				 article_bg:'white',
+				 text_color:'black',
+				 text_body:'white',
+				 border:"0px solid white"
 			})
 		}
 		
@@ -1049,7 +1061,7 @@ bnbvalidation = (event2)=>{
         {this.state.from=='ltc' && this.state.to=='btc'
         ?<div>
       
-      <Main1 value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme} changetoetc1={this.changetoetc} changetoeth1={this.changetoeth}  changetosol1={this.changetosol} send2={this.setvalue} changetovet1={this.changetovet} changetoxtz1={this.changetoxtz} changetoada1={this.changetoada} changetotrx1={this.changetotrx} changetoavax1={this.changetoavax} first66={this.state.value876} first changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc2} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} value501={this.state.show2} from1={'litecoin'} to1={'btc'} value74={'none'} value81={'block'} value75={'none'} value76={'block'} value71={'none'} value72={'none'} value73={'block'} value738 ={'block'} call={this.calltofinal} value1006={this.hide2} value10070={this.hide3} value739={'none'} backtohome={this.home234} value751={'none'} value741={'none'}/>
+      <Main1 value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme} changetoetc1={this.changetoetc} changetoeth1={this.changetoeth}  changetosol1={this.changetosol} send2={this.setvalue} changetovet1={this.changetovet} changetoxtz1={this.changetoxtz} changetoada1={this.changetoada} changetotrx1={this.changetotrx} changetoavax1={this.changetoavax} first66={this.state.value876} first changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc2} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} value501={this.state.show2} from1={'litecoin'} to1={'btc'} value74={'none'} value81={'block'} value75={'none'} value76={'block'} value71={'none'} value72={'none'} value73={'block'} value738 ={'block'} call={this.calltofinal} value1006={this.hide2} value10070={this.hide3} value739={'none'} backtohome={this.home234} value751={'none'} value741={'none'}/>
       
                           {/* Footer begins */}
 	<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>

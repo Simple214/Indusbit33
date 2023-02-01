@@ -13,7 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './main1.css'
 
-const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,logo_value,value10087,value10088})=>{
+const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,logo_value,value10087,value10088,value100910,value10059,value100912,value10057})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
@@ -269,56 +269,56 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 			
                 
 
-			<article className={`vh-100 dt w-100 pt-5 pb-5`} style={{'background-color':`${value10081}`}}>
+			<article className={`vh-100 dt w-100 pt-5 pb-5`} style={{'background-color':`${value10081}`}} >
             <div className="dtc v-mid tc white ph3 ph4-l">
-            <article className="mw6 center bg-white br3 pa2 pa4-ns mv3 ba b--black-10 shadow-3">
+            <article className="mw6 center br3 pa2 pa4-ns mv3 ba b--black-10 shadow-3" style={{'background-color':`${value100910}`,'border':`${value10057}`}}  >
             <Container>
             <Row>
                 <Col className='col-md-12 text-black'>
-                <Button className='btn1 b text-black shadow-3'>Variable rate</Button>
+                <Button className={'btn1 b shadow-3'} style={{'background-color':`${value100912}`, 'color':`${value10059}`, 'border':`${value10057}`} } >Variable rate</Button>
                 </Col>
             </Row>
 
             <Row className='mt-3'>
             <Col className='col-md-12 text-black'>
-                <p className='b text-black para1'>1 <span className='title1'>{value3}</span> = <span className='value'></span>{lgShow5} <span className='title2'>{value4}</span></p>
+            <p className='b para1' style={{'color':`${value10059}`}} >1 <span className='title1' >{value3}</span> = <span className='value'></span>{lgShow5} <span className='title2'>{value4}</span></p>
                 </Col>
             </Row>
 
             <Row className='mt-3 justify-content-center align-items-center'>
             <Col className='col-md-5 text-center tc col10'>
-            <article className="mw7 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3"  onClick={() => {
+            <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3" style={{'background-color':`${value100910}`,'border':`${value10057}`}} onClick={() => {
 				setLgShow(true)
 				setLgShow2('SEND')
 			}}>
                     <img src={require(`./${value10}.png`)}/>
-                    <h3 className='b text-black send_r mt-4 mb-1'>YOU SEND</h3>
-                    <p className='b text-black'>{value3}</p>
+                    <h3 className='b send_r mt-4 mb-1' style={{'color':`${value10059}`}} >YOU SEND</h3>
+                    <p className='b' style={{'color':`${value10059}`}} >{value3}</p>
                 </article>
                 </Col>
 
                 <Col className='col-sm-2 tc text-center col13'>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-arrow-left-right text-black svg1" viewBox="0 0 16 16" onClick={reverse}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" style={{'color':`${value10059}`}} className="bi bi-arrow-left-right svg1" viewBox="0 0 16 16" onClick={reverse}>
                 <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
                 </svg>
                 </Col>
 
                 <Col className='col-md-5 text-center tc col10'>
-                <article className="mw7 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3" onClick={() => {
+                <article style={{'background-color':`${value100910}`,'border':`${value10057}`}} className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3" onClick={() => {
 					setLgShow3(true)
 					setLgShow2('RECEIVE')
 				}}>
                 <img src={require(`./${value11}.png`)}/>
-                    <h3 className='b text-black send_r mt-4 mb-1'>YOU RECEIVE</h3>
-                    <p className='b text-black'>{value4}</p>
+                <h3 className='b send_r mt-4 mb-1' style={{'color':`${value10059}`}} >YOU RECEIVE</h3>
+                <p className='b' style={{'color':`${value10059}`}} >{value4}</p>
                 </article>
                 </Col>
             </Row>
             
             <Row className='mt-3'>
             <Col className='col-md-12 text-black'>
-            <p className='b text-black para258'>Enter the amount that you will send</p>
+            <p className='b para258' style={{'color':`${value10059}`}}>Enter the amount that you will send</p>
             <input id="name2" style={{'color':`white`, 'background-color':`${lgShow6}`}} className="b input-reset ba b--black-20 pa3 mb2 db w-100 tc text-center" type="number" aria-describedby="name-desc" onFocus={value10070} onChange={send2} />
             <p className='b text-red text-center tc para3000' style={{'display':`${value501}`}} >Min. {value3} Amount is {lgShow233}</p>
             <p className='b text-red text-center tc para3000' style={{'display':`${value1600}`}} >Please Enter a Amount</p>
@@ -327,7 +327,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
             
             <Row className='mt-3'>
             <Col className='col-md-12 text-black'>
-                <p className='b text-black para10'>Receiving address</p>
+            <p style={{'color':`${value10059}`}} className='b para10'>Receiving address</p>
                 </Col>
             </Row>
 
@@ -342,7 +342,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 
             <Row className='mt-3'>
                 <Col className='col-md-12 text-black'>
-                <Button className='btn2 b text-black shadow-3' onClick={call}>EXCHANGE</Button>
+                <Button className='btn2 b shadow-3' style={{'background-color':`${value100910}`,'border':`${value10057}`,'color':`${value10059}`}}  onClick={call}>EXCHANGE</Button>
                 </Col>
             </Row>
 

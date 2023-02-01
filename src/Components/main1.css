@@ -5,10 +5,7 @@ body{
 	background-position:center;
 }
 .btn1{
-    border: none !important;
     border-radius: 5px !important;
-    color: black !important;
-    background-color: white !important;
 }
 .send_r{
     font-size: 20px !important;
@@ -46,11 +43,8 @@ body{
     border-radius: 7px !important;
 }
 .btn2{
-    border: none !important;
     border-radius: 0px !important;
-    color: black !important;
     font-size: 20px !important;
-    background-color: white !important;
 }
 
 /* Button CSS Starts */
