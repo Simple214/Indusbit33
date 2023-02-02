@@ -106,7 +106,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 			setLgShow233("0.1")
 		}
 		
-		fetch("https://rich-tan-lovebird-coat.cyclic.app/price23",{
+		fetch("https://rich-tan-lovebird-coat.cyclic.app/price25",{
 			'method':'post',
 			'headers':{'Content-type':'application/json'},
 			'body': JSON.stringify({
@@ -115,7 +115,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 			})
 		}).then(res => res.json()).then(data20 => {
             if (true) {
-                setLgShow5(data20.rate)
+                setLgShow5(data20.rate3)
             }
         })
     },[])
