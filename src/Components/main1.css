@@ -14,6 +14,29 @@ body{
 .col10{
     cursor: pointer;
 }
+#dropdown-basic{
+	background:none !important;
+	border:none !important;
+}
+.dropdown-toggle::after{
+	display:none !important;
+}
+.flag1{
+	margin-left:60px !important;
+}
+.flag2{
+	margin-left:35px !important;
+}
+
+.flag3{
+	margin-left:52px !important;
+}
+.flag4{
+	margin-left:35px !important;
+}
+.flag5{
+	margin-left:35px !important;
+}
 .para258{
 	font-size:20px;
 }
