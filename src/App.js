@@ -565,7 +565,7 @@ bnbvalidation = (event2)=>{
             to:'',
             moveahead2:'no'
           })
-          value156='https://rich-tan-lovebird-coat.cyclic.app/order23'
+          value156='https://rich-tan-lovebird-coat.cyclic.app/order25'
         }
         if (this.state.moveahead=='no'){
           this.setState({

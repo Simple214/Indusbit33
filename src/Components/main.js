@@ -295,9 +295,14 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
             <div className="dtc v-mid tc white ph3 ph4-l">
             <article className="mw6 center br3 pa2 pa4-ns mv3 ba b--black-10 shadow-3" style={{'background-color':`${value100910}`,'border':`${value10057}`}}  >
             <Container>
-            <Row>
-                <Col className='col-md-12 text-black'>
-                <Button className={'btn1 b shadow-3'} style={{'background-color':`${value100912}`, 'color':`${value10059}`, 'border':`${value10057}`} } >Variable rate</Button>
+            
+            <Row className='tc text-center justify-content-center align-items-center'>
+                <Col className='col-md-5 text-black'>
+                <Button className={'btn1 b shadow-3'} style={{'background-color':`${value100912}`, 'color':`${value10059}`, 'border':`${value10057}`} } >Variable Rate</Button>
+                </Col>
+                
+                <Col className='col-md-4 text-black'>
+                <Button className={'btn1 b shadow-3'} style={{'background-color':`${value100912}`, 'color':`${value10059}`, 'border':`${value10057}`} } >Fixed Rate</Button>
                 </Col>
             </Row>
 
