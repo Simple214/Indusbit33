@@ -274,10 +274,10 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                             </Dropdown.Toggle>
                             
                             <Dropdown.Menu style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="hi.bitbarter.org">हिंदी    <img src={require(`./india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="jp.bitbarter.org">日本語 <img src={require(`./japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="cn.bitbarter.org">中文 <img src={require(`./china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="ru.bitbarter.org">руский <img src={require(`./russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="http://www.hi.bitbarter.org">हिंदी    <img src={require(`./india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="http://www.jp.bitbarter.org">日本語 <img src={require(`./japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="http://www.cn.bitbarter.org">中文 <img src={require(`./china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="http://www.ru.bitbarter.org">руский <img src={require(`./russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
                             <Dropdown.Item style={{'color':`${value10059}`}} href="http://www.bitbarter.org">English <img className='flag5' src={require(`./en.png`)} width='30px' /> </Dropdown.Item>
                             </Dropdown.Menu>
                             
