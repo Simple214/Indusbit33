@@ -985,49 +985,49 @@ bnbvalidation = (event2)=>{
 		const value100 = event.target.value
 		var value101
 		if(this.state.value3=='LTC'){
-			value101=0.02
+			value101=0.25
 		}
 		if(this.state.value3=='BTC'){
-			value101=0.00009
+			value101=0.001
 		}	
 		if(this.state.value3=='TRX'){
-			value101=35
+			value101=350
 		}	
 		if(this.state.value3=='DOGE'){
-			value101=25
+			value101=250
 		}
 		if(this.state.value3=='DASH'){
-			value101=0.04
+			value101=0.4
 		}
 		if(this.state.value3=='BCH'){
-			value101=0.02
+			value101=0.2
 		}
 		if(this.state.value3=='XMR'){
-			value101=0.01
+			value101=0.15
 		}
 		if(this.state.value3=='BNB'){
-			value101=0.008
-		}
-		if(this.state.value3=='AVAX'){
-			value101=0.1
-		}
-		if(this.state.value3=='ADA'){
-			value101=7
-		}
-		if(this.state.value3=='VET'){
-			value101=200
-		}
-		if(this.state.value3=='XTZ'){
-			value101=2
-		}
-		if(this.state.value3=='ETH'){
-			value101=0.01
-		}
-		if(this.state.value3=='SOL'){
 			value101=0.06
 		}
+		if(this.state.value3=='AVAX'){
+			value101=1
+		}
+		if(this.state.value3=='ADA'){
+			value101=60
+		}
+		if(this.state.value3=='VET'){
+			value101=1000
+		}
+		if(this.state.value3=='XTZ'){
+			value101=20
+		}
+		if(this.state.value3=='ETH'){
+			value101=0.015
+		}
+		if(this.state.value3=='SOL'){
+			value101=1
+		}
 		if(this.state.value3=='ETC'){
-			value101=0.1
+			value101=1
 		}
 		if (value100<value101) {
 			this.setState({
