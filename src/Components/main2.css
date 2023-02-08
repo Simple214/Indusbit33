@@ -1,7 +1,10 @@
 .para2005{
     font-size: 14px !important;
 }
-
+.btn2{
+	background-color:white;
+	border:0px solid white;
+}
 .h3_send{
     font-size: 35px !important;
 }

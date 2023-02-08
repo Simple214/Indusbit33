@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import './main2.css'
 
-const Main3 =({value10,value5,value11,value6,value3,value1005,final56,call2home,value19})=>{
+const Main3 =({value10,value5,value11,value6,value3,value1005,final56,call2home,value19,orderid})=>{
     const [lgShow51, setLgShow51] = useState('');
     
     useEffect(() => {
@@ -24,14 +24,29 @@ const Main3 =({value10,value5,value11,value6,value3,value1005,final56,call2home,
         <div>
         <article className="vh-100 dt w-100 bg-dark-pink">
         <div className="dtc v-mid tc white ph3 ph4-l">
-        <article className="mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3">
+        <article className="mw7 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3">
         <Container fluid>
         <Row className='d-flex justify-content-center align-items-center'>
 
+        <Row className='mt-4'>
+        <Col className='col-md-12 text-black'>
+        <img src={require(`./logo.png`)} alt='bitbarter_logo' className='img25' />
+        </Col>
+        </Row>
+        
+        <Row className='mt-4'>
+        <Col className='col-md-12 text-black'>
+        <h2 className='b text-black text-center'>Order ID</h2>
+        <h5 className="b text-black text-center">{orderid}</h5>
+        </Col>
+        </Row>
+        
             <Col className='col-md-2 m-0'>
                 <img src={`https://cryptologos.cc/logos/${value10}coin-${value5}-logo.png`} width={'55px'} />
             </Col>
-
+            
+        
+            
             <Col className='col-md-2  m-0'>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-arrow-right text-black" viewBox="0 0 16 16">
@@ -45,26 +60,23 @@ const Main3 =({value10,value5,value11,value6,value3,value1005,final56,call2home,
             </Col>
 
             </Row>
-
+            
+         
+            
             <Row className='mt-4'>
-                <Col className='col-md-12 text-black'>
-                    <h3 className='b text-black text-center'>{value19}</h3>
-                </Col>
+            <Col className='col-md-12 text-black'>
+            <h3 className='b text-black text-center'>{value19}</h3>
+            </Col>
             </Row>
 
-            <Row className='mt-4'>
-                <Col className='col-md-12 text-black'>
-                    <h3 className='b text-black text-center'>Exchange Done</h3>
+            <Row className='mt-4 d-flex justify-content-center align-items-center'>
+                <Col className='col-md-6 d-flex justify-content-center align-items-center text-black flex-column'>
+                <h4 className='b text-black text-center'>Received</h4>
+                <p className='b text-center'>We Received {value5} ...</p>
                 </Col>
-            </Row>
-
-            <Row className='mt-4 d-flex justify-content-center align-items-center flex-column'>
-                <Col className='col-md-12 d-flex justify-content-center align-items-center text-black flex-column'>
-                    <h3 className='b text-black text-center'>Txn. ID</h3>
-                    <input type='text' id="input56" className='b text-black mt-4 mb-4 p-1 w-100 tc p-3' value={lgShow51} disabled />
-                    <Button variant="" class="btn" onClick={() => {navigator.clipboard.writeText(lgShow51)}}>
-                    <img src={require('./clipboard_copy_icon_152888.png')} width={'35px'}/>
-                    </Button>
+                <Col className='col-md-6 d-flex justify-content-center align-items-center text-black flex-column'>
+                <h4 className='b text-black text-center'>Sent</h4>
+                <p className='b text-center'>We Sent {value6} ...</p>
                 </Col>
             </Row>
 
@@ -77,7 +89,7 @@ const Main3 =({value10,value5,value11,value6,value3,value1005,final56,call2home,
 
             <Row className='mt-4'>
                 <Col className='col-md-12 text-black'>
-                    <h6 className='b text-black text-center'>Make a new exchange....</h6>
+                    <h6 className='b text-black text-center'>Make a new Barter....</h6>
                 <Button className='btn2 b text-black shadow-5' onClick={call2home}>HOME</Button>
                 </Col>
             </Row>
