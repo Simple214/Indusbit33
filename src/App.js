@@ -13,6 +13,7 @@ class App extends React.Component{
   constructor(){
     super()
     this.state={
+	  text_color2:"white",
 	  order_id:'',
       value876:'',
       address_23:'',
@@ -53,6 +54,7 @@ class App extends React.Component{
 	  row_bg:"#ffffff",
 	  row_color:"#d5018e",
 	  bottom_color:'#d5018e',
+	  bottom_color2:'#25ace3',
 	  article_bg:"white",
 	  text_color:'black',
 	  text_body:'white',
@@ -1118,13 +1120,14 @@ bnbvalidation = (event2)=>{
           :<div>{this.state.final_from=='ltc' &&this.state.final_to=='btc'
           ?<div>
           <Main2 value10={this.state.value10} value5={this.state.value5} value11={this.state.value11}  value6={this.state.value6} value3={this.state.value3} orderid={this.state.order_id} amount23={this.state.address569} value1005={this.state.address} final56={this.state.rec_address} backtohome2={this.home234}  final90={this.calltofinal}/>
-                                                                              {/* Footer begins */}
-      <Row className='row1 d-flex justify-content-center align-items-center'>
-        <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-            <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
-        </Col>
-      </Row>
-      {/* Footer ends */}
+          
+          {/* Footer begins */}
+          <Row className='row1 d-flex justify-content-center align-items-center' style={{'color':`${this.state.text_color2}`,'background-color':`${this.state.bottom_color2}`}} >
+          <Col className='col-md-12 d-flex justify-content-center align-items-center'>
+          <p className='b text-center tc mt-4'>bitBarter © 2023</p>
+          </Col>
+          </Row>
+          {/* Footer ends */}
           </div>
           :<div>{this.state.status=='final'
           ?<div>
@@ -1394,7 +1397,7 @@ bnbvalidation = (event2)=>{
 												:<div>{this.state.from=='eth' && this.state.to=='btc'
 													?<div>
 													
-													<Main1 value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme}   value1600={this.state.show3} value501={this.state.show2} send2={this.setvalue} first66={this.state.value876} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc19} reverse={this.reverse1} changetodoge4={this.changetodoge2} changetoltc4={this.to_ltc} changetobtc4={this.changetobtc14} event1={this.dogevalidation} value500={this.state.show} value1500={this.state.show1} value74={'block'} value75={'block'} value76={'none'} value71={'none'} value72={'block'} value73={'block'} value738 ={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value74={'none'} value741={'none'} value750={'none'} value751={'none'} value740={'block'} value738={'block'} backtohome={this.home234}/>
+													<Main1 value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme}   value1600={this.state.show3} value501={this.state.show2} send2={this.setvalue} first66={this.state.value876} first66={this.state.value876} changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={this.state.value3} value4={this.state.value4} value5={this.state.value5} value6={this.state.value6} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc19} reverse={this.reverse1} changetodoge4={this.changetodoge2} changetoltc4={this.to_ltc} changetobtc4={this.changetobtc14} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value74={'block'} value75={'block'} value76={'none'} value71={'none'} value72={'block'} value73={'block'} value738 ={'none'} call={this.calltofinal} value1006={this.hide2} value739={'none'} value74={'none'} value741={'none'} value750={'none'} value751={'none'} value740={'block'} value738={'block'} backtohome={this.home234}/>
 													
 													{/* Footer begins */}
 													<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>

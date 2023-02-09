@@ -250,7 +250,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                         <Navbar.Collapse id="basic-navbar-nav" style={{'background-color':`${value100915}`}} >
                         <Nav className="ms-auto d-flex justify-content-center align-items-center">
                         <Nav.Link href="#home" style={{'color':`${value1008}`}} className='d-flex justify-content-center align-items-center navlink'>Wallets <img src={require(`${value10091}`)}   className='ms-2' width={'17px'}/>
-                        <span className="b span45 d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}}>Working</span>
+                        <span className="b span45 d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}} >Working</span>
                         </Nav.Link>
                         <Nav.Link href="#home" style={{'color':`${value1008}`}} className='d-flex justify-content-center align-items-center navlink'>System Status <img src={require(`${value10091}`)} className='ms-2' width={'17px'}/>
                         <span className="b span45 d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}} >Working</span></Nav.Link>

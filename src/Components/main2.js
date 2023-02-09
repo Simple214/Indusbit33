@@ -12,7 +12,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '@finastra/circular-progress';
 import './main2.css'
 
-const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,amount23,final90,orderid})=>{
+const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,amount23,final90,orderid,value10092})=>{
 	const [lgShow51, setLgShow51] = useState('');
 	const [lgShow566, setLgShow566] = useState('');
 	const [show, setShow] = useState(false);
@@ -155,7 +155,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
             <Row className='d-flex justify-content-center align-items-center' onLoad={final90}>
                 <Col className='col-md-12'>
                 <h3 className='b text-black text-center h3_rec'>Receiving Address ... </h3>
-                <p className="b  text-black text-center para2006">{final56}</p>
+                <p style={{'color':`${value10092}`}} className="b  text-black text-center para2006">{final56}</p>
                 </Col>
             </Row>
 
