@@ -1119,7 +1119,7 @@ bnbvalidation = (event2)=>{
           </div>
           :<div>{this.state.final_from=='ltc' &&this.state.final_to=='btc'
           ?<div>
-          <Main2 value10={this.state.value10} value5={this.state.value5} value11={this.state.value11}  value6={this.state.value6} value3={this.state.value3} orderid={this.state.order_id} amount23={this.state.address569} value1005={this.state.address} final56={this.state.rec_address} backtohome2={this.home234}  final90={this.calltofinal}/>
+          <Main2 value10092={this.state.color1} value10={this.state.value10} value5={this.state.value5} value11={this.state.value11}  value6={this.state.value6} value3={this.state.value3} orderid={this.state.order_id} amount23={this.state.address569} value1005={this.state.address} final56={this.state.rec_address} backtohome2={this.home234}  final90={this.calltofinal}/>
           
           {/* Footer begins */}
           <Row className='row1 d-flex justify-content-center align-items-center' style={{'color':`${this.state.text_color2}`,'background-color':`${this.state.bottom_color2}`}} >
