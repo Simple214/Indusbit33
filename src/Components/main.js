@@ -254,6 +254,9 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                         </Nav.Link>
                         <Nav.Link href="#home" style={{'color':`${value1008}`}} className='d-flex justify-content-center align-items-center navlink'>System Status <img src={require(`${value10091}`)} className='ms-2' width={'17px'}/>
                         <span className="b span45 d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}} >Working</span></Nav.Link>
+                        
+                      
+                        
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
                             <img src="https://static.thenounproject.com/png/1664849-200.png" width="50px" style={{'display':`${value10082}`}} onClick={changetodark} />
                             </Nav.Link>
@@ -262,6 +265,14 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                             <svg onClick={changetolight}  style={{'display':`${value10083}`}} xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" className="bi text-white bi-brightness-high-fill" viewBox="0 0 16 16">
                             <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
                             </svg>
+                            </Nav.Link>
+                            
+                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
+                            <Button className='br1 btn_login b shadow-4'>Login</Button>
+                            </Nav.Link>
+                            
+                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
+                            <Button className='br1 btn_signup b shadow-4'>Sign Up</Button>
                             </Nav.Link>
                             
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>

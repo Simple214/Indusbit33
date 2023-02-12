@@ -17,6 +17,10 @@ body{
 #name:focus{
    outline:none;
 }
+.btn_signup{
+	background-color:#ff0000 !important;
+	border-color:#ff0000 !important;
+}
 #dropdown-basic{
 	background:none !important;
 	border:none !important;
@@ -277,10 +281,6 @@ body{
 .para3000{
     color: red !important;
     font-weight: bolder !important;
-}
-.navbar1{
-	height:95px;
-	background-color: white !important;
 }
 .span45{
     font-size: 10px !important;
