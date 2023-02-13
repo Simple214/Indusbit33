@@ -14,7 +14,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import './main1.css'
 
-const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,logo_value,value10087,value10088,value100910,value10059,value100912,value10057,value100915})=>{
+const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,logo_value,value10087,value10088,value100910,value10059,value100912,value10057,value100915,changetologin,changetosignup})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
@@ -268,11 +268,11 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                             </Nav.Link>
                             
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
-                            <Button className='br1 btn_login b shadow-4'>Login</Button>
+                            <Button className='br5 btn_login b shadow-4' onClick={changetologin} >Login</Button>
                             </Nav.Link>
                             
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
-                            <Button className='br1 btn_signup b shadow-4'>Sign Up</Button>
+                            <Button className='br5 btn-danger b shadow-4' onClick={changetosignup}>Sign Up</Button>
                             </Nav.Link>
                             
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>

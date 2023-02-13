@@ -1,0 +1,29 @@
+.svg20{
+    color: white !important;
+}
+body{
+	background-color:#d5008f !important;
+	margin:0px;
+	padding:0px;
+}
+.input101{
+	border-radius:0px !important;
+	border-top:none !important;
+	border-left:none !important;
+	border-right:none !important;
+}
+.btn100{
+    border: none !important;
+    border-radius: 4px !important;
+}
+.btn100{
+	background-color:#d5008f !important;
+}
+.anchor_t{
+	cursor:pointer;
+	color: #d5008f !important;
+	text-decoration:none !important;
+}
+.anchor_t:hover{
+	color: #0c6efc !important;
+}
