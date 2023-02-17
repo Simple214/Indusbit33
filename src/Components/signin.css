@@ -12,12 +12,19 @@ body{
 	border-left:none !important;
 	border-right:none !important;
 }
+.para3000{
+	color: red !important;
+	font-weight: bolder !important;
+}
 .btn100{
     border: none !important;
     border-radius: 4px !important;
 }
 .btn100{
 	background-color:#d5008f !important;
+}
+.btn100:hover{
+	background-color:#ba0780 !important;
 }
 .anchor_t{
 	cursor:pointer;

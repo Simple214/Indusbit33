@@ -15,6 +15,10 @@ class App extends React.Component{
   constructor(){
     super()
     this.state={
+	  moveahead731:'no',
+	  moveahead732:'no',
+	  show731:'none',
+	  show740:'none',
 	  text_color2:"white",
 	  order_id:'',
       value876:'',
@@ -253,7 +257,7 @@ dogevalidation = (event2)=>{
 }
 
 btcvalidation = (event2)=>{
-  const value100=event2.target.value
+  const value100 = event2.target.value
   this.setState({
     rec_address:value100
   })
@@ -929,9 +933,124 @@ bnbvalidation = (event2)=>{
 			})
 		}
 		
-		login_validation = ()=>{
-			console.log("Validate your Login")
+		
+		login_validation2 = (event)=>{
+			
+			const value100 = event.target.value
+			const isEmpty = value100 => !value100.trim().length;
+			const blank = /^\s+$/;
+			if(value100==null || isEmpty(value100)){
+				this.setState({
+					moveahead731:'no',
+				    show731:'block'
+				})
+			}
+			if(isEmpty(value100)){
+				this.setState({
+				  moveahead731:'no',
+				  show731:'block'
+				})
+			}
+			if(value100!=null){
+				const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				if(value100.match(mailformat)){
+				this.setState({
+					moveahead731:'yes',
+				    show731:'none'
+				})
+				}
+			}
+			
+		
 		}
+		
+		
+		login_validation3 = (event)=>{
+			
+			const value100 = event.target.value
+			console.log(value100)
+			console.log(value100[0])
+			if(value100==null){
+				this.setState({
+					moveahead732:'no',
+				  show740:'block'
+				})
+			}
+			if(value100==""){
+				this.setState({
+					moveahead732:'no',
+				  show740:'block'
+				})
+			}
+			if(value100=="" || value100[0]==undefined){
+				this.setState({
+					moveahead732:'no',
+				  show740:'block'
+				})
+			}
+			if(value100!=null){
+					this.setState({
+						moveahead732:'yes',
+				   show740:'none'
+					})
+			}
+			console.log(value100)
+			console.log(value100[0])
+			
+		}
+		
+		login_validation4 = (event)=>{
+			
+			const value100 = event.target.value
+			if(value100==null || value100[0]==undefined || value100==""){
+				this.setState({
+					moveahead732:'no',
+				  show740:'block'
+				})
+			}
+			if(value100!=null && value100[0]!=undefined && value100!=""){
+				this.setState({
+					moveahead732:'yes',
+				  show740:'none'
+				})
+			}
+
+			
+		}
+		
+		login_validation = ()=>{
+			
+			if(this.state.moveahead731=='yes' && this.state.moveahead732=='yes'){
+				this.setState({
+					show731:'none',
+					show740:'none'
+				})
+				
+			}
+			
+			if(this.state.moveahead731=='no' && this.state.moveahead732=='no'){
+				this.setState({
+					show731:'block',
+					show740:'block'
+				})
+			}
+			
+			if(this.state.moveahead731=='yes' && this.state.moveahead732=='no'){
+				this.setState({
+					show731:'none',
+					show740:'block'
+				})
+			}
+			
+			if(this.state.moveahead731=='no' && this.state.moveahead732=='yes'){
+				this.setState({
+					show731:'block',
+					show740:'none'
+				})
+			}
+			
+		}
+		
 		
 		dark_theme = ()=>{
 			this.setState({
@@ -1463,7 +1582,7 @@ bnbvalidation = (event2)=>{
 															:<div>{this.state.from=='signin' && this.state.to=='signin'
 																?<div>
 																
-																<Signin backtosignup={this.signup} gologin={this.login_validation}/>
+																<Signin signinpassword2={this.login_validation4} value1500={this.state.show731} value1503 = {this.state.show740} signinpassword={this.login_validation3} signinemail={this.login_validation2} backtosignup={this.signup} gologin={this.login_validation}/>
 																
 																{/* Footer begins */}
 																<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`white`}} >
@@ -1477,7 +1596,7 @@ bnbvalidation = (event2)=>{
 																:<div>{this.state.from=='signup' && this.state.to=='signup'
 																	?<div>
 																	
-																	<Signup  backtologin={this.login}/>
+																	<Signup value1500={this.state.show731} value1501 = {this.state.show732}  backtologin={this.login}/>
 																	
 																	
 																	{/* Footer begins */}
