@@ -14,6 +14,13 @@ body{
 .col10{
     cursor: pointer;
 }
+.navbar-toggler{
+	border:2px solid white !important;
+	background-color: rgb(212, 0, 142) !important;
+}
+.navbar-toggler-icon{
+	filter:invert(1);
+}
 #name:focus{
    outline:none;
 }
