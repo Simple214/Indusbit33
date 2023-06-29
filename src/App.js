@@ -52,7 +52,7 @@ class App extends React.Component{
       txn_id:'',
       moveahead2:'',
 	  moveahead3:'no',
-	  theme:'light',
+	  theme:'dark',
 	  text:'black',
 	  url:'./green.png',
 	  color1:"#1c840f",
@@ -69,7 +69,7 @@ class App extends React.Component{
 	  text_color:'black',
 	  text_body:'white',
 	  border:"0px solid white",
-	  first_bg:'#f8f8fb',
+	  first_bg:'dark',
 	  second_bg:'#202429'
     }
   }
@@ -1090,7 +1090,7 @@ bnbvalidation = (event2)=>{
 			this.setState({
 				theme:'dark',
 				text:'white',
-				url:'./red.png',
+				url:'./green.png',
 				color1:'#ce1414',
 				bg_body:"#2c3546",
 				display1:'none',
@@ -1111,7 +1111,7 @@ bnbvalidation = (event2)=>{
 		
 		light_theme = ()=>{
 			this.setState({
-				theme:'light',
+				theme:'dark',
 				 text:'black',
 				 url:'./green.png',
 				 color1:"#1c840f",
@@ -1123,12 +1123,12 @@ bnbvalidation = (event2)=>{
 				 row_bg:"#f0f2f5",
 				 row_color:"#d5018e",
 				 bottom_color:'#d5018e',
-				 article_bg:'white',
+			     article_bg:'#ffffff',
 				 text_color:'black',
 				 text_body:'white',
 				 border:"0px solid white",
-				 first_bg:'#f8f8fb',
-				 second_bg:'#202429'
+				 first_bg:'dark',
+				 second_bg:'dark'
 			})
 		}
 		
