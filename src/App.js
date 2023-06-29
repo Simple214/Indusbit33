@@ -59,7 +59,7 @@ class App extends React.Component{
 	  bg_body:'#d4008e',
 	  display1:"block",
 	  display2:"none",
-	  top_color:"#3166f0",
+	  top_color:"#355c9d",
 	  url2:"./logo.png",
 	  row_bg:"#ffffff",
 	  row_color:"#d5018e",

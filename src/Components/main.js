@@ -257,16 +257,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                         <span className="b text-white span45 d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}} >Working</span></Nav.Link>
                         
                       
-                        
-                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
-                            <img src={require(`./1664849-200.png`)}width="50px" style={{'display':`${value10082}`}} onClick={changetodark} />
-                            </Nav.Link>
-                            
-                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
-                            <svg onClick={changetolight}  style={{'display':`${value10083}`}} xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" className="bi text-white bi-brightness-high-fill" viewBox="0 0 16 16">
-                            <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-                            </svg>
-                            </Nav.Link>                   
+                 
                             
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
                             
@@ -288,14 +279,29 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                             </Dropdown>
                             
                             </Nav.Link>
+                                            
+                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
+                            <img src={require(`./1664849-200.png`)}width="50px" style={{'display':`${value10082}`}} onClick={changetodark} />
+                            </Nav.Link>      
+                            
+                                                        <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
+                            <svg onClick={changetolight}  style={{'display':`${value10083}`}} xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" className="bi text-white bi-brightness-high-fill" viewBox="0 0 16 16">
+                            <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                            </svg>
+                            </Nav.Link>    
+                            
+                            
                         </Nav>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
 			
                 
+        <Container fluid style={{'background-color':`${value10081}`}} >
+        <Row>
+        <Col className='col-md-6'>
 
-			<article className={`vh-100 dt w-100 pt-5 pb-5`} style={{'background-color':`${value10081}`}} >
+			<article className={`vh-100 dt w-100 pt-5 pb-5`}  >
             <div className="dtc v-mid tc white ph3 ph4-l">
             <article className="mw6 center br3 pa2 pa4-ns mv3 ba b--black-10 shadow-3" style={{'background-color':`${value100910}`,'border':`${value10057}`}}  >
             <Container>
@@ -559,10 +565,17 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
             </article>
             </div>
             </article>
+                    </Col>
+            <Col className='col-md-6 justify-content-center align-items-center text-center tc pt-5 pb-5'>
+       <img src={require(`./r1.png`)} width="500px" />
+       <h1 className='b text-center tc fs-1 text-white'>Swap any Crypto you Want.</h1>
+            </Col>
+                    </Row>
+    </Container>
             <Row className='d-flex row589 justify-content-center align-items-center' style={{'background-color':`${value10087}`,'color':`${value10088}`}}>
             <Col className='col-md-12'>
             <h2 className='tc b fs-2 mt-4 text-center'>How to Exchange Crypto</h2>
-            <p className='b fs-4 tc text-cente br'>Exchanging crypto is simple & easy on Bitbarter.</p>
+            <p className='b fs-4 tc text-cente br'>Exchanging crypto is simple & easy on IndusBit.</p>
             <p className='b fs-4 tc text-center'>Follow the four steps</p>
             <Row className='d-flex mt-5 mb-5 justify-content-center align-items-center tc text-center'>
             
@@ -571,7 +584,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" className="bi mt-3 mb-3 bi-hand-index-thumb-fill" viewBox="0 0 16 16">
             <path d="M8.5 1.75v2.716l.047-.002c.312-.012.742-.016 1.051.046.28.056.543.18.738.288.273.152.456.385.56.642l.132-.012c.312-.024.794-.038 1.158.108.37.148.689.487.88.716.075.09.141.175.195.248h.582a2 2 0 0 1 1.99 2.199l-.272 2.715a3.5 3.5 0 0 1-.444 1.389l-1.395 2.441A1.5 1.5 0 0 1 12.42 16H6.118a1.5 1.5 0 0 1-1.342-.83l-1.215-2.43L1.07 8.589a1.517 1.517 0 0 1 2.373-1.852L5 8.293V1.75a1.75 1.75 0 0 1 3.5 0z"/>
             </svg>
-            <h6 className='b fs-6'>Choose the crypto you like to receive</h6>
+            <h6 className='b fs-6'>Choose the Crypto - Pair you like.</h6>
             </Col>
             
             <Col className='col-md-3 col-12'>
