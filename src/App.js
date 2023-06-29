@@ -1226,7 +1226,7 @@ bnbvalidation = (event2)=>{
                           {/* Footer begins */}
 	<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}} >
         <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-        <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+        <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
         </Col>
       </Row>
       {/* Footer ends */}
@@ -1239,7 +1239,7 @@ bnbvalidation = (event2)=>{
                                   {/* Footer begins */}
                                   <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
         <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-        <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+        <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
         </Col>
       </Row>
       {/* Footer ends */}
@@ -1263,7 +1263,7 @@ bnbvalidation = (event2)=>{
                                               {/* Footer begins */}
                                               <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}} >
         <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-        <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+        <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
         </Col>
       </Row>
       {/* Footer ends */}
@@ -1275,7 +1275,7 @@ bnbvalidation = (event2)=>{
                                               {/* Footer begins */}
                                               <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}} >
         <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-        <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+        <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
         </Col>
       </Row>
       {/* Footer ends */}
@@ -1287,7 +1287,7 @@ bnbvalidation = (event2)=>{
                                               {/* Footer begins */}
                                               <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}} >
         <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-            <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+            <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
         </Col>
       </Row>
       {/* Footer ends */}
@@ -1299,7 +1299,7 @@ bnbvalidation = (event2)=>{
           {/* Footer begins */}
           <Row className='row1 d-flex justify-content-center align-items-center' style={{'color':`${this.state.text_color2}`,'background-color':`${this.state.bottom_color2}`}} >
           <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-          <p className='b text-center tc mt-4'>bitBarter © 2023</p>
+          <p className='b text-center tc mt-4'>IndusBit © 2023</p>
           </Col>
           </Row>
           {/* Footer ends */}
@@ -1311,7 +1311,7 @@ bnbvalidation = (event2)=>{
                                                                                 {/* Footer begins */}
       <Row className='row1 d-flex justify-content-center align-items-center'>
         <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-            <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+            <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
         </Col>
       </Row>
       {/* Footer ends */}
@@ -1326,7 +1326,7 @@ bnbvalidation = (event2)=>{
 			  {/* Footer begins */}
 			  <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 			  <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-			  <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+			  <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 			  </Col>
 			  </Row>
 			  {/* Footer ends */}
@@ -1341,7 +1341,7 @@ bnbvalidation = (event2)=>{
 				{/* Footer begins */}
 				<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 				<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-				<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+				<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 				</Col>
 				</Row>
 				{/* Footer ends */}
@@ -1356,7 +1356,7 @@ bnbvalidation = (event2)=>{
           {/* Footer begins */}
           <Row className='row1 d-flex justify-content-center align-items-center'style={{'background-color':`${this.state.bottom_color}`}}>
           <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-          <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+          <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
           </Col>
           </Row>
           {/* Footer ends */}
@@ -1370,7 +1370,7 @@ bnbvalidation = (event2)=>{
           {/* Footer begins */}
           <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
           <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-          <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+          <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
           </Col>
           </Row>
           {/* Footer ends */}
@@ -1384,7 +1384,7 @@ bnbvalidation = (event2)=>{
           {/* Footer begins */}
           <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
           <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-          <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+          <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
           </Col>
           </Row>
           {/* Footer ends */}
@@ -1398,7 +1398,7 @@ bnbvalidation = (event2)=>{
       {/* Footer begins */}
       <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
       <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-      <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+      <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
       </Col>
       </Row>
       {/* Footer ends */}
@@ -1413,7 +1413,7 @@ bnbvalidation = (event2)=>{
           {/* Footer begins */}
           <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
           <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-          <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+          <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
           </Col>
           </Row>
           {/* Footer ends */}
@@ -1427,7 +1427,7 @@ bnbvalidation = (event2)=>{
             {/* Footer begins */}
             <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
             <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-            <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+            <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
             </Col>
             </Row>
             {/* Footer ends */}
@@ -1442,7 +1442,7 @@ bnbvalidation = (event2)=>{
 				{/* Footer begins */}
 				<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 				<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-				<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+				<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 				</Col>
 				</Row>
 				{/* Footer ends */}
@@ -1457,7 +1457,7 @@ bnbvalidation = (event2)=>{
 					 {/* Footer begins */}
 					 <Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 					 <Col className='col-md-12 d-flex justify-content-center align-items-center'>
-					 <p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+					 <p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 					 </Col>
 					 </Row>
 					 {/* Footer ends */}
@@ -1472,7 +1472,7 @@ bnbvalidation = (event2)=>{
 					{/* Footer begins */}
 					<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 					<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-					<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+					<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 					</Col>
 					</Row>
 					{/* Footer ends */}
@@ -1487,7 +1487,7 @@ bnbvalidation = (event2)=>{
 							{/* Footer begins */}
 							<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 							<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-							<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+							<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 							</Col>
 							</Row>
 							{/* Footer ends */}
@@ -1502,7 +1502,7 @@ bnbvalidation = (event2)=>{
 								{/* Footer begins */}
 								<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 								<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-								<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+								<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 								</Col>
 								</Row>
 								{/* Footer ends */}
@@ -1517,7 +1517,7 @@ bnbvalidation = (event2)=>{
 									{/* Footer begins */}
 									<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}} >
 									<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-									<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+									<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 									</Col>
 									</Row>
 									{/* Footer ends */}
@@ -1532,7 +1532,7 @@ bnbvalidation = (event2)=>{
 										{/* Footer begins */}
 										<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 										<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-										<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+										<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 										</Col>
 										</Row>
 										{/* Footer ends */}
@@ -1547,7 +1547,7 @@ bnbvalidation = (event2)=>{
 											{/* Footer begins */}
 											<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}} >
 											<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-											<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+											<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 											</Col>
 											</Row>
 											{/* Footer ends */}
@@ -1562,7 +1562,7 @@ bnbvalidation = (event2)=>{
 												{/* Footer begins */}
 												<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 												<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-												<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+												<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 												</Col>
 												</Row>
 												{/* Footer ends */}
@@ -1577,7 +1577,7 @@ bnbvalidation = (event2)=>{
 													{/* Footer begins */}
 													<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 													<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-													<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+													<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 													</Col>
 													</Row>
 													{/* Footer ends */}
@@ -1592,7 +1592,7 @@ bnbvalidation = (event2)=>{
 														{/* Footer begins */}
 														<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 														<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-														<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+														<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 														</Col>
 														</Row>
 														{/* Footer ends */}
@@ -1607,7 +1607,7 @@ bnbvalidation = (event2)=>{
 															{/* Footer begins */}
 															<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`${this.state.bottom_color}`}}>
 															<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-															<p className='b text-white text-center tc mt-4'>bitBarter © 2023</p>
+															<p className='b text-white text-center tc mt-4'>IndusBit © 2023</p>
 															</Col>
 															</Row>
 															{/* Footer ends */}
@@ -1621,7 +1621,7 @@ bnbvalidation = (event2)=>{
 																{/* Footer begins */}
 																<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`white`}} >
 																<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-																<p className='b para25 text-center tc mt-4'>bitBarter © 2023</p>
+																<p className='b para25 text-center tc mt-4'>IndusBit © 2023</p>
 																</Col>
 																</Row>
 																{/* Footer ends */}
@@ -1636,7 +1636,7 @@ bnbvalidation = (event2)=>{
 																	{/* Footer begins */}
 																	<Row className='row1 d-flex justify-content-center align-items-center' style={{'background-color':`white`}} >
 																	<Col className='col-md-12 d-flex justify-content-center align-items-center'>
-																	<p className='b para25 text-center tc mt-4'>bitBarter © 2023</p>
+																	<p className='b para25 text-center tc mt-4'>IndusBit © 2023</p>
 																	</Col>
 																	</Row>
 																	{/* Footer ends */}

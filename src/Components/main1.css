@@ -11,6 +11,11 @@ body{
     font-size: 20px !important;
     text-align: center !important;
 }
+@media (max-width: 767px){
+  body {
+    padding: 0;
+  }
+}
 .col10{
     cursor: pointer;
 }
