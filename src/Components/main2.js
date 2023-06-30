@@ -94,7 +94,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
                 </Navbar>
                      </Row>
 
-<Row className='d-flex justify-content-center align-items-center' style={{'background-color':'#d5018e'}}>
+<Row className='d-flex justify-content-center align-items-center' style={{'background-color':`${value0789}`}} >
 <Col className='col-md-12 col-12'>
         <article className="vh-100 dt w-100">
         <div className="dtc v-mid tc white ph3 ph4-l">
@@ -188,7 +188,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
         </article>
         </Col>
         </Row>
-        <Row className='pt-3 d-flex justify-content-center align-items-center' style={{'background-color':'#d5018e','border-top':'5px solid white'}} >
+        <Row className='pt-3 d-flex justify-content-center align-items-center' style={{'background-color':`${value0789}`,'border-top':'5px solid white'}} >
           <Col className='col-md-12 d-flex justify-content-center align-items-center'>
           <p className='b text-center tc text-white'>IndusBit © 2023</p>
         </Col>

@@ -299,7 +299,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                 </Navbar>
                      </Row>
 
-        <Row className='d-flex justify-content-center align-items-center ' style={{'background-color':`${value0789}`}}>
+        <Row className='d-flex justify-content-center align-items-center ' style={{'background-color':`${value0789}`}} >
         <Col className='col-md-6'>
 
 			<article className={`vh-100 dt w-100 pt-5 pb-5`}  >
