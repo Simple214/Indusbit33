@@ -1,4 +1,5 @@
 import React from "react";  
+import { TypeAnimation } from 'react-type-animation';
 import { useState,useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -242,7 +243,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
         <input id="name" placeholder='Your Order ID' onChange={value0201} className="b input-reset ba b--black-20 pt-2 pb-2 ps-2 db w-60" type="text" aria-describedby="name-desc" /> </Col>
         
         </Row>
-        <Navbar bg={theme} expand="lg" className='navbar1'>
+        <Navbar bg={theme} expand="lg">
         <Container fluid>
                         <Navbar.Brand href="#home" className="d-flex justify-content-center align-items-center mt-1">
                             <img src={require(`${logo_value}`)} alt='bitbarter_logo' className='img25' onClick={backtohome} />
@@ -273,7 +274,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                             <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.jp.bitbarter.org" target="_blank">日本語 <img src={require(`./japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
                             <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.cn.bitbarter.org" target="_blank">中文 <img src={require(`./china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
                             <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.ru.bitbarter.org" target="_blank">руский <img src={require(`./russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.bitbarter.org" target="_blank">English <img className='flag5' src={require(`./en.png`)} width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.bitbarter.org" target="_blank">English </Dropdown.Item>
                             </Dropdown.Menu>
                             
                             </Dropdown>
@@ -567,8 +568,38 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
             </article>
                     </Col>
             <Col className='col-md-6 justify-content-center align-items-center text-center tc pt-5 pb-5'>
-       <img src={require(`./r1.png`)} width="500px" />
-       <h1 className='b text-center tc fs-1 text-white'>Swap any Crypto you Want.</h1>
+            <Row>
+        <img src={require(`./r1.png`)} width="500px" />
+            </Row>
+             <Row>
+               <TypeAnimation className='b text-center tc text-white'
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        'Swap any Crypto you want',
+        1000, // wait 1s before replacing "Mice" with "Hamsters"
+        'Bitcoin (BTC)',
+        1000,
+        'Ethereum (ETH)',
+        1000,
+             'Binance Coin (BNB)',
+        1000,
+             'Tether US (USDT)',
+        1000,
+             'Monero (XMR)',
+        1000,
+        'Litecoin (LTC)',
+        1000,
+            '& any other crypto you wish',
+        1000
+      ]}
+      wrapper="span"
+      speed={50}
+      style={{ fontSize: '3em', display: 'inline-block' }}
+      repeat={Infinity}
+    />
+             </Row>
+
+    
             </Col>
                     </Row>
     </Container>
