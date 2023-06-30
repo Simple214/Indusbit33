@@ -243,6 +243,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
         <input id="name" placeholder='Your Order ID' onChange={value0201} className="b input-reset ba b--black-20 pt-2 pb-2 ps-2 db w-60" type="text" aria-describedby="name-desc" /> </Col>
         
         </Row>
+          <Row className='d-flex justify-content-end  align-items-center'>
         <Navbar bg={theme} expand="lg">
         <Container fluid>
                         <Navbar.Brand href="#home" className="d-flex justify-content-center align-items-center mt-1">
@@ -296,10 +297,9 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
+                     </Row>
 			
-                
-        <Container fluid style={{'background-color':`${value10081}`}} >
-        <Row>
+        <Row className='d-flex justify-content-center align-items-center bg-red'>
         <Col className='col-md-6'>
 
 			<article className={`vh-100 dt w-100 pt-5 pb-5`}  >
@@ -321,7 +321,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
             </Row>
 
             <Row className='mt-3 justify-content-center align-items-center'>
-            <Col className='col-md-5 text-center tc col10'>
+            <Col className='col-md-5 col-12 text-center tc col10'>
             <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3" style={{'background-color':`${value100910}`,'border':`${value10057}`}} onClick={() => {
 				setLgShow(true)
 				setLgShow2('SEND')
@@ -332,14 +332,14 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                 </article>
                 </Col>
 
-                <Col className='col-sm-2 tc text-center col13'>
+                <Col className='col-sm-2 col-12 tc text-center col13'>
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" style={{'color':`${value10059}`}} className="bi bi-arrow-left-right svg1" viewBox="0 0 16 16" onClick={reverse}>
                 <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
                 </svg>
                 </Col>
 
-                <Col className='col-md-5 text-center tc col10'>
+                <Col className='col-md-5 col-12 text-center tc col10'>
                 <article style={{'background-color':`${value100910}`,'border':`${value10057}`}} className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3" onClick={() => {
 					setLgShow3(true)
 					setLgShow2('RECEIVE')
@@ -572,37 +572,12 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
         <img src={require(`./r1.png`)} width="500px" />
             </Row>
              <Row>
-               <TypeAnimation className='b text-center tc text-white'
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        'Swap any Crypto you want',
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'Bitcoin (BTC)',
-        1000,
-        'Ethereum (ETH)',
-        1000,
-             'Binance Coin (BNB)',
-        1000,
-             'Tether US (USDT)',
-        1000,
-             'Monero (XMR)',
-        1000,
-        'Litecoin (LTC)',
-        1000,
-            '& any other crypto you wish',
-        1000
-      ]}
-      wrapper="span"
-      speed={50}
-      style={{ fontSize: '3em', display: 'inline-block' }}
-      repeat={Infinity}
-    />
+             <h1 className='b text-white tc text-center'>SWAP ANY CRYPTO YOU WANT</h1>
              </Row>
 
     
             </Col>
                     </Row>
-    </Container>
             <Row className='d-flex row589 justify-content-center align-items-center' style={{'background-color':`${value10087}`,'color':`${value10088}`}}>
             <Col className='col-md-12'>
             <h2 className='tc b fs-2 mt-4 text-center'>How to Exchange Crypto</h2>
