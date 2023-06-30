@@ -247,7 +247,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
         <Navbar bg={theme} expand="lg">
         <Container fluid>
                         <Navbar.Brand href="#home" className="d-flex justify-content-center align-items-center mt-1">
-                            <img src={require(`${logo_value}`)} alt='bitbarter_logo' className='img25' onClick={backtohome} />
+                            <img src={require(`${logo_value}`)} alt='bitbarter_logo' className='img25 ms-5' onClick={backtohome} />
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav" style={{'background-color':`${value100915}`}} >
