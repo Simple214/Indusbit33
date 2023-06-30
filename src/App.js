@@ -772,10 +772,10 @@ bnbvalidation = (event2)=>{
 	  }
 
       home234 = ()=>{
-        window.open('https://www.bitbarter.org', '_blank');
+        window.open('https://www.indusbit.org', '_blank');
       }
       home235 = ()=>{
-		  window.open('https://www.bitbarter.org');
+		  window.open('https://www.indusbit.org');
 	  }
 
           

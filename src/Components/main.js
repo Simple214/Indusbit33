@@ -271,11 +271,11 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                             </Dropdown.Toggle>
                             
                             <Dropdown.Menu style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.hi.bitbarter.org" target="_blank">हिंदी    <img src={require(`./india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.jp.bitbarter.org" target="_blank">日本語 <img src={require(`./japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.cn.bitbarter.org" target="_blank">中文 <img src={require(`./china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.ru.bitbarter.org" target="_blank">руский <img src={require(`./russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.bitbarter.org" target="_blank">English </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.hi.indusbit.org" target="_blank">हिंदी    <img src={require(`./india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.jp.indusbit.org" target="_blank">日本語 <img src={require(`./japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.cn.indusbit.org" target="_blank">中文 <img src={require(`./china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.ru.indusbit.org" target="_blank">руский <img src={require(`./russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org" target="_blank">English </Dropdown.Item>
                             </Dropdown.Menu>
                             
                             </Dropdown>
