@@ -61,40 +61,21 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
         <Navbar bg={theme} expand="lg">
         <Container fluid>
                         <Navbar.Brand href="#home" className="d-flex justify-content-center align-items-center mt-1">
-                            <img src={require(`${logo_value}`)} alt='bitbarter_logo' className='img25 ms-5' onClick={backtohome} />
+                            <img src={require(`./logo.png`)} alt='bitbarter_logo' className='img25 ms-5' onClick={backtohome} />
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav" style={{'background-color':`${value100915}`}} >
                         <Nav className="ms-auto d-flex justify-content-center align-items-center">
-                        <Nav.Link href="#home" style={{'color':`${value1008}`}} className=' b text-white d-flex justify-content-center align-items-center navlink'>Wallets <img src={require(`${value10091}`)}   className='ms-2' width={'17px'}/>
+                        <Nav.Link href="#home" style={{'color':`${value1008}`}} className=' b text-white d-flex justify-content-center align-items-center navlink'>Wallets <img src={require(`./green.png`)}   className='ms-2' width={'17px'}/>
                         <span className="b span45 text-white d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}} >Working</span>
                         </Nav.Link>
-                        <Nav.Link href="#home" style={{'color':`${value1008}`}} className='b text-white  d-flex justify-content-center align-items-center navlink'>System Status <img src={require(`${value10091}`)} className='ms-2' width={'17px'}/>
+                        <Nav.Link href="#home" style={{'color':`${value1008}`}} className='b text-white  d-flex justify-content-center align-items-center navlink'>System Status <img src={require(`./green.png`)} className='ms-2' width={'17px'}/>
                         <span className="b text-white span45 d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}} >Working</span></Nav.Link>
                         
                       
                  
                             
-                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
-                            
-                            <Dropdown>
-                            
-                            <Dropdown.Toggle id="dropdown-basic">
-                            <img src={require(`./lang2.png`)} width="70px" style={{'display':`${value10082}`}}  />
-                            <img src={require(`./lang2.png`)} width="70px" style={{'display':`${value10083}`}}  />
-                            </Dropdown.Toggle>
-                            
-                            <Dropdown.Menu style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.hi.indusbit.org" target="_blank">हिंदी    <img src={require(`./india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.jp.indusbit.org" target="_blank">日本語 <img src={require(`./japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.cn.indusbit.org" target="_blank">中文 <img src={require(`./china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.ru.indusbit.org" target="_blank">руский <img src={require(`./russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org" target="_blank">English </Dropdown.Item>
-                            </Dropdown.Menu>
-                            
-                            </Dropdown>
-                            
-                            </Nav.Link>
+ 
                                             
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
                             <img src={require(`./1664849-200.png`)}width="50px" style={{'display':`${value10082}`}} onClick={changetodark} />
@@ -113,8 +94,9 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
                 </Navbar>
                      </Row>
 
-
-        <article className="vh-100 dt w-100 bg-dark-pink">
+<Row className='d-flex justify-content-center align-items-center' style={{'background-color':'#d5018e'}}>
+<Col className='col-md-12 col-12'>
+        <article className="vh-100 dt w-100">
         <div className="dtc v-mid tc white ph3 ph4-l">
         <article className="mw7 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3">
         <Container fluid>
@@ -194,15 +176,23 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 
             <Row className='d-flex justify-content-center align-items-center' onLoad={final90}>
                 <Col className='col-md-12'>
-                <h3 className='b text-black text-center h3_rec'>Receiving Address ... </h3>
-                <p style={{'color':`${value10092}`}} className="b  text-black text-center para2006">{final56}</p>
+                <h3 className='b text-black text-center '>Receiving Address ... </h3>
+                <p className='b text-center fs-2' style={{'color':'#d5018e'}} className="b fs-5 text-center">{final56}</p>
                 </Col>
             </Row>
+            
 
         </Container>
         </article>
         </div>
         </article>
+        </Col>
+        </Row>
+        <Row className='pt-3 d-flex justify-content-center align-items-center' style={{'background-color':'#d5018e','border-top':'5px solid white'}} >
+          <Col className='col-md-12 d-flex justify-content-center align-items-center'>
+          <p className='b text-center tc text-white'>IndusBit © 2023</p>
+        </Col>
+          </Row>
     </div>
     )
 }  
