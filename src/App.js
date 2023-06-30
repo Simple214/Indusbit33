@@ -1294,7 +1294,7 @@ bnbvalidation = (event2)=>{
           </div>
           :<div>{this.state.final_from=='ltc' &&this.state.final_to=='btc'
           ?<div>
-          <Main2 theme={this.state.theme} value10092={this.state.color1} value10={this.state.value10} value5={this.state.value5} value11={this.state.value11}  value6={this.state.value6} value3={this.state.value3} orderid={this.state.order_id} amount23={this.state.address569} value1005={this.state.address} final56={this.state.rec_address} backtohome2={this.home234}  final90={this.calltofinal}/>
+          <Main2 value10082={this.state.display1} value10083={this.state.display2} theme={this.state.theme} value10092={this.state.color1} value10={this.state.value10} value5={this.state.value5} value11={this.state.value11}  value6={this.state.value6} value3={this.state.value3} orderid={this.state.order_id} amount23={this.state.address569} value1005={this.state.address} final56={this.state.rec_address} backtohome={this.home234}  final90={this.calltofinal} changetodark={this.dark_theme} changetolight={this.light_theme} />
 
           </div>
           :<div>{this.state.status=='final'
