@@ -7,12 +7,13 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Nav from 'react-bootstrap/Nav';
+import Dropdown from 'react-bootstrap/Dropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '@finastra/circular-progress';
 import './main2.css'
 
-const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,amount23,final90,orderid,value10092})=>{
+const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,value10082,value10083,backtohome,value10091,amount23,final90,orderid,value10092,value100915,value1008,value0789,changetolight,changetodark,value10059,theme,logo_value,value10057,value100910})=>{
 	const [lgShow51, setLgShow51] = useState('');
 	const [lgShow566, setLgShow566] = useState('');
 	const [show, setShow] = useState(false);
@@ -56,23 +57,62 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
     return(
         <div>
 
-                            <Navbar bg="light" expand="lg" className='navbar1'>
-                            <Container>
-                            <Navbar.Brand href="#home">
-                            <img src={require('./logo.png')} alt='bitbarter_logo' className='img25'  onClick={backtohome2}/>
+       <Row className='d-flex justify-content-end  align-items-center'>
+        <Navbar bg={theme} expand="lg">
+        <Container fluid>
+                        <Navbar.Brand href="#home" className="d-flex justify-content-center align-items-center mt-1">
+                            <img src={require(`${logo_value}`)} alt='bitbarter_logo' className='img25 ms-5' onClick={backtohome} />
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
+                        <Navbar.Collapse id="basic-navbar-nav" style={{'background-color':`${value100915}`}} >
                         <Nav className="ms-auto d-flex justify-content-center align-items-center">
-                        <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>Wallets <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Icon_green_lamp_on.svg/512px-Icon_green_lamp_on.svg.png'  className='ms-2' width={'15px'}/>
-                        <span className="b span45 d-flex justify-content-center align-items-center">Working</span>
+                        <Nav.Link href="#home" style={{'color':`${value1008}`}} className=' b text-white d-flex justify-content-center align-items-center navlink'>Wallets <img src={require(`${value10091}`)}   className='ms-2' width={'17px'}/>
+                        <span className="b span45 text-white d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}} >Working</span>
                         </Nav.Link>
-                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>System Stauts <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Icon_green_lamp_on.svg/512px-Icon_green_lamp_on.svg.png' className='ms-2' width={'15px'}/>
-                            <span className="b span45 d-flex justify-content-center align-items-center">Working</span></Nav.Link>
+                        <Nav.Link href="#home" style={{'color':`${value1008}`}} className='b text-white  d-flex justify-content-center align-items-center navlink'>System Status <img src={require(`${value10091}`)} className='ms-2' width={'17px'}/>
+                        <span className="b text-white span45 d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}} >Working</span></Nav.Link>
+                        
+                      
+                 
+                            
+                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
+                            
+                            <Dropdown>
+                            
+                            <Dropdown.Toggle id="dropdown-basic">
+                            <img src={require(`./lang2.png`)} width="70px" style={{'display':`${value10082}`}}  />
+                            <img src={require(`./lang2.png`)} width="70px" style={{'display':`${value10083}`}}  />
+                            </Dropdown.Toggle>
+                            
+                            <Dropdown.Menu style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.hi.indusbit.org" target="_blank">हिंदी    <img src={require(`./india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.jp.indusbit.org" target="_blank">日本語 <img src={require(`./japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.cn.indusbit.org" target="_blank">中文 <img src={require(`./china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.ru.indusbit.org" target="_blank">руский <img src={require(`./russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org" target="_blank">English </Dropdown.Item>
+                            </Dropdown.Menu>
+                            
+                            </Dropdown>
+                            
+                            </Nav.Link>
+                                            
+                            <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
+                            <img src={require(`./1664849-200.png`)}width="50px" style={{'display':`${value10082}`}} onClick={changetodark} />
+                            </Nav.Link>      
+                            
+                                                        <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
+                            <svg onClick={changetolight}  style={{'display':`${value10083}`}} xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" className="bi text-white bi-brightness-high-fill" viewBox="0 0 16 16">
+                            <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                            </svg>
+                            </Nav.Link>    
+                            
+                            
                         </Nav>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
+                     </Row>
+
 
         <article className="vh-100 dt w-100 bg-dark-pink">
         <div className="dtc v-mid tc white ph3 ph4-l">
