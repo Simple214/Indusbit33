@@ -16,6 +16,21 @@ body{
     padding: 0;
   }
 }
+
+@media (min-width: 320px) and (max-width:425px) {
+.main_row{
+flex-direction:column !important;
+}
+.img_special1{
+width:100px !important;
+}
+
+.img_special2{
+width:100px !important;
+}
+}
+
+
 .col10{
     cursor: pointer;
 }

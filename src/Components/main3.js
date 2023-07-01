@@ -30,7 +30,7 @@ const Main3 =({value10,value5,value11,value6,value3,value1005,final56,call2home,
 
         <Row className='mt-4'>
         <Col className='col-md-12 text-black'>
-        <img src={require(`./logo.png`)} alt='bitbarter_logo' className='img25' />
+        <img src={require(`./images/logo.png`)} alt='bitbarter_logo' className='img25' />
         </Col>
         </Row>
         

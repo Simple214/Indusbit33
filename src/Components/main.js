@@ -46,67 +46,6 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 
     useEffect(() => {
 		
-		if(value3=="LTC"){
-			setLgShow6("#345c9c")
-			setLgShow233("0.25")
-		}
-		if(value3=="TRX"){
-			setLgShow6("#fe060b")
-			setLgShow233("350")
-		}
-		if(value3=="BTC"){
-			setLgShow6("#f6921b")
-			setLgShow233("0.001")
-		}
-		if(value3=="DOGE"){
-			setLgShow6("#baa133")
-			setLgShow233("250")
-		}
-		if(value3=="DASH"){
-			setLgShow6("#2673c3")
-			setLgShow233("0.4")
-		}
-		if(value3=="BCH"){
-			setLgShow6("#0bc18d")
-			setLgShow233("0.2")
-		}
-		if(value3=="XMR"){
-			setLgShow6("#f26623")
-			setLgShow233("0.15")
-		}
-		if(value3=="BNB"){
-			setLgShow6("#f0b80c")
-			setLgShow233("0.06")
-		}
-		if(value3=="AVAX"){
-			setLgShow6("#e64041")
-			setLgShow233("1")
-		}
-		if(value3=="ADA"){
-			setLgShow6("#0033af")
-			setLgShow233("60")
-		}
-		if(value3=="VET"){
-			setLgShow6("#16bdfe")
-			setLgShow233("1000")
-		}
-		if(value3=="XTZ"){
-			setLgShow6("#2c7df9")
-			setLgShow233("20")
-		}
-		if(value3=="ETH"){
-			setLgShow6("#393939")
-			setLgShow233("0.015")
-		}
-		if(value3=="SOL"){
-			setLgShow6("#dc1fff")
-			setLgShow233("1")
-		}
-		if(value3=="ETC"){
-			setLgShow6("#3ab93b")
-			setLgShow233("1")
-		}
-		
 		fetch("https://rich-tan-lovebird-coat.cyclic.app/price25",{
 			'method':'post',
 			'headers':{'Content-type':'application/json'},
@@ -266,15 +205,15 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                             <Dropdown>
                             
                             <Dropdown.Toggle id="dropdown-basic">
-                            <img src={require(`./lang2.png`)} width="70px" style={{'display':`${value10082}`}}  />
-                            <img src={require(`./lang2.png`)} width="70px" style={{'display':`${value10083}`}}  />
+                            <img src={require(`./images/lang2.png`)} width="70px" style={{'display':`${value10082}`}}  />
+                            <img src={require(`./images/lang2.png`)} width="70px" style={{'display':`${value10083}`}}  />
                             </Dropdown.Toggle>
                             
                             <Dropdown.Menu style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.hi.indusbit.org" target="_blank">हिंदी    <img src={require(`./india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.jp.indusbit.org" target="_blank">日本語 <img src={require(`./japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.cn.indusbit.org" target="_blank">中文 <img src={require(`./china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.ru.indusbit.org" target="_blank">руский <img src={require(`./russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.hi.indusbit.org" target="_blank">हिंदी    <img src={require(`./images/india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.jp.indusbit.org" target="_blank">日本語 <img src={require(`./images/japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.cn.indusbit.org" target="_blank">中文 <img src={require(`./images/china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.ru.indusbit.org" target="_blank">руский <img src={require(`./images/russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
                             <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org" target="_blank">English </Dropdown.Item>
                             </Dropdown.Menu>
                             
@@ -283,7 +222,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                             </Nav.Link>
                                             
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
-                            <img src={require(`./1664849-200.png`)}width="50px" style={{'display':`${value10082}`}} onClick={changetodark} />
+                            <img src={require(`./images/1664849-200.png`)}width="50px" style={{'display':`${value10082}`}} onClick={changetodark} />
                             </Nav.Link>      
                             
                                                         <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
@@ -326,7 +265,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 				setLgShow(true)
 				setLgShow2('SEND')
 			}}>
-                    <img src={require(`./${value10}.png`)}/>
+                    <img src={require(`./images/${value10}.png`)}/>
                     <h3 className='b send_r mt-4 mb-1' style={{'color':`${value10059}`}} >YOU SEND</h3>
                     <p className='b' style={{'color':`${value10059}`}} >{value3}</p>
                 </article>
@@ -344,7 +283,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 					setLgShow3(true)
 					setLgShow2('RECEIVE')
 				}}>
-                <img src={require(`./${value11}.png`)}/>
+                <img src={require(`./images/${value11}.png`)}/>
                 <h3 className='b send_r mt-4 mb-1' style={{'color':`${value10059}`}} >YOU RECEIVE</h3>
                 <p className='b' style={{'color':`${value10059}`}} >{value4}</p>
                 </article>
@@ -569,7 +508,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                     </Col>
             <Col className='col-md-6 justify-content-center align-items-center text-center tc pt-5 pb-5'>
             <Row>
-        <img src={require(`./r1.png`)} width="500px" />
+        <img src={require(`./images/r1.png`)} width="500px" />
             </Row>
              <Row>
              <h1 className='b text-white tc text-center'>SWAP ANY CRYPTO YOU WANT</h1>
