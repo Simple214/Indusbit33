@@ -154,7 +154,7 @@ const BTC= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
             </Row>
 
             <Row className='mt-3 justify-content-center align-items-center'>
-            <Col className='col-md-5 col-12 text-center tc col10'>
+            <Col className='col-md-5 col-12 text-center tc col10 col_special'>
             <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3" style={{'background-color':`${value100910}`,'border':`${value10057}`}} onClick={() => {
 				setLgShow(true)
 				setLgShow2('SEND')

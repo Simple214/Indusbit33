@@ -30,6 +30,16 @@ width:100px !important;
 }
 }
 
+@media (min-width: 426px) and (max-width:768px) {
+.main_row{
+flex-direction:column !important;
+}
+.col-md-6 {
+    flex: 0 0 auto !important;
+    width: 75% !important;
+}
+}
+
 
 .col10{
     cursor: pointer;
