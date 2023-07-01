@@ -238,7 +238,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
                 </Navbar>
                      </Row>
 
-        <Row className='d-flex justify-content-center align-items-center ' style={{'background-color':`${value0789}`}} >
+        <Row className='d-flex justify-content-center align-items-center main_row' style={{'background-color':`${value0789}`}} >
         <Col className='col-md-6'>
 
 			<article className={`vh-100 dt w-100 pt-5 pb-5`}  >
@@ -265,7 +265,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 				setLgShow(true)
 				setLgShow2('SEND')
 			}}>
-                    <img src={require(`./images/${value10}.png`)}/>
+                    <img src={require(`./images/${value10}.png`)} className='img_special1' />
                     <h3 className='b send_r mt-4 mb-1' style={{'color':`${value10059}`}} >YOU SEND</h3>
                     <p className='b' style={{'color':`${value10059}`}} >{value3}</p>
                 </article>
@@ -283,7 +283,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
 					setLgShow3(true)
 					setLgShow2('RECEIVE')
 				}}>
-                <img src={require(`./images/${value11}.png`)}/>
+                <img src={require(`./images/${value11}.png`)} className='img_special2' />
                 <h3 className='b send_r mt-4 mb-1' style={{'color':`${value10059}`}} >YOU RECEIVE</h3>
                 <p className='b' style={{'color':`${value10059}`}} >{value4}</p>
                 </article>
