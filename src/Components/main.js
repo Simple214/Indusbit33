@@ -559,6 +559,7 @@ const Main1= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
             <h3 className='text-white b text-center tc' >IndusBit © 2023</h3>
             </Col>
             </Row>
+            
         </div>
     )
 }
