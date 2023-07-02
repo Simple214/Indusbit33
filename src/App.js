@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Main1 from './Components/main';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, Routes,Link } from "react-router-dom"
+import { Route, Routes,Link,Navigate } from "react-router-dom"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {useEffect} from 'react'
@@ -566,7 +566,7 @@ class App extends React.Component{
       <div>
             <Routes>
             
-           <Route index path="/" element={ <Main1 value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme}    first66={this.state.value876}  change1={this.changevalue} value2 ={this.state.value2} value3={'LTC'} value4={'BTC'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} call={this.calltofinal} value1006={this.hide2} value10070={this.hide3} value739={'none'} backtohome={this.home234}/>} />
+        <Route path="/" element={<Navigate to="/ltc/btc" replace />} />
            
         <Route path="/ltc">
     
@@ -578,7 +578,6 @@ class App extends React.Component{
     } />
     
   </Route>
-  
     </Routes>
 
     
