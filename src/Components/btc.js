@@ -2,6 +2,7 @@ import React from "react";
 import { TypeAnimation } from 'react-type-animation';
 import { useState,useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
+import { Route, Routes,Link,Navigate } from "react-router-dom"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { sha256 } from 'js-sha256';
@@ -15,13 +16,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import './main1.css'
 
-const BTC= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,logo_value,value10087,value10088,value100910,value10059,value100912,value10057,value100915,changetologin,changetosignup,orderid1,value0200,value0201,value0789,value_bg})=>{
+const BTC= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,logo_value,value10087,value10088,value100910,value10059,value100912,value10057,value100915,changetologin,changetosignup,orderid1,value0200,value0201,value0789,value_bg,value_img,value_img2})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
     const [smShow, setSmShow] = useState(false);
     const [lgShow, setLgShow] = useState(false);
     const [lgShow3, setLgShow3] = useState(false);
+    const [lgShow31, setLgShow31] = useState(false);
     const [lgShow2, setLgShow2] = useState('');
 	const [lgShow233, setLgShow233] = useState('');
     const [lgShow5, setLgShow5] = useState('');
@@ -159,9 +161,9 @@ const BTC= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
 				setLgShow(true)
 				setLgShow2('SEND')
 			}}>
-                    <img src={require(`./images/litecoin.png`)} className='img_special1'/>
+                    <img src={require(`${value_img}`)} className='img_special1'/>
                     <h3 className='b mt-2 text-center fs-5' style={{'color':`${value10059}`}}>YOU SEND</h3>
-                    <p className='b text-center tc fs-6' style={{'color':`${value10059}`}}>LTC</p>
+                    <p className='b text-center tc fs-6' style={{'color':`${value10059}`}}>{value3}</p>
                 </article>
                 </Col>
 
@@ -177,7 +179,7 @@ const BTC= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
 					setLgShow3(true)
 					setLgShow2('RECEIVE')
 				}}>
-                <img src={require(`./images/bitcoin.png`)} className='img_special2' />
+                <img src={require(`${value_img2}`)} className='img_special2' />
                 <h3 className='b fs-5 mt-2' style={{'color':`${value10059}`}} >YOU RECEIVE</h3>
                 <p className='b fs-6' style={{'color':`${value10059}`}} >BTC</p>
                 </article>
@@ -220,8 +222,8 @@ const BTC= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
         onHide={() => setLgShow(false)}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-      <Modal.Header closeButton style={{'background-color':`${value100910}`,'color':`${value10059}`}}  >
-      <Modal.Title style={{'background-color':`${value100910}`,'color':`${value10059}`}} >
+      <Modal.Header closeButton   >
+      <Modal.Title >
       <Row>
       <Col className='col-md-12 tc text-center'>
       <h3 className='b tc'>YOU {lgShow2} </h3>
@@ -233,7 +235,26 @@ const BTC= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
 
 
             <Row className='justify-content-center align-items-center'>
-            
+        <ul>
+          <li>
+            <Link to="/doge/btc" >DOGE</Link>
+          </li>
+          
+                 <li>
+            <Link to="/usdt-tron/btc">USDT (TRC20) </Link>
+          </li>
+          
+                 <li>
+            <Link to="/sol/btc">SOL</Link>
+          </li>
+          
+                 <li>
+            <Link to="/matic/btc">MATIC</Link>
+          </li>
+
+          
+        </ul>
+                              
             </Row>
 
         </Modal.Body>
@@ -244,7 +265,6 @@ const BTC= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
         show={lgShow3}
         onHide={() => setLgShow3(false)}
         aria-labelledby="example-modal-sizes-title-lg"
-		style={{'background-color':`${value10081}`}}
       >
       <Modal.Header closeButton>
       <Modal.Title>
@@ -257,7 +277,18 @@ const BTC= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
       </Modal.Header>
         <Modal.Body >
             <Row className='justify-content-center align-items-center'>
-
+        <ul>
+          <li>
+            <Link to="/ltc/doge">DOGE</Link>
+          </li>
+          <li>
+            <Link to="/ltc/sol">SOL</Link>
+          </li>
+             <li>
+            <Link to="/ltc/usdt">USDT</Link>
+          </li>
+          
+        </ul>
             </Row>
 
         </Modal.Body>
