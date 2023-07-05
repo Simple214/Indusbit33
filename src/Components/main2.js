@@ -19,33 +19,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 	const [show, setShow] = useState(false);
 	const target = useRef(null);
 	useEffect(() => {
-		if(value3=="LTC"){
-			setLgShow566("#345c9c")
-		}
-		if(value3=="TRX"){
-			setLgShow566("#fe060b")
-		}
-		if(value3=="BTC"){
-			setLgShow566("#f6921b")
-		}
-		if(value3=="DOGE"){
-			setLgShow566("#baa133")
-		}
-		if(value3=="DASH"){
-			setLgShow566("#2673c3")
-		}
-		if(value3=="BCH"){
-			setLgShow566("#0bc18d")
-		}
-		if(value3=="XMR"){
-			setLgShow566("#f26623")
-		}
-		if(value3=="BNB"){
-			setLgShow566("#f0b80c")
-		}
-		if(value3=="ETC"){
-			setLgShow566("#3ab93b")
-		}
+
 		let value178 = Math.random(0,100)
 		fetch(`https://api.hashify.net/hash/md4/hex?value=${value178}`).then(res3 => res3.json()).then( res5 => {
 			let value1056 = res5.Digest

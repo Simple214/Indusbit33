@@ -23,6 +23,7 @@ class App extends React.Component{
   constructor(){
     super()
     this.state={
+      slash_order_id:'',
       footer_bg:'#d4008e',
 	  orderahead:'no',
 	  order_id:'',
@@ -338,23 +339,6 @@ class App extends React.Component{
 			  })
 		}
 		
-		from_ltc = ()=>{
-			this.setState({
-				 from:'ltc',
-				 value3:'LTC',
-				 value5:'ltc',
-				 value10:'litecoin'
-			})
-		}
-		
-		from_btc = ()=>{
-			this.setState({
-				from:'btc',
-				 value3:'BTC',
-				 value5:'btc',
-				 value10:'bitcoin'
-			})
-		}
 		
 		order_id_validation2 = (event)=>{
 			
@@ -385,8 +369,6 @@ class App extends React.Component{
 			}
 			
 		}
-
-		
 		
 		dark_theme = ()=>{
 			this.setState({
@@ -568,6 +550,12 @@ class App extends React.Component{
 
           
                     <Route path="/btc">
+                    
+              <Route index element={<TO_BTC  value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme}    first66={this.state.value876}  change1={this.changevalue} value2 ={this.state.value2} value3={'SOL'} value4={'BTC'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} call={this.calltofinal} value1006={this.hide2} value10070={this.hide3} value739={'none'} backtohome={this.home234}/>} />
+
+          </Route>
+          
+                              <Route path={`${this.state.from}`}>
                     
               <Route index element={<TO_BTC  value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme}    first66={this.state.value876}  change1={this.changevalue} value2 ={this.state.value2} value3={'SOL'} value4={'BTC'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} call={this.calltofinal} value1006={this.hide2} value10070={this.hide3} value739={'none'} backtohome={this.home234}/>} />
 
