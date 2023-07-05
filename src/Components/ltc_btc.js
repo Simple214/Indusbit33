@@ -212,7 +212,7 @@ const LTC_BTC = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 
             <Row className='mt-3'>
                 <Col className='col-md-12 text-black'>
-                <Link to={`/order/${order_id}`} className='no-underline p-3 mt-3 btn2 b shadow-3' style={{'background-color':`${value100910}`,'border':`${value10057}`,'color':`${value10059}`}}  onClick={call}>EXCHANGE</Link>
+                <Link to='/order' className='no-underline p-3 mt-3 btn2 b shadow-3' style={{'background-color':`${value100910}`,'border':`${value10057}`,'color':`${value10059}`}}  onClick={call}>EXCHANGE</Link>
                 </Col>
             </Row>
 
