@@ -16,7 +16,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import './main1.css'
 
-const SOL= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,logo_value,value10087,value10088,value100910,value10059,value100912,value10057,value100915,changetologin,changetosignup,orderid1,value0200,value0201,value0789,value_bg})=>{
+const LTC_BTC = ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,logo_value,value10087,value10088,value100910,value10059,value100912,value10057,value100915,changetologin,changetosignup,orderid1,value0200,value0201,value0789,value_bg})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
@@ -105,11 +105,11 @@ const SOL= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
                             </Dropdown.Toggle>
                             
                             <Dropdown.Menu style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.hi.indusbit.org" target="_blank">हिंदी    <img src={require(`./images/india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.jp.indusbit.org" target="_blank">日本語 <img src={require(`./images/japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.cn.indusbit.org" target="_blank">中文 <img src={require(`./images/china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.ru.indusbit.org" target="_blank">руский <img src={require(`./images/russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org" target="_blank">English </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="http://localhost:3000/hi/ltc/btc">हिंदी <img src={require(`./images/india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org/jp/ltc/btc"> 日本語 <img src={require(`./images/japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org/cn/ltc/btc"> 中文 <img src={require(`./images/china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org/ru/ltc/btc"> руский <img src={require(`./images/russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org/en/ltc/btc"> English </Dropdown.Item>
                             </Dropdown.Menu>
                             
                             </Dropdown>
@@ -261,13 +261,13 @@ const SOL= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
             <Row className='justify-content-center align-items-center'>
        <ul>
           <li>
-            <Link to="/ltc/doge">DOGE</Link>
+            <Link to="/en/ltc/doge">DOGE</Link>
           </li>
           <li>
-            <Link to="/ltc/sol">SOL</Link>
+            <Link to="/en/ltc/sol">SOL</Link>
           </li>
              <li>
-            <Link to="/ltc/usdt">USDT</Link>
+            <Link to="/en/ltc/usdt">USDT</Link>
           </li>
 
           
@@ -321,9 +321,11 @@ const SOL= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
             <h6 className='b fs-6'>Click on Exchange</h6>
             </Col>
             <Col className='col-md-3 col-12 mt-3 mb-3'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" className="mt-3 mb-3 bi bi-currency-dollar" viewBox="0 0 16 16">
-            <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
-            </svg>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" className="mt-3 mb-3 bi bi-currency-bitcoin" viewBox="0 0 16 16">
+  <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25L5.5 13zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28V4.487zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927V8.539z"/>
+</svg>
+            
             <h6 className='b fs-6'>Receive your crypto in seconds</h6>
             </Col>
             </Row>
@@ -338,4 +340,4 @@ const SOL= ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,v
     )
 }
 
-export default SOL
+export default LTC_BTC

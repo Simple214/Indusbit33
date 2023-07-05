@@ -233,19 +233,17 @@ const LTC_USDT =  ({reverse,value2,change1,value3,value4,value5,value6,value7,va
       <Modal.Body >
 
 
-            <Row className='justify-content-center align-items-center'>
-        <ul>
+            <Row className='tc text-center b justify-content-center align-items-center'>
+        <ul className='pl0 list' >
           <li>
-            <Link to="/ltc/doge">DOGE</Link>
+            <Link to="/en/btc/usdt">BTC</Link>
           </li>
           <li>
-            <Link to="/ltc/sol">SOL</Link>
+          <Link to="/en/eth/usdt">ETH</Link>
           </li>
              <li>
-            <Link to="/ltc/usdt">USDT</Link>
+          <Link to="/en/bnb/usdt">BNB</Link>
           </li>
-
-          
         </ul>
                               
             </Row>
@@ -271,83 +269,24 @@ const LTC_USDT =  ({reverse,value2,change1,value3,value4,value5,value6,value7,va
       </Modal.Header>
         <Modal.Body  className='m-0 p-0'>
             <Row className='tc text-center b justify-content-center align-items-center'>
-        <ul className='list pl0' >
-          <li className='grow pt-3 pb-3 flex-row b text-center tc' style={{'border-bottom':`2px solid red`}} >
-            <Link to="/ltc/doge" className='no-underline text-black'> 
-            <Row className='b justify-content-center align-items-center'>
-            <Col className='d-flex col-md-6 col-12 align-items-center justify-content-center'>
-            <img src={require(`./images/dogecoin.png`)} width='45px' />
-            </Col>
-            <Col className='fs-5 d-flex col-md-6 pt-3 pb-3 align-items-center justify-content-center'>
-            DOGE
-            </Col>
-            </Row>
-            </Link>
+        <ul className='pl0 list' >
+        <li>
+            <Link to="/en/ltc/btc">BTC</Link>
           </li>
-          
-          <li className='grow pt-3 pb-3 flex-row b text-center tc' style={{'border-bottom':`2px solid red`}} >
-            <Link to="/ltc/doge" className='no-underline text-black'> 
-            <Row className='b justify-content-center align-items-center'>
-            <Col className='d-flex col-md-6 col-12 align-items-center justify-content-center'>
-            <img src={require(`./images/bitcoin.png`)} width='45px' />
-            </Col>
-            <Col className='fs-5 d-flex col-md-6 pt-3 pb-3 align-items-center justify-content-center'>
-            BTC
-            </Col>
-            </Row>
-            </Link>
+        <li>
+            <Link to="/ltc/eth">ETH</Link>
           </li>
-          
-        <li className='grow pt-3 pb-3 flex-row b text-center tc' style={{'border-bottom':`2px solid red`}}>
-            <Link to="/ltc/doge" className='no-underline text-black'> 
-            <Row className='b justify-content-center align-items-center'>
-            <Col className='d-flex col-md-6 col-12 align-items-center justify-content-center'>
-            <img src={require(`./images/solana.png`)} width='45px' />
-            </Col>
-            <Col className='fs-5 d-flex col-md-6 pt-3 pb-3 align-items-center justify-content-center'>
-            SOL
-            </Col>
-            </Row>
-            </Link>
+        <li>
+            <Link to="/ltc/bnb">BNB</Link>
           </li>
-                    
-        <li className='grow pt-3 pb-3 flex-row b text-center tc' style={{'border-bottom':`2px solid red`}}>
-            <Link to="/ltc/doge" className='no-underline text-black'> 
-            <Row className='b justify-content-center align-items-center'>
-            <Col className='d-flex col-md-6 col-12 align-items-center justify-content-center'>
-            <img src={require(`./images/ada.png`)} width='45px'/>
-            </Col>
-            <Col className='fs-5 d-flex col-md-6 pt-3 pb-3 align-items-center justify-content-center'>
-            ADA (Cardano)
-            </Col>
-            </Row>
-            </Link>
+          <li>
+            <Link to="/ltc/doge">DOGE</Link>
           </li>
-                    
-        <li className='grow pt-3 pb-3 flex-row b text-center tc' style={{'border-bottom':`2px solid red`}}>
-            <Link to="/ltc/doge" className='no-underline text-black'> 
-            <Row className='b justify-content-center align-items-center'>
-            <Col className='d-flex col-md-6 col-12 align-items-center justify-content-center'>
-            <img src={require(`./images/avax.png`)} width='45px'/>
-            </Col>
-            <Col className='fs-5 d-flex col-md-6 pt-3 pb-3 align-items-center justify-content-center'>
-            AVAX
-            </Col>
-            </Row>
-            </Link>
-          </li>          
-          
-        <li className='grow pt-3 pb-3 flex-row b text-center tc'>
-            <Link to="/ltc/doge" className='no-underline text-black'> 
-            <Row className='b justify-content-center align-items-center'>
-            <Col className='d-flex col-md-6 col-12 align-items-center justify-content-center'>
-            <img src={require(`./images/bnb.png`)} width='45px'/>
-            </Col>
-            <Col className='fs-5 d-flex col-md-6 pt-3 pb-3 align-items-center justify-content-center'>
-            BNB (Binance Coin)
-            </Col>
-            </Row>
-            </Link>
+          <li>
+            <Link to="/ltc/sol">SOL</Link>
+          </li>
+             <li>
+            <Link to="/ltc/usdt">USDT</Link>
           </li>
         </ul>
             </Row>
