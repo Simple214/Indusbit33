@@ -408,7 +408,7 @@ to:'BTC',
 		dark_theme = ()=>{
 			this.setState({
 			    footer_bg:'#808080',
-			    main2_bg:'black',
+			    main2_bg:'#2c3546',
                 main2_bo:'2px solid white',
 				theme:'dark',
 				text:'white',
