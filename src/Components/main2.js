@@ -13,19 +13,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '@finastra/circular-progress';
 import './main2.css'
 
-const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,value10082,value10083,backtohome,value10091,amount23,final90,orderid,value10092,value100915,value1008,value0789,changetolight,changetodark,value10059,theme,logo_value,value10057,value100910})=>{
+const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,value10082,value10083,backtohome,value10091,amount23,final90,orderid,value10092,value100915,value1008,value0789,changetolight,changetodark,value10059,theme,logo_value,value10057,value100910,value_img1,value_img2,amount_pls,value_pay,value10056,bg_ar,bo_ar})=>{
 	const [lgShow51, setLgShow51] = useState('');
 	const [lgShow566, setLgShow566] = useState('');
 	const [show, setShow] = useState(false);
 	const target = useRef(null);
 	useEffect(() => {
 
-		let value178 = Math.random(0,100)
-		fetch(`https://api.hashify.net/hash/md4/hex?value=${value178}`).then(res3 => res3.json()).then( res5 => {
-			let value1056 = res5.Digest
-			let final_value1056 = value1056.slice(0, 10)
-			setLgShow51(final_value1056)
-		})
 	},[])
 
     return(
@@ -72,13 +66,13 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 <Col className='col-md-12 col-12'>
         <article className="vh-100 dt w-100">
         <div className="dtc v-mid tc white ph3 ph4-l">
-        <article className="mw7 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3">
+        <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3" style={{'background-color':`${bg_ar}`, 'color':`${value10059}`,'border':`${bo_ar}`}}>
         <Container fluid>
         
         <Row className='d-flex justify-content-center align-items-center mt-0'>
         <Col className='col-md-12 d-flex justify-content-center align-items-center flex-column'>
-        <h2 className='b text-black text-center'>Order ID</h2>
-        <h5 className="b text-black text-center">{orderid}</h5>
+        <h2  style={{'color':`${value10059}`}}  className='b text-center'>Order ID</h2>
+        <h5 style={{'color':`${value10059}`}}  className="b text-center">{orderid}</h5>
         </Col>
         
         </Row>
@@ -86,19 +80,19 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
             <Row className='d-flex justify-content-center align-items-center'>
 
                 <Col className='col-md-2 m-0'>
-                    <img src={`https://cryptologos.cc/logos/${value10}-${value5}-logo.png`} width={'85px'} />
+                    <img src={require(`./images/${value_img1}.png`)} width={'85px'} />
                 </Col>
 
                 <Col className='col-md-2  m-0'>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-arrow-right text-black" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-arrow-right" style={{'color':`${value10059}`}}  viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                 </svg>
 
                 </Col>
 
                 <Col className='col-md-2 m-0'>
-                    <img src={`https://cryptologos.cc/logos/${value11}-${value6}-logo.png`}  width={'85px'} />
+                      <img src={require(`./images/${value_img2}.png`)} width={'85px'} />
                 </Col>
 
             </Row>
@@ -106,23 +100,23 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
             <Row className='d-flex justify-content-center align-items-center mt-4'>
 
                 <Col className='col-md-12'>
-                <h3 className='b text-black text-center h3_send'>Please send <span style={{'color':`${lgShow566}`}}>{amount23}</span> {value3} </h3>
-                    <p className="b text-black text-center para2005">to the following address.....</p>
-                </Col>xz
+                <h3 style={{'color':`${value10059}`}}  className='b text-center h3_send'>Please send <span style={{'color':`${lgShow566}`}}>{amount23}</span> {amount_pls} </h3>
+                    <p style={{'color':`${value10059}`}}  className="b text-center para2005">to the following address.....</p>
+                </Col>
 
             </Row>
 
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-12 d-flex justify-content-center align-items-center flex-row'>
-                <input type='text' className='b text-black mt-0 mb-4 w-100 tc p-3' value={value1005} disabled />
+                <input type='text' style={{'color':`${value10059}`}}  className='b mt-0 mb-4 w-100 tc p-3' value={value10056} disabled />
 
                 <Button ref={target} variant="" className="btn mb-4" onClick={() => {
 					navigator.clipboard.writeText(value1005)
 					setShow(!show)
 				}}>
-				<Overlay target={target.current} show={show} placement="right">
+				<Overlay target={target.current} show={show} placement="top">
 				{(props) => (
-					<Tooltip id="overlay-example" {...props}>
+					<Tooltip  id="overlay-example" {...props}>
 					Copied
 					</Tooltip>
 				)}
@@ -135,13 +129,13 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-12'>
-                <img src={`https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=${value1005}`} />
+                <img src={`https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=${value10056}`} />
                 </Col>
             </Row>
 
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-12'>
-                <p className='b text-black text-center mt-2 mb-2'>Awaiting Payment....</p>
+                <p style={{'color':`${value10059}`}} className='b text-center mt-2 mb-2'>{value_pay}</p>
                 <fds-circular-progress indeterminate="true"></fds-circular-progress>
                 </Col>
             </Row>
@@ -150,7 +144,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 
             <Row className='d-flex justify-content-center align-items-center' onLoad={final90}>
                 <Col className='col-md-12'>
-                <h3 className='b text-black text-center '>Receiving Address ... </h3>
+                <h3 style={{'color':`${value10059}`}} className='b text-center '>Receiving Address ... </h3>
                 <p className='b text-center fs-2' style={{'color':'#d5018e'}} className="b fs-5 text-center">{final56}</p>
                 </Col>
             </Row>

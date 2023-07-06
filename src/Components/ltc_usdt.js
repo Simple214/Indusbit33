@@ -211,7 +211,7 @@ const LTC_USDT =  ({reverse,value2,change1,value3,value4,value5,value6,value7,va
 
             <Row className='mt-3'>
                 <Col className='col-md-12 text-black'>
-                <Button className='btn2 b shadow-3' style={{'background-color':`${value100910}`,'border':`${value10057}`,'color':`${value10059}`}}  onClick={call}>EXCHANGE</Button>
+          <Link to='/order' className='no-underline p-3 mt-3 btn2 b shadow-3' style={{'background-color':`${value100910}`,'border':`${value10057}`,'color':`${value10059}`}}  onClick={call}>EXCHANGE</Link>
                 </Col>
             </Row>
 
