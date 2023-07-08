@@ -434,7 +434,7 @@ oid:res23.id,
 oaddress:res23.address
 			})			
 
-			window.location.href = `http://localhost:3000/en/order/${res23.id}`
+			window.location.href = `https://indusbit.org/en/order/${res23.id}`
 
           })
           }
