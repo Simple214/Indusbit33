@@ -381,20 +381,46 @@ class App extends React.Component{
 		
 	  btcvalidation = (event)=>{
 			const value100 = event.target.value
-			if(value100){
-			
-				
+			if((value100[0]=='b' && value100[1]=='c' && value100[2]=='1') && (value100!='') && ( value100.length==42)){
+			        this.setState({
+			        moveahead_ad:'yes',
+			        show:'none'
+			          })
 			}
-			if(this.state.orderahead=='yes'){
-				fetch(`https://rich-tan-lovebird-coat.cyclic.app/${this.state.order_id}`).then(res1 => res1.json()).then(res10 => console.log(res10))
-				
+			if((value100[0]!='b' || value100[1]!='c' || value100[2]!='1') || (value100=='')  || ( value100.length!=42)){
+			        this.setState({
+			        moveahead_ad:'no',
+			        show:'block'
+			          })
+			}
+
+		}
+		
+	    amountvalidation = (event)=>{
+			const value100 = event.target.value
+			
+			if((value100>=1.0) && (value100!='')){
+			        this.setState({
+			        moveahead_am:'yes',
+			        show3:'none',
+			            show2:'none'
+			          })
 			}
 			
+			if(value100<1.0){
+			        this.setState({
+			        moveahead_am:'no',
+			        show2:'block'
+			          })
+			}
+
 		}
 		
 				
 		state_change = ()=>{
+		
 		if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='yes'){
+		alert('asdfs')
 		 fetch("https://rich-tan-lovebird-coat.cyclic.app/order25",{
             'method':'post',
             'headers':{'Content-type':'application/json'},
@@ -413,11 +439,25 @@ oaddress:res23.address
 
           })
           }
-          else{
-          this.setState({
+    if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
+            this.setState({
+                   show3:'block',
+                   show1:'none'
+			})
+          }
+          
+              if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='no'){
+            this.setState({
+                   show3:'block',
+                   show1:'none'
+			})
+          }
+          
+              if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='no'){
+            this.setState({
                    show3:'block',
                    show1:'block'
-			})	
+			})
           }
 
 		}
@@ -529,11 +569,11 @@ oaddress:res23.address
         <Route path="ltc">
     
         
-    <Route path="btc" element={   <LTC_BTC oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.btcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} value2 ={this.state.value2} value3={'LTC'} value4={'BTC'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal} backtohome={this.home234}/>
+    <Route path="btc" element={   <LTC_BTC oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.btcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} value2 ={this.state.value2} value3={'LTC'} value4={'BTC'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} event2={this.amountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal} backtohome={this.home234}/>
 
     } />
     
-       <Route path="doge" element={   <LTC_DOGE value_img2={'./images/dogecoin.png'} value_img={'./images/litecoin.png'} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation} changetologin={this.login} changetosignup={this.signup} value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme} changetoetc1={this.changetoetc} changetoeth1={this.changetoeth}  changetosol1={this.changetosol} send2={this.setvalue} changetovet1={this.changetovet} changetoxtz1={this.changetoxtz} changetoada1={this.changetoada} changetotrx1={this.changetotrx} changetoavax1={this.changetoavax} first66={this.state.value876} first changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={'LTC'} value4={'DOGE'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc2} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} value501={this.state.show2} from1={'litecoin'} to1={'btc'} value74={'none'} value81={'block'}   call={this.calltofinal} backtohome={this.home234} />
+       <Route path="doge" element={   <LTC_DOGE value_img2={'./images/dogecoin.png'} value_img={'./images/litecoin.png'} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation} changetologin={this.login} changetosignup={this.signup} value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme} changetoetc1={this.changetoetc} changetoeth1={this.changetoeth}  changetosol1={this.changetosol} send2={this.setvalue} changetovet1={this.changetovet} changetoxtz1={this.changetoxtz} changetoada1={this.changetoada} changetotrx1={this.changetotrx} changetoavax1={this.changetoavax} first66={this.state.value876} first changetodash1={this.changetodash} changetobch1={this.changetobch13} changetobch2={this.changetobch26}  changetobnb1={this.changetobnb13}  changetobnb2={this.changetobnb14} changetoxmr2={this.changetoxmr2} change1={this.changevalue} value2 ={this.state.value2} value3={'LTC'} value4={'DOGE'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} changetoxmr={this.changetoxmr1} changetodoge={this.changetodoge1} changetoltc={this.changetoltc1} changetobtc={this.changetobtc1}  changetodoge4={this.changetodoge2} changetoltc4={this.changetoltc2} changetobtc4={this.changetobtc2} event1={this.btcvalidation} event2={this.amountvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} value501={this.state.show2} from1={'litecoin'} to1={'btc'} value74={'none'} value81={'block'}   call={this.calltofinal} backtohome={this.home234} />
     } />
     
 
