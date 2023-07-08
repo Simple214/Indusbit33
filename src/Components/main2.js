@@ -7,19 +7,40 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Nav from 'react-bootstrap/Nav';
+import { useParams } from "react-router-dom"
 import Dropdown from 'react-bootstrap/Dropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '@finastra/circular-progress';
 import './main2.css'
 
-const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,value10082,value10083,backtohome,value10091,amount23,final90,orderid,value10092,value100915,value1008,value0789,changetolight,changetodark,value10059,theme,logo_value,value10057,value100910,value_img1,value_img2,amount_pls,value_pay,value10056,bg_ar,bo_ar})=>{
+const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,value10082,value10083,backtohome,value10091,amount23,final90,orderid,value10092,value100915,value1008,value0789,changetolight,changetodark,value10059,theme,logo_value,value10057,value_rec,value100910,value_img1,value_img2,amount_pls,value_pay,value10056,bg_ar,bo_ar})=>{
 	const [lgShow51, setLgShow51] = useState('');
 	const [lgShow566, setLgShow566] = useState('');
+	const [lgShowa, setLgShowa] = useState('');
+    const [lgShowb, setLgShowb] = useState('');
+	const [lgShowc, setLgShowc] = useState('');
+	const [lgShowd, setLgShowd] = useState('');
+	const [lgShowe, setLgShowe] = useState('');
+	const [lgShowf, setLgShowf] = useState('');
+						
 	const [show, setShow] = useState(false);
+    const { id } = useParams()
 	const target = useRef(null);
 	useEffect(() => {
-
+	
+			 fetch(`https://rich-tan-lovebird-coat.cyclic.app/id/${id}`,{
+            'method':'post',
+            'headers':{'Content-type':'application/json'},
+          }).then(res3 => res3.json()).then(res23 => {
+          setLgShowa(res23.id)
+          setLgShowb(res23.depositAddress)
+          setLgShowc(res23.depositCoin)
+          setLgShowd(res23.status)
+          setLgShowe(res23.settleAddress)
+          setLgShowf((res23.createdAt).replace('T',' ').replace('Z',''))
+          })
+          
 	},[])
 
     return(
@@ -69,10 +90,17 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
         <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3" style={{'background-color':`${bg_ar}`, 'color':`${value10059}`,'border':`${bo_ar}`}}>
         <Container fluid>
         
+                <Row className='d-flex justify-content-center align-items-center mt-0'>
+        <Col className='col-md-12 d-flex justify-content-center align-items-center flex-column'>
+        <p style={{'color':`${value10059}`}}  className='fs-4 b text-center'>Created At : {lgShowf} (Zulu Time) </p>
+        </Col>
+        
+        </Row>
+        
         <Row className='d-flex justify-content-center align-items-center mt-0'>
         <Col className='col-md-12 d-flex justify-content-center align-items-center flex-column'>
         <h2  style={{'color':`${value10059}`}}  className='b text-center'>Order ID</h2>
-        <h5 style={{'color':`${value10059}`}}  className="b text-center">{orderid}</h5>
+        <h5 style={{'color':`${value10059}`}}  className="b text-center">{lgShowa}</h5>
         </Col>
         
         </Row>
@@ -100,7 +128,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
             <Row className='d-flex justify-content-center align-items-center mt-4'>
 
                 <Col className='col-md-12'>
-                <h3 style={{'color':`${value10059}`}}  className='b text-center h3_send'>Please send <span style={{'color':`${lgShow566}`}}>{amount23}</span> {amount_pls} </h3>
+                <h3 style={{'color':`${value10059}`}}  className='b text-center h3_send'>Please send <span style={{'color':`${lgShow566}`}}>{amount23}</span> {lgShowc} </h3>
                     <p style={{'color':`${value10059}`}}  className="b text-center para2005">to the following address.....</p>
                 </Col>
 
@@ -108,7 +136,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-12 d-flex justify-content-center align-items-center flex-row'>
-                <input type='text' style={{'color':`${value10059}`}}  className='b mt-0 mb-4 w-100 tc p-3' value={value10056} disabled />
+                <input type='text' style={{'color':`${value10059}`}}  className='b mt-0 mb-4 w-100 tc p-3' value={lgShowb} disabled />
 
                 <Button ref={target} variant="" className="btn mb-4" onClick={() => {
 					navigator.clipboard.writeText(value1005)
@@ -132,13 +160,13 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-12'>
-                <img src={`https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=${value10056}`} />
+                <img src={`https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=${lgShowb}`} />
                 </Col>
             </Row>
 
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-12'>
-                <p style={{'color':`${value10059}`}} className='b text-center mt-2 mb-2'>{value_pay}</p>
+                <p style={{'color':`${value10059}`}} className='b text-center mt-2 mb-2'>Status : {lgShowd}</p>
                 <fds-circular-progress indeterminate="true"></fds-circular-progress>
                 </Col>
             </Row>
@@ -148,7 +176,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
             <Row className='d-flex justify-content-center align-items-center' onLoad={final90}>
                 <Col className='col-md-12'>
                 <h3 style={{'color':`${value10059}`}} className='b text-center '>Receiving Address ... </h3>
-                <p className='b text-center fs-2' style={{'color':'#d5018e'}} className="b fs-5 text-center">{final56}</p>
+                <p className='b text-center fs-2' style={{'color':`${value_rec}`}} className="b fs-5 text-center">{lgShowe}</p>
                 </Col>
             </Row>
             

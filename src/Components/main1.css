@@ -57,6 +57,9 @@ flex-direction:column !important;
 #name:focus{
    outline:none;
 }
+#name{
+   border-radius:none !important;
+}
 .btn_signup{
 	background-color:#ff0000 !important;
 	border-color:#ff0000 !important;

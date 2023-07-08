@@ -1,3 +1,6 @@
+*{
+overflow-wrap:anywhere !important;
+}
 .para2005{
     font-size: 14px !important;
 }
