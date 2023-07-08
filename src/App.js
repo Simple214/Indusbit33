@@ -420,7 +420,6 @@ class App extends React.Component{
 		state_change = ()=>{
 		
 		if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='yes'){
-		alert('asdfs')
 		 fetch("https://rich-tan-lovebird-coat.cyclic.app/order25",{
             'method':'post',
             'headers':{'Content-type':'application/json'},
