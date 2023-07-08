@@ -23,6 +23,11 @@ class App extends React.Component{
   constructor(){
     super()
     this.state={
+      li_show1:'block',
+      li_show2:'block',
+      li_show3:'block',
+      li_show4:'block',
+      li_show5:'block',
       payment_status:'Awaiting Payment....',
       oid:'',
       oaddress:'',
@@ -396,6 +401,34 @@ class App extends React.Component{
 
 		}
 		
+	    searchvalidation = (event)=>{
+			const value100 = event.target.value
+						if(value100==''){
+			        this.setState({
+                                  li_show1:'block', li_show2:'block' , li_show3:'block', li_show4:'block', li_show5:'block'
+			          })
+			}
+			if(value100=='btc'){
+			        this.setState({
+                                  li_show1:'block',
+                                  li_show2:'none',
+                                  li_show3:'none',
+                                  li_show4:'none',
+                                  li_show5:'none'
+			          })
+			}
+						if(value100=='eth'){
+			        this.setState({
+                                  li_show1:'none',
+                                  li_show2:'block',
+                                  li_show3:'none',
+                                  li_show4:'none',
+                                  li_show5:'none'
+			          })
+			}
+
+		}
+		
 	    amountvalidation = (event)=>{
 			const value100 = event.target.value
 			
@@ -577,7 +610,7 @@ oaddress:res23.address
     
 
     
-           <Route path="usdt" element={   <LTC_USDT value_img2={'./images/usdt.png'} value_img={'./images/litecoin.png'} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation} changetologin={this.login} changetosignup={this.signup} value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme} changetoetc1={this.changetoetc} changetoeth1={this.changetoeth}  changetosol1={this.changetosol} send2={this.setvalue} changetovet1={this.changetovet} changetoxtz1={this.changetoxtz} changetoada1={this.changetoada} changetotrx1={this.changetotrx} changetoavax1={this.changetoavax} first66={this.state.value876} first change1={this.changevalue} value2 ={this.state.value2} value3={'LTC'} value4={'USDT-TRON'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} value501={this.state.show2}  call={this.calltofinal} value1006={this.hide2}  backtohome={this.home234} />
+           <Route path="usdt" element={   <LTC_USDT value_li1={this.state.li_show1} value_li2={this.state.li_show2} value_li5={this.state.li_show5} value_li4={this.state.li_show4} value_li3={this.state.li_show3} event12={this.searchvalidation} value_img2={'./images/usdt.png'} value_img={'./images/litecoin.png'} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation} changetologin={this.login} changetosignup={this.signup} value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} logo_value={this.state.url2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} changetodark={this.dark_theme} changetolight={this.light_theme} theme={this.state.theme} changetoetc1={this.changetoetc} changetoeth1={this.changetoeth}  changetosol1={this.changetosol} send2={this.setvalue} changetovet1={this.changetovet} changetoxtz1={this.changetoxtz} changetoada1={this.changetoada} changetotrx1={this.changetotrx} changetoavax1={this.changetoavax} first66={this.state.value876} first change1={this.changevalue} value2 ={this.state.value2} value3={'LTC'} value4={'USDT-TRON'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} value10={this.state.value10} value11={this.state.value11} event1={this.btcvalidation} value500={this.state.show} value1500={this.state.show1} value1600={this.state.show3} value501={this.state.show2}  call={this.calltofinal} value1006={this.hide2}  backtohome={this.home234} />
     } />
     
     

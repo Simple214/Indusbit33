@@ -4,6 +4,18 @@ body{
 	background-repeat:no-repeat;
 	background-position:center;
 }
+.mb_1{
+    padding: 0 !important;
+    height:100vh !important;
+    overflow-y :hidden !important;
+    overflow-x :hidden !important;
+}
+.mb_2{
+    padding: 0 !important;
+    height:90vh !important;
+    overflow-y :scroll !important;
+    overflow-x :hidden !important;
+}
 .link{
 text-decoration:none !important; 
 }

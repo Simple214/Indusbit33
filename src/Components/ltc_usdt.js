@@ -16,7 +16,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import './main1.css'
 
-const LTC_USDT =  ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,logo_value,value10087,value10088,value100910,value10059,value100912,value10057,value100915,changetologin,changetosignup,orderid1,value0200,value0201,value0789,value_bg})=>{
+const LTC_USDT =  ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,changetodoge,changetoltc,changetobtc,changetodoge4,changetoltc4,changetobtc4,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,changetoxmr,value738,changetoxmr2,value739,value740,value741,changetobnb1,changetobnb2,value750,value751,changetobch1,changetobch2,changetotrx1,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,changetorose2,changetodash1,send2,first56,first66,changetoavax1,changetoada1,changetovet1,changetoxtz1,value81,changetoeth1,value859,changetosol1,theme,value8591,changetoetc1,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,logo_value,value10087,value10088,value100910,value10059,value100912,value10057,value100915,changetologin,changetosignup,orderid1,value0200,value0201,value0789,value_bg,event12,value_li1,value_li2,value_li3,value_li4,value_li5,value_li6,value_li7,value_li8,value_li9})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
@@ -215,8 +215,8 @@ const LTC_USDT =  ({reverse,value2,change1,value3,value4,value5,value6,value7,va
                 </Col>
             </Row>
 
-            <Modal
-        size="lg"
+            <Modal className='mb_1'
+        size="md"
         show={lgShow}
         onHide={() => setLgShow(false)}
         aria-labelledby="example-modal-sizes-title-lg"
@@ -230,22 +230,25 @@ const LTC_USDT =  ({reverse,value2,change1,value3,value4,value5,value6,value7,va
       </Row>
       </Modal.Title>
       </Modal.Header>
-      <Modal.Body >
+      <Modal.Body className='p-0 mb_2' >
 
 
-            <Row className='tc text-center b justify-content-center align-items-center'>
+            <Row className='tc text-center b justify-content-center align-items-center mt-1'>
+            <Col className='col-md-12 col-12'>
+            <p className='b fs-4 text-center tc'>Search</p>
+    <input placeholder='ONLY CRYPTO TICKER' id="name" onChange={event12} class="ttu ms-4 me-4 mb-3 mt-3 input-reset ba b b--black-20 pa2 db tc text-center w-90" type="text" aria-describedby="name-desc"/>
         <ul className='pl0 list' >
-          <li>
-            <Link to="/en/btc/usdt">BTC</Link>
-          </li>
-          <li>
-          <Link to="/en/eth/usdt">ETH</Link>
-          </li>
-             <li>
-          <Link to="/en/bnb/usdt">BNB</Link>
-          </li>
+          <li className='shadow-3 p-3 grow' style={{'display':`${value_li1}`}}>  <Link className='no-underline '  to="/en/btc/usdt"><img className='me-1' src={require(`./images/bitcoin.png`)} width="50px" />BTC</Link></li>
+          <li className='shadow-3 p-3 grow' style={{'display':`${value_li2}`}}>  <Link className='no-underline'  to="/en/eth/usdt"><img className='me-1' src={require(`./images/eth.png`)} width="50px" />ETH</Link></li>
+          <li className='shadow-3 p-3 grow' style={{'display':`${value_li3}`}}>  <Link className='no-underline'  to="/en/bnb/usdt"><img className='me-1' src={require(`./images/bnb.png`)} width="50px" />BNB</Link></li>
+          <li className='shadow-3 p-3 grow' style={{'display':`${value_li4}`}}>  <Link className='no-underline'  to="/en/ada/usdt"><img className='me-1' src={require(`./images/ada.png`)} width="50px" />ADA</Link></li>
+          <li className='shadow-3 p-3 grow' style={{'display':`${value_li5}`}}>  <Link className='no-underline '  to="/en/xrp/usdt"><img className='me-1' src={require(`./images/xrp.png`)} width="50px" />XRP</Link></li>
+          <li className='shadow-3 p-3 grow' style={{'display':`${value_li6}`}}>  <Link className='no-underline'  to="/en/sol/usdt"><img className='me-1' src={require(`./images/sol.png`)} width="50px" />SOL</Link></li>
+          <li className='shadow-3 p-3 grow' style={{'display':`${value_li7}`}}>  <Link className='no-underline'  to="/en/busd/usdt"><img className='me-1' src={require(`./images/busd.png`)} width="50px" />BUSD</Link></li>
+          <li className='shadow-3 p-3 grow' style={{'display':`${value_li8}`}}>  <Link className='no-underline'  to="/en/xmr/usdt"><img className='me-1' src={require(`./images/monero.png`)} width="50px" />XMR</Link></li>
+          <li className='shadow-3 p-3 grow' style={{'display':`${value_li9}`}}>  <Link className='no-underline'  to="/en/etc/usdt"><img className='me-1' src={require(`./images/ethereum-classic.png`)} width="50px" />ETC</Link></li>
         </ul>
-                              
+                   </Col>           
             </Row>
 
         </Modal.Body>
@@ -303,7 +306,7 @@ const LTC_USDT =  ({reverse,value2,change1,value3,value4,value5,value6,value7,va
         <img src={require(`./images/r1.png`)} width="500px" />
             </Row>
              <Row>
-             <h1 className='b text-white tc text-center'>SWAP ANY CRYPTO YOU WANT</h1>
+             <h1 className='b text-white tc text-center'>SWAP TOP CRYPTO PAIRS</h1>
              </Row>
 
     
