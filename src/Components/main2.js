@@ -14,7 +14,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '@finastra/circular-progress';
 import './main2.css'
 
-const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,value10082,value10083,backtohome,value10091,amount23,final90,orderid,value10092,value100915,value1008,value0789,changetolight,changetodark,value10059,theme,logo_value,value10057,value_rec,value100910,value_img1,value_img2,amount_pls,value_pay,value10056,bg_ar,bo_ar})=>{
+const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,value10082,value10083,backtohome,value10091,amount23,final90,orderid,value10092,value100915,value1008,value0789,changetolight,changetodark,value10059,theme,logo_value,value10057,value_rec,value100910,value_img1,value_img2,amount_pls,value_pay,value10056,bg_ar,bo_ar,from9,to9})=>{
 	const [lgShow51, setLgShow51] = useState('');
 	const [lgShow566, setLgShow566] = useState('');
 	const [lgShowa, setLgShowa] = useState('');
@@ -23,13 +23,14 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 	const [lgShowd, setLgShowd] = useState('');
 	const [lgShowe, setLgShowe] = useState('');
 	const [lgShowf, setLgShowf] = useState('');
+	const [lgShowg, setLgShowg] = useState('');
 						
 	const [show, setShow] = useState(false);
-    const { id } = useParams()
+    const { id,orderid3 } = useParams()
 	const target = useRef(null);
 	useEffect(() => {
 	
-			 fetch(`https://rich-tan-lovebird-coat.cyclic.app/id/${id}`,{
+			 fetch(`https://rich-tan-lovebird-coat.cyclic.app/id/${orderid3}`,{
             'method':'post',
             'headers':{'Content-type':'application/json'},
           }).then(res3 => res3.json()).then(res23 => {
@@ -39,7 +40,9 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
           setLgShowd(res23.status)
           setLgShowe(res23.settleAddress)
           setLgShowf((res23.createdAt).replace('T',' ').replace('Z',''))
+          setLgShowg(res23.settleCoin)
           })
+
           
 	},[])
 
@@ -106,9 +109,8 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
         </Row>
 
             <Row className='d-flex justify-content-center align-items-center'>
-
                 <Col className='col-md-2 m-0'>
-                    <img src={require(`./images/${value_img1}.png`)} width={'85px'} />
+                      <img src={require(`./images/${from9}.png`)} width={'85px'} />
                 </Col>
 
                 <Col className='col-md-2  m-0'>
@@ -120,7 +122,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
                 </Col>
 
                 <Col className='col-md-2 m-0'>
-                      <img src={require(`./images/${value_img2}.png`)} width={'85px'} />
+                      <img src={require(`./images/${to9}.png`)} width={'85px'} />
                 </Col>
 
             </Row>
