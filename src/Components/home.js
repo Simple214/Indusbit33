@@ -255,7 +255,7 @@ const Home = ({reverse,value2,change1,value3,value4,value5,value6,value7,value10
         <img src={require(`./images/r1.png`)} width="500px" />
             </Row>
              <Row>
-             <h1 className='b text-white tc text-center'>Swap Any Crypto you Want</h1>
+             <h1 className='b text-white tc text-center'>Swap Your Crypto Seamlessly.</h1>
              </Row>
 
     
