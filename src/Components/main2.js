@@ -173,8 +173,6 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
                 </Col>
             </Row>
 
-
-
             <Row className='d-flex justify-content-center align-items-center' onLoad={final90}>
                 <Col className='col-md-12'>
                 <h3 style={{'color':`${value10059}`}} className='b text-center '>Receiving Address ... </h3>
