@@ -10,6 +10,8 @@ import Main2 from './Components/main2';
 import Main3 from './Components/main3';
 import Ltc_btc from './Components/ltc_btc';
 import Ltc_doge from './Components/ltc_doge';
+import Ltc_bnb from './Components/ltc_bnb';
+import Ltc_eth from './Components/ltc_eth';
 import 'clipboard'
  
 class App extends React.Component{
