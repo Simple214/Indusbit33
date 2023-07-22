@@ -136,7 +136,7 @@ const Ltc_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 
             <Row className='mt-3'>
             <Col className='col-md-12 text-black'>
-            <p className='b para1' style={{'color':`${value10059}`}} >1 <span className='title1 ttu' >LTC</span> = <span className='value'></span>{lgShow5} <span className='title2 ttu'>BTC</span></p>
+            <p className='b para1' style={{'color':`${value10059}`}} >1 <span className='title1 ttu' >LTC</span> = <span className='value'></span>{lgShow5} <span className='title2 ttu'>bnb</span></p>
                 </Col>
             </Row>
 
@@ -161,7 +161,7 @@ const Ltc_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
                 <article onClick={() => setLgShow(true)} style={{'background-color':`${value100910}`,'border':`${value10057}`}} className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4">
                 <img  src={require(`./images/bnb-bsc.png`)} className='img_special2' />
                 <h3 className='b ttu mt-3 fs-6' style={{'color':`${value10059}`}} >RECEIVE</h3>
-                <p className='b' style={{'color':`${value10059}`}} >Bitcoin</p>
+                <p className='b' style={{'color':`${value10059}`}} >Binance-Coin</p>
                 </article>
                 </Col>
             </Row>
@@ -232,7 +232,7 @@ const Ltc_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
   
   <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/eth/btc">
   <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
-                    <img  src={require(`./images/eth.png`)} width="50px" className='text-center tc' />
+                    <img  src={require(`./images/btc.png`)} width="50px" className='text-center tc' />
                     <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>BTC</h3>
                     <p className='b text-center  tc fs-6' style={{'color':`${value10059}`}}>Bitcoin</p>
 </article>
@@ -241,7 +241,7 @@ const Ltc_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 
   <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/bnb/btc">
   <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
-                    <img  src={require(`./images/bnb-bsc.png`)} width="50px" className='text-center tc' />
+                    <img  src={require(`./images/eth.png`)} width="50px" className='text-center tc' />
                     <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>ETH</h3>
                     <p className='b text-center  tc fs-6' style={{'color':`${value10059}`}}>Ethereum</p>
 </article>
