@@ -142,8 +142,8 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 
             <Row className='mt-3 justify-content-center align-items-center'>
             <Col className='col-md-5 col-12 text-center tc col10 col_special'>
-            <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}} onClick={() => setLgShow(true)}>
-                    <img  src={require(`./images/ltc.png`)} />
+            <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}} >
+                    <img  src={require(`./images/ltc.png`)} className='img_special1' />
                     <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>SEND</h3>
                     <p className='b text-center tc fs-6' style={{'color':`${value10059}`}}>Litecoin</p>
                 </article>
@@ -158,8 +158,8 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
                 </Col>
 
                 <Col className='col-md-5 col-12 text-center tc col10'>
-                <article style={{'background-color':`${value100910}`,'border':`${value10057}`}} className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4">
-                <img  src={require(`./images/btc.png`)} />
+                <article onClick={() => setLgShow(true)} style={{'background-color':`${value100910}`,'border':`${value10057}`}} className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4">
+                <img  src={require(`./images/btc.png`)}  className='img_special2' />
                 <h3 className='b ttu mt-3 fs-6' style={{'color':`${value10059}`}} >RECEIVE</h3>
                 <p className='b' style={{'color':`${value10059}`}} >Bitcoin</p>
                 </article>
