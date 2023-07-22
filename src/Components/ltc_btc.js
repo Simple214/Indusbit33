@@ -223,7 +223,7 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
       >
         <Modal.Header closeButton>
           <Modal.Title className='b text-center tc' id="example-modal-sizes-title-lg">
-          You Will Send
+          You Will Receive
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>

@@ -223,14 +223,14 @@ const Ltc_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
       >
         <Modal.Header closeButton>
           <Modal.Title className='b text-center tc' id="example-modal-sizes-title-lg">
-          You Will Send
+          You Will Receive
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
         
   <Row className='tc text-center justify-content-center align-items-center'> 
   
-  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/eth/btc">
+  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/ltc/btc">
   <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
                     <img  src={require(`./images/btc.png`)} width="50px" className='text-center tc' />
                     <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>BTC</h3>
@@ -239,7 +239,7 @@ const Ltc_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 </Link>
 </Col> 
 
-  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/bnb/btc">
+  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/ltc/eth">
   <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
                     <img  src={require(`./images/eth.png`)} width="50px" className='text-center tc' />
                     <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>ETH</h3>
@@ -249,7 +249,7 @@ const Ltc_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 </Col> 
 
 
-  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/doge/btc">
+  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/ltc/doge">
   <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
                     <img  src={require(`./images/doge.png`)} width="50px" className='text-center tc' />
                     <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>DOGE</h3>
