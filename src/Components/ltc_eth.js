@@ -18,10 +18,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import './home.css'
 
-const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,value738,value739,value740,value741,value750,value751,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,send2,first56,first66,value81,value859,theme,value8591,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,value10087,value10088,value100910,value10059,value100912,value10057,value100915,orderid1,value0200,value0201,value0789,value_bg,valuetoorder,order_id,changes,oid5,event2,coins,from,to,id1,id2,swap,filteredRobots,onSearchChange})=>{
+const Ltc_eth = ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,value738,value739,value740,value741,value750,value751,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,send2,first56,first66,value81,value859,theme,value8591,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,value10087,value10088,value100910,value10059,value100912,value10057,value100915,orderid1,value0200,value0201,value0789,value_bg,valuetoorder,order_id,changes,oid5,event2,coins,from,to,id1,id2,swap,filteredRobots,onSearchChange})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true); 
     const [show, setShow] = useState(false);
+    const [lgShowA, setLgShowA] = useState(false);
     const [smShow, setSmShow] = useState(false);
     const [lgShow, setLgShow] = useState(false);
     const [lgShow3, setLgShow3] = useState(false);
@@ -31,16 +32,9 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
     useEffect(() => {
             
         
-		fetch("https://rich-tan-lovebird-coat.cyclic.app/price25",{
-			'method':'post',
-			'headers':{'Content-type':'application/json'},
-			'body': JSON.stringify({
-				from:`ltc`, 
-		        to:`btc`, 
-			})
-		}).then(res => res.json()).then(data20 => {
+		fetch("https://sideshift.ai/api/v2/pair/ltc/eth").then(res => res.json()).then(data20 => {
             if (true) {
-                setLgShow5(data20.rate3)
+                setLgShow5(data20.rate)
             }
         })
     
@@ -136,13 +130,13 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 
             <Row className='mt-3'>
             <Col className='col-md-12 text-black'>
-            <p className='b para1' style={{'color':`${value10059}`}} >1 <span className='title1 ttu' >LTC</span> = <span className='value'></span>{lgShow5} <span className='title2 ttu'>BTC</span></p>
+            <p className='b para1' style={{'color':`${value10059}`}} >1 <span className='title1 ttu' >LTC</span> = <span className='value'></span>{lgShow5} <span className='title2 ttu'>ETH</span></p>
                 </Col>
             </Row>
 
             <Row className='mt-3 justify-content-center align-items-center'>
             <Col className='col-md-5 col-12 text-center tc col10 col_special'>
-            <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}} onClick={() => setLgShow(true)}>
+            <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}} onClick={() => setLgShow(true)} > 
                     <img  src={require(`./images/ltc.png`)} />
                     <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>SEND</h3>
                     <p className='b text-center tc fs-6' style={{'color':`${value10059}`}}>Litecoin</p>
@@ -158,10 +152,10 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
                 </Col>
 
                 <Col className='col-md-5 col-12 text-center tc col10'>
-                <article style={{'background-color':`${value100910}`,'border':`${value10057}`}} className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4">
-                <img  src={require(`./images/btc.png`)} />
+                <article onClick={() => setLgShowA(true)} style={{'background-color':`${value100910}`,'border':`${value10057}`}} className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4">
+                <img  src={require(`./images/eth.png`)} />
                 <h3 className='b ttu mt-3 fs-6' style={{'color':`${value10059}`}} >RECEIVE</h3>
-                <p className='b' style={{'color':`${value10059}`}} >Bitcoin</p>
+                <p className='b' style={{'color':`${value10059}`}} >Ethereum</p>
                 </article>
                 </Col>
             </Row>
@@ -184,7 +178,7 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 
             <Row className='mt-0'>
             <Col className='col-md-12 text-black'>
-            <input id="name" style={{'border-top':'2px solid black','border-bottom':'7px solid black'}} className="input_address b  text-center tc input-reset pa2 mb2 db w-100" type="text" aria-describedby="name-desc" placeholder={`Your BTC Address`} onChange={event1} onFocus={value1006} />
+            <input id="name" style={{'border-top':'2px solid black','border-bottom':'7px solid black','border-right':'2px solid black',}} className="input_address b  text-center tc input-reset pa2 mb2 db w-100" type="text" aria-describedby="name-desc" placeholder={`Your ETH Address`} onChange={event1} onFocus={value1006} />
             <p className='b text-red text-center tc para3000' style={{'display':`${value500}`}} >Please Enter a Valid {value4} Address</p>
             <p className='b text-red text-center tc para3000 ttu' style={{'display':`${value1500}`}} >Please Enter a Address</p>
                 </Col>
@@ -198,20 +192,39 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 
 
    <Modal
-        size="sm"
-        show={smShow}
-        onHide={() => setSmShow(false)}
+        size="lg"
+        show={lgShowA}
+        onHide={() => setLgShowA(false)}
         aria-labelledby="example-modal-sizes-title-sm"
       >
         <Modal.Header closeButton>
           <Modal.Title id="example-modal-sizes-title-sm">
-            Small Modal
+            You will Receive
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        
+          <Row className='tc text-center justify-content-center align-items-center'> 
+  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/ltc/btc">
+  <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
+                    <img  src={require(`./images/btc.png`)} width="50px" className='text-center tc' />
+                    <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>BTC</h3>
+                    <p className='b text-center  tc fs-6' style={{'color':`${value10059}`}}>Bitcoin</p>
+</article>
+</Link>
+</Col> 
 
-  
+  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/ltc/bnb">
+  <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
+                    <img  src={require(`./images/bnb-bsc.png`)} width="50px" className='text-center tc' />
+                    <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>BNB</h3>
+                    <p className='b text-center  tc fs-6' style={{'color':`${value10059}`}}>Binance-Coin</p>
+</article>
+</Link>
+</Col> 
+
+
+
+    </Row> 
         </Modal.Body>
       </Modal>
       
@@ -239,7 +252,7 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 </Link>
 </Col> 
 
-  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/bnb/btc">
+  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/bnb/eth">
   <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
                     <img  src={require(`./images/bnb-bsc.png`)} width="50px" className='text-center tc' />
                     <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>BNB</h3>
@@ -247,18 +260,6 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 </article>
 </Link>
 </Col> 
-
-
-  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/doge/btc">
-  <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
-                    <img  src={require(`./images/doge.png`)} width="50px" className='text-center tc' />
-                    <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>DOGE</h3>
-                    <p className='b text-center  tc fs-6' style={{'color':`${value10059}`}}>Dogecoin</p>
-</article>
-</Link>
-</Col> 
-
-
 </Row>
 
 
@@ -276,7 +277,7 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
         <img src={require(`./images/r1.png`)} width="500px" />
             </Row>
              <Row>
-             <h1 className='b text-white tc text-center'>Swap Your Crypto Seamlessly.</h1>
+             <h1 className='b text-white tc text-center'>Swap your Bitcoin (BTC),Litecoin (LTC) & Ethereum (ETH).</h1>
              </Row>
 
     
@@ -330,4 +331,4 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
     )
 }
 
-export default Ltc_btc
+export default Ltc_eth

@@ -31,16 +31,9 @@ const Ltc_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
     useEffect(() => {
             
         
-		fetch("https://rich-tan-lovebird-coat.cyclic.app/price25",{
-			'method':'post',
-			'headers':{'Content-type':'application/json'},
-			'body': JSON.stringify({
-				from:`ltc`, 
-		        to:`bnb`, 
-			})
-		}).then(res => res.json()).then(data20 => {
+		fetch("https://sideshift.ai/api/v2/pair/ltc/bnb").then(res => res.json()).then(data20 => {
             if (true) {
-                setLgShow5(data20.rate3)
+                setLgShow5(data20.rate)
             }
         })
     

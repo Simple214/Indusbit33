@@ -9,9 +9,17 @@ import {useEffect} from 'react'
 import Main2 from './Components/main2';
 import Main3 from './Components/main3';
 import Ltc_btc from './Components/ltc_btc';
-import Ltc_doge from './Components/ltc_doge';
+import Btc_ltc from './Components/btc_ltc';
+import Btc_bnb from './Components/btc_bnb';
+import Eth_ltc from './Components/eth_ltc';
+import Eth_btc from './Components/eth_btc';
+import Eth_bnb from './Components/eth_bnb';
 import Ltc_bnb from './Components/ltc_bnb';
 import Ltc_eth from './Components/ltc_eth';
+import Bnb_eth from './Components/bnb_eth';
+import Bnb_btc from './Components/bnb_btc';
+import Bnb_ltc from './Components/bnb_ltc';
+import Notfound from './Components/notfound';
 import 'clipboard'
  
 class App extends React.Component{
@@ -85,7 +93,7 @@ class App extends React.Component{
 	  article_bg:"white",
 	  text_color:'black',
 	  text_body:'white',
-	  border:"0px solid white",
+	  border:"2px solid black",
 	  first_bg:'dark',
 	  second_bg:'#202429'
     }
@@ -397,6 +405,80 @@ class App extends React.Component{
 
 		}
 		
+	   btcvalidation = (event)=>{
+			const value100 = event.target.value
+			if(((value100[0]=='b' && value100[1]=='c' && value100[2]=='1') && (value100!='') && ( value100.length==42))){
+			        this.setState({
+			        moveahead_ad:'yes',
+			        show:'none',
+			        ad:value100
+			          })
+			}
+			if(((value100[0]!='b' && value100[1]!='c' && value100[2]!='1') || (value100=='')  || ( value100.length!=42))){
+			        this.setState({
+			        moveahead_ad:'no',
+			        show:'block'
+			          })
+			}
+
+		}
+		
+		ethvalidation = (event)=>{
+			const value100 = event.target.value
+			if((value100[0]=='0' && value100[1]=='x') && (value100!='') && ( value100.length==42)){
+			        this.setState({
+			        moveahead_ad:'yes',
+			        show:'none',
+			        ad:value100
+			          })
+			}
+			if((value100[0]!='0' || value100[1]!='x') || (value100=='')  || ( value100.length!=42)){
+			        this.setState({
+			        moveahead_ad:'no',
+			        show:'block'
+			          })
+			}
+
+		}
+		
+      ltcvalidation = (event)=>{
+			const value100 = event.target.value
+			if((((value100[0]=='M')) && (value100!='') && (value100.length==34))){
+			        this.setState({
+			        moveahead_ad:'yes',
+			        show:'none',
+			        ad:value100
+			          })
+			}
+    		if((((value100[0]!='M')) || (value100=='') || (value100.length!=34))){
+			        this.setState({
+			        moveahead_ad:'no',
+			        show:'block'
+			          })
+			}
+
+		}
+		
+		
+	     bnbvalidation = (event)=>{
+			const value100 = event.target.value
+			if((value100[0]=='0' && value100[1]=='x') && (value100!='') && ( value100.length==42)){
+			        this.setState({
+			        moveahead_ad:'yes',
+			        show:'none',
+			        ad:value100
+			          })
+			}
+			if((value100[0]!='0' || value100[1]!='x') || (value100=='')  || ( value100.length!=42)){
+			        this.setState({
+			        moveahead_ad:'no',
+			        show:'block'
+			          })
+			}
+
+		}
+		
+		
 	    searchvalidation = (event)=>{
 			const value100 = event.target.value
 						if(value100==''){
@@ -425,7 +507,50 @@ class App extends React.Component{
 
 		}
 		
-	    amountvalidation = (event)=>{
+	     bnbamountvalidation = (event)=>{
+			const value100 = event.target.value
+			
+			if((value100>=0.1) && (value100!='')){
+			        this.setState({
+			        moveahead_am:'yes',
+			        show3:'none',
+			        show2:'none',
+			        am:value100
+			          })
+			}
+			
+			if(value100<0.1){
+			        this.setState({
+			        moveahead_am:'no',
+			        show2:'block'
+			          })
+			}
+
+		}
+		
+	    btcamountvalidation = (event)=>{
+			const value100 = event.target.value
+			
+			if((value100>=0.002) && (value100!='')){
+			        this.setState({
+			        moveahead_am:'yes',
+			        show3:'none',
+			        show2:'none',
+			        am:value100
+			          })
+			}
+			
+			if(value100<0.002){
+			        this.setState({
+			        moveahead_am:'no',
+			        show2:'block'
+			          })
+			}
+
+		}
+		
+			
+		 ltcamountvalidation = (event)=>{
 			const value100 = event.target.value
 			
 			if((value100>=1.0) && (value100!='')){
@@ -446,8 +571,31 @@ class App extends React.Component{
 
 		}
 		
+		 ethamountvalidation = (event)=>{
+			const value100 = event.target.value
+			
+			if((value100>=0.05) && (value100!='')){
+			        this.setState({
+			        moveahead_am:'yes',
+			        show3:'none',
+			        show2:'none',
+			        am:value100
+			          })
+			}
+			
+			if(value100<0.05){
+			        this.setState({
+			        moveahead_am:'no',
+			        show2:'block'
+			          })
+			}
+
+		}
+		
 				
 		state_change = ()=>{
+		
+		
 		
 		if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='yes'){
 		 fetch("https://rich-tan-lovebird-coat.cyclic.app/order25",{
@@ -455,15 +603,15 @@ class App extends React.Component{
             'headers':{'Content-type':'application/json'},
             'body': JSON.stringify({
               address:this.state.ad,
-              from:'ltc',
-              to:'btc'
+              from:this.state.from,
+              to:this.state.to
             })
           }).then(res3 => res3.json()).then(res23 => {
 this.setState({
 oid:res23.id,
 oaddress:res23.address
 			})		
-		window.location.href=`https://www.indusbit.org/en/order/${res23.id}`
+		window.location.href=`http://localhost:3000/en/order/${res23.id}`
           })
           }
     if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
@@ -537,7 +685,7 @@ oaddress:res23.address
 			     article_bg:'#ffffff',
 				 text_color:'black',
 				 text_body:'white',
-				 border:"0px solid white",
+			     border:"2px solid black",
 				 first_bg:'dark',
 				 second_bg:'dark'
 			})
@@ -591,22 +739,62 @@ oaddress:res23.address
    <Route path="/" element={<Navigate to="/en/ltc/btc" replace />} />
       <Route path="/en"> 
       <Route path="ltc/btc" element={
-<Ltc_btc oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.addressvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.amountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+<Ltc_btc oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.btcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ltcamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
 } />
 
     <Route path="ltc/eth" element={
-<Ltc_eth oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.addressvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.amountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+<Ltc_eth oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.ethvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ltcamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
 } />
 
     <Route path="ltc/bnb" element={
-<Ltc_bnb oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.addressvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.amountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+<Ltc_bnb oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.bnbvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ltcamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
 } />
 
-    <Route path="ltc/doge" element={
-<Ltc_doge oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.addressvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.amountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+      <Route path="eth/btc" element={
+<Eth_btc oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.btcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ethamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+
+} />
+
+    <Route path="eth/ltc" element={
+<Eth_ltc oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.ltcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ethamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+
+} />
+
+    <Route path="eth/bnb" element={
+<Eth_bnb oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.bnbvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ethamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+
+} />
+
+      <Route path="bnb/btc" element={
+<Bnb_btc oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.btcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.bnbamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+
+} />
+
+    <Route path="bnb/eth" element={
+<Bnb_eth oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.ethvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.bnbamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+
+} />
+
+    <Route path="bnb/ltc" element={
+<Bnb_ltc oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.ltcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.bnbamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+
+} />
+
+      <Route path="btc/ltc" element={
+<Btc_ltc oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.ltcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.amountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+
+} />
+
+    <Route path="btc/eth" element={
+<Ltc_eth oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.ethvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.btcamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+
+} />
+
+    <Route path="btc/bnb" element={
+<Btc_bnb oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.bnbvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.btcamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
 } />
 
@@ -617,6 +805,7 @@ oaddress:res23.address
 <Main2 oid1={this.state.oid} from9={this.state.from} to9={this.state.to} from = {this.state.from} to={this.state.to} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.addressvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} value2 ={this.state.value2} value3={'LTC'} value4={'BTC'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} event2={this.amountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal} backtohome={this.home234}/>
 } />
     </Route>
+      <Route path="*" element={<Notfound />} />
         </Route>
 
     </Routes>
