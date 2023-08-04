@@ -72,9 +72,9 @@ const Notfound = ({reverse,value2,change1,value3,value4,value5,value6,value7,val
                          <Col className='col-md-12'>               
     <h1 class="fs-1 f2-m f-subheadline-l text-white fw6 tc">**404 Not Found**</h1>
     <h1 class="fs-1 f2-m f-subheadline-l text-white fw6 tc">
-<a className="text-white  f3 grow no-underline br-pill ba bw1 ph3 pv2 mb2 dib black" href="http://localhost:3000/en/ltc/btc"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
+<a className="text-white  f3 grow no-underline br-pill ba bw1 ph3 pv2 mb2 dib black" href="https://www.indusbit.org"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-</svg> Back To Home</a>
+</svg> Back To Home Page</a>
     </h1>
 
     </Col>

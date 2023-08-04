@@ -37,6 +37,7 @@ class App extends React.Component{
       from:'doge',
       border23:'5px solid white',
       to:'btc',
+      orderid18:'',
       slash_order_id:'',
       input_bg:'#d4d6d9',
       main2_tx:'#d4008e',
@@ -387,7 +388,7 @@ class App extends React.Component{
 				
 			}
 			if(this.state.orderahead=='yes'){
-				fetch(`https://rich-tan-lovebird-coat.cyclic.app/${this.state.order_id}`).then(res1 => res1.json()).then(res10 => console.log(res10))
+			window.location.href=`http://localhost:3000/en/order/${this.state.order_id}`
 				
 			}
 			
@@ -689,6 +690,174 @@ oaddress:res23.address
 
 		}
 		
+						state_change3 = ()=>{
+		
+		if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='yes'){
+		 fetch("https://rich-tan-lovebird-coat.cyclic.app/order25",{
+            'method':'post',
+            'headers':{'Content-type':'application/json'},
+            'body': JSON.stringify({
+              address:this.state.ad,
+              from:'ltc',
+              to:'bnb'
+            })
+          }).then(res3 => res3.json()).then(res23 => {
+this.setState({
+oid:res23.id,
+oaddress:res23.address
+			})		
+		window.location.href=`http://localhost:3000/en/order/${res23.id}`
+          })
+          }
+    if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
+            this.setState({
+                   show3:'block',
+                   show1:'none'
+			})
+          }
+          
+              if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='no'){
+            this.setState({
+                   show3:'none',
+                   show1:'block'
+			})
+          }
+          
+              if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='no'){
+            this.setState({
+                   show3:'block',
+                   show1:'block'
+			})
+          }
+
+		}
+		
+								state_change4 = ()=>{
+		
+		if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='yes'){
+		 fetch("https://rich-tan-lovebird-coat.cyclic.app/order25",{
+            'method':'post',
+            'headers':{'Content-type':'application/json'},
+            'body': JSON.stringify({
+              address:this.state.ad,
+              from:'eth',
+              to:'ltc'
+            })
+          }).then(res3 => res3.json()).then(res23 => {
+this.setState({
+oid:res23.id,
+oaddress:res23.address
+			})		
+		window.location.href=`http://localhost:3000/en/order/${res23.id}`
+          })
+          }
+    if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
+            this.setState({
+                   show3:'block',
+                   show1:'none'
+			})
+          }
+          
+              if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='no'){
+            this.setState({
+                   show3:'none',
+                   show1:'block'
+			})
+          }
+          
+              if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='no'){
+            this.setState({
+                   show3:'block',
+                   show1:'block'
+			})
+          }
+
+		}
+		
+		
+										state_change5 = ()=>{
+		
+		if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='yes'){
+		 fetch("https://rich-tan-lovebird-coat.cyclic.app/order25",{
+            'method':'post',
+            'headers':{'Content-type':'application/json'},
+            'body': JSON.stringify({
+              address:this.state.ad,
+              from:'eth',
+              to:'btc'
+            })
+          }).then(res3 => res3.json()).then(res23 => {
+this.setState({
+oid:res23.id,
+oaddress:res23.address
+			})		
+		window.location.href=`http://localhost:3000/en/order/${res23.id}`
+          })
+          }
+    if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
+            this.setState({
+                   show3:'block',
+                   show1:'none'
+			})
+          }
+          
+              if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='no'){
+            this.setState({
+                   show3:'none',
+                   show1:'block'
+			})
+          }
+          
+              if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='no'){
+            this.setState({
+                   show3:'block',
+                   show1:'block'
+			})
+          }
+
+		}
+		
+										state_change6 = ()=>{
+		
+		if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='yes'){
+		 fetch("https://rich-tan-lovebird-coat.cyclic.app/order25",{
+            'method':'post',
+            'headers':{'Content-type':'application/json'},
+            'body': JSON.stringify({
+              address:this.state.ad,
+              from:'eth',
+              to:'bnb'
+            })
+          }).then(res3 => res3.json()).then(res23 => {
+this.setState({
+oid:res23.id,
+oaddress:res23.address
+			})		
+		window.location.href=`http://localhost:3000/en/order/${res23.id}`
+          })
+          }
+    if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
+            this.setState({
+                   show3:'block',
+                   show1:'none'
+			})
+          }
+          
+              if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='no'){
+            this.setState({
+                   show3:'none',
+                   show1:'block'
+			})
+          }
+          
+              if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='no'){
+            this.setState({
+                   show3:'block',
+                   show1:'block'
+			})
+          }
+
+		}
 		dark_theme = ()=>{
 			this.setState({
 			    footer_bg:'black',
@@ -811,22 +980,22 @@ oaddress:res23.address
 } />
 
     <Route path="ltc/bnb" element={
-<Ltc_bnb oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.bnbvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ltcamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+<Ltc_bnb oid1={this.state.oid} changes={this.state_change3} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.bnbvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ltcamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
 } />
 
       <Route path="eth/btc" element={
-<Eth_btc oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.btcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ethamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+<Eth_btc oid1={this.state.oid} changes={this.state_change5} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.btcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ethamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
 } />
 
     <Route path="eth/ltc" element={
-<Eth_ltc oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.ltcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ethamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+<Eth_ltc oid1={this.state.oid} changes={this.state_change4} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.ltcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ethamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
 } />
 
     <Route path="eth/bnb" element={
-<Eth_bnb oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.bnbvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ethamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
+<Eth_bnb oid1={this.state.oid} changes={this.state_change6} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.bnbvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ethamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
 } />
 
@@ -859,8 +1028,7 @@ oaddress:res23.address
 <Btc_bnb oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.bnbvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.btcamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
 } />
-
-    
+  
         <Route path="order">
       <Route path=":orderid3" element={
 

@@ -56,11 +56,11 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
           setLgShowj(`bitcoin`)
           setLgShowk('btc')
           }
-                if(res23.settleCoin=='ETH'){         
+          if(res23.settleCoin=='ETH'){         
           setLgShowj(`ethereum`)
           setLgShowk('eth')
           }
-           if(res23.depositCoin=='BNB'){         
+          if(res23.depositCoin=='BNB'){         
               setLgShowh(`bnb`)
               setLgShowi('bnb')
           }
@@ -95,11 +95,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
                         <Nav.Link href="#home" style={{'color':`${value1008}`}} className='b text-white  d-flex justify-content-center align-items-center navlink'>System Status <img src={require(`./images/green.png`)} className='ms-2' width={'17px'}/>
                         <span className="b text-white span45 d-flex justify-content-center align-items-center" style={{'color':`${value10092}`}} >Working</span></Nav.Link>
                         
-                      
-                 
-                            
- 
-                                            
+            
                             <Nav.Link href="#home" className='d-flex justify-content-center align-items-center navlink'>
                             <img src={require(`./images/1664849-200.png`)}width="50px" style={{'display':`${value10082}`}} onClick={changetodark} />
                             </Nav.Link>      
