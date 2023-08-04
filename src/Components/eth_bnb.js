@@ -180,7 +180,7 @@ const Eth_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 
             <Row className='mt-0'>
             <Col className='col-md-12 text-black'>
-            <input id="name" style={{'border-top':'2px solid black','border-bottom':'7px solid black'}} className="input_address b  text-center tc input-reset pa2 mb2 db w-100" type="text" aria-describedby="name-desc" placeholder={`Your BNB Address`} onChange={event1} onFocus={value1006} />
+            <input id="name" style={{'border-top':'2px solid black','border-bottom':'7px solid black'}} className="input_address b  text-center tc input-reset pa2 mb2 db w-100" type="text" aria-describedby="name-desc" placeholder={`Your BNB(BEP-20) Address`} onChange={event1} onFocus={value1006} />
             <p className='b text-red text-center tc para3000' style={{'display':`${value500}`}} >Please Enter a Valid {value4} Address</p>
             <p className='b text-red text-center tc para3000 ttu' style={{'display':`${value1500}`}} >Please Enter a Address</p>
                 </Col>
@@ -209,7 +209,7 @@ const Eth_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
         
   <Row className='tc text-center justify-content-center align-items-center'> 
   
-  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/eth/btc">
+  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/btc/bnb">
   <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
                     <img  src={require(`./images/btc.png`)} width="50px" className='text-center tc' />
                     <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>BTC</h3>
@@ -219,11 +219,11 @@ const Eth_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 </Col> 
 
 
-  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/doge/btc">
+  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/ltc/bnb">
   <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
-                    <img  src={require(`./images/bnb-bsc.png`)} width="50px" className='text-center tc' />
-                    <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>BNB</h3>
-                    <p className='b text-center  tc fs-6' style={{'color':`${value10059}`}}>Binance-Coin</p>
+                    <img  src={require(`./images/ltc.png`)} width="50px" className='text-center tc' />
+                    <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>LTC</h3>
+                    <p className='b text-center  tc fs-6' style={{'color':`${value10059}`}}>Litecoin</p>
 </article>
 </Link>
 </Col> 

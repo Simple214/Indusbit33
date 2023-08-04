@@ -14,17 +14,20 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '@finastra/circular-progress';
 import './main2.css'
 
-const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,value10082,value10083,backtohome,value10091,amount23,final90,orderid,value10092,value100915,value1008,value0789,changetolight,changetodark,value10059,theme,logo_value,value10057,value_rec,value100910,value_img1,value_img2,amount_pls,value_pay,value10056,bg_ar,bo_ar,from9,to9})=>{
+const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,backtohome2,value10082,value10083,backtohome,value10091,amount23,final90,orderid,value10092,value100915,value1008,value0789,changetolight,changetodark,value10059,theme,logo_value,value10057,value_rec,value100910,value_img1,value_img2,amount_pls,value_pay,value10056,bg_ar,bo_ar,from9,to9,value_bo,value_bg,value10058,value198,value10061})=>{
 	const [lgShow51, setLgShow51] = useState('');
 	const [lgShow566, setLgShow566] = useState('');
 	const [lgShowa, setLgShowa] = useState('');
     const [lgShowb, setLgShowb] = useState('');
 	const [lgShowc, setLgShowc] = useState('');
 	const [lgShowd, setLgShowd] = useState('');
+	const [lgShowh, setLgShowh] = useState('');
+	const [lgShowi, setLgShowi] = useState('');
+	const [lgShowj, setLgShowj] = useState('');
+	const [lgShowk, setLgShowk] = useState('');
 	const [lgShowe, setLgShowe] = useState('');
 	const [lgShowf, setLgShowf] = useState('');
 	const [lgShowg, setLgShowg] = useState('');
-						
 	const [show, setShow] = useState(false);
     const { id,orderid3 } = useParams()
 	const target = useRef(null);
@@ -41,6 +44,34 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
           setLgShowe(res23.settleAddress)
           setLgShowf((res23.createdAt).replace('T',' ').replace('Z',''))
           setLgShowg(res23.settleCoin)
+          if(res23.depositCoin=='ETH'){         
+          setLgShowh(`ethereum`)
+          setLgShowi('eth')
+          }
+          if(res23.depositCoin=='LTC'){         
+              setLgShowh(`litecoin`)
+              setLgShowi('ltc')
+          }
+          if(res23.settleCoin=='BTC'){         
+          setLgShowj(`bitcoin`)
+          setLgShowk('btc')
+          }
+                if(res23.settleCoin=='ETH'){         
+          setLgShowj(`ethereum`)
+          setLgShowk('eth')
+          }
+           if(res23.depositCoin=='BNB'){         
+              setLgShowh(`bnb`)
+              setLgShowi('bnb')
+          }
+          if(res23.settleCoin=='BNB'){         
+          setLgShowj(`bnb`)
+          setLgShowk('bnb')
+          }
+          if(res23.settleCoin=='LTC'){         
+          setLgShowj(`litecoin`)
+          setLgShowk('ltc')
+          }
           })
 
           
@@ -90,7 +121,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 <Col className='col-md-12 col-12'>
         <article className="vh-100 dt w-100">
         <div className="dtc v-mid tc white ph3 ph4-l">
-        <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3" style={{'background-color':`${bg_ar}`, 'color':`${value10059}`,'border':`${bo_ar}`}}>
+        <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-3" style={{'background-color':`${value10058}`, 'color':`${value10059}`,'border':`${bo_ar}`}}>
         <Container fluid>
         
                 <Row className='d-flex justify-content-center align-items-center mt-0'>
@@ -110,7 +141,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-2 m-0'>
-                      <img src={require(`./images/${from9}.png`)} width={'85px'} />
+     <img src={`https://cryptologos.cc/logos/${lgShowh}-${lgShowi}-logo.png`} width={'85px'} />
                 </Col>
 
                 <Col className='col-md-2  m-0'>
@@ -122,7 +153,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
                 </Col>
 
                 <Col className='col-md-2 m-0'>
-                      <img src={require(`./images/${to9}.png`)} width={'85px'} />
+     <img src={`https://cryptologos.cc/logos/${lgShowj}-${lgShowk}-logo.png`} width={'85px'} />
                 </Col>
 
             </Row>
@@ -138,7 +169,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-12 d-flex justify-content-center align-items-center flex-row'>
-                <input type='text' style={{'color':`${value10059}`}}  className='b mt-0 mb-4 w-100 tc p-3' value={lgShowb} disabled />
+                <input type='text' style={{'color':`${value10059}`,'background-color':`${value10061}`}}   className='b mt-0 mb-4 w-100 tc p-3' value={lgShowb} disabled />
 
                 <Button ref={target} variant="" className="btn mb-4" onClick={() => {
 					navigator.clipboard.writeText(value1005)
@@ -169,14 +200,14 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-12'>
                 <p style={{'color':`${value10059}`}} className='b text-center mt-2 mb-2'>Status : {lgShowd}</p>
-                <fds-circular-progress indeterminate="true"></fds-circular-progress>
+                <fds-circular-progress indeterminate="true" styles="color:'black'"></fds-circular-progress>
                 </Col>
             </Row>
 
             <Row className='d-flex justify-content-center align-items-center' onLoad={final90}>
                 <Col className='col-md-12'>
                 <h3 style={{'color':`${value10059}`}} className='b text-center '>Receiving Address ... </h3>
-                <p className='b text-center fs-2' style={{'color':`${value_rec}`}} className="b fs-5 text-center">{lgShowe}</p>
+                <p className='b text-center fs-2' style={{'color':`${value198}`}} className="b fs-5 text-center">{lgShowe}</p>
                 </Col>
             </Row>
             
@@ -187,7 +218,7 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
         </article>
         </Col>
         </Row>
-        <Row className='pt-3 d-flex justify-content-center align-items-center' style={{'background-color':`${value0789}`,'border-top':'5px solid white'}} >
+        <Row className='pt-3 d-flex justify-content-center align-items-center' style={{'background-color':`${value_bg}`,'border-top':`${value_bo}`}} >
           <Col className='col-md-12 d-flex justify-content-center align-items-center'>
           <p className='b text-center tc text-white'>IndusBit © 2023</p>
         </Col>

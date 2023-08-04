@@ -180,7 +180,7 @@ const Eth_ltc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
 
             <Row className='mt-0'>
             <Col className='col-md-12 text-black'>
-            <input id="name" style={{'border-top':'2px solid black','border-bottom':'7px solid black'}} className="input_address b  text-center tc input-reset pa2 mb2 db w-100" type="text" aria-describedby="name-desc" placeholder={`Your LTC Address`} onChange={event1} onFocus={value1006} />
+            <input id="name" style={{'border-top':'2px solid black','border-bottom':'7px solid black'}} className="input_address b  text-center tc input-reset pa2 mb2 db w-100" type="text" aria-describedby="name-desc" placeholder={`Your LTC (should start with M) Address`} onChange={event1} onFocus={value1006} />
             <p className='b text-red text-center tc para3000' style={{'display':`${value500}`}} >Please Enter a Valid {value4} Address</p>
             <p className='b text-red text-center tc para3000 ttu' style={{'display':`${value1500}`}} >Please Enter a Address</p>
                 </Col>

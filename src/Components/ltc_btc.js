@@ -18,7 +18,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import './home.css'
 
-const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,value738,value739,value740,value741,value750,value751,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,send2,first56,first66,value81,value859,theme,value8591,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,value10087,value10088,value100910,value10059,value100912,value10057,value100915,orderid1,value0200,value0201,value0789,value_bg,valuetoorder,order_id,changes,oid5,event2,coins,from,to,id1,id2,swap,filteredRobots,onSearchChange})=>{
+const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,value10,value11,event1,value500,from1,to1,value71,value72,value73,value74,value75,value76,call,value1500,value1006,backtohome,value738,value739,value740,value741,value750,value751,value760,value761,value7610,value501,value10070,value1600,changetorose1,event105,send2,first56,first66,value81,value859,theme,value8591,changetodark,value1008,value10091,value10092,bg1,value10081,value10082,value10083,changetolight,value10085,value10087,value10088,value100910,value10059,value100912,value10057,value100915,orderid1,value0200,value0201,value0789,value_bg,valuetoorder,order_id,changes,oid5,event2,coins,from,to,id1,id2,swap,filteredRobots,onSearchChange,ltcoeth})=>{
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true); 
     const [show, setShow] = useState(false);
@@ -247,7 +247,7 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
         
   <Row className='tc text-center justify-content-center align-items-center'> 
   
-  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/ltc/eth">
+  <Col className='col-md-3 col-12 tc text-center '>  <Link className='no-underline' to="/en/ltc/eth" onClick={ltcoeth}>
   <article className="mw7 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-4" style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
                     <img  src={require(`./images/eth.png`)} width="50px" className='text-center tc' />
                     <h3 className='b mt-3 text-center fs-6' style={{'color':`${value10059}`}}>ETH</h3>

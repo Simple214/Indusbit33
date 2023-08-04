@@ -165,7 +165,7 @@ const Btc_bnb = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
             <Col className='col-md-12 text-black'>
             <p className='b para258' style={{'color':`${value10059}`}}>Enter the amount that you will send</p>
             <input id="name2" style={{'border-radius':'3px','color':`black`, 'background-color':`#f0f4fa`,'border-left':'3px solid black','border-right':'3px solid black','border-top':'2px solid black','border-bottom':'7px solid black'}} className="b input-reset ba b--black-20 pa3 mb2 db w-100 tc text-center" type="number" aria-describedby="name-desc" onFocus={value10070} onChange={event2} />
-            <p className='ttu b text-red text-center tc para3000' style={{'display':`${value501}`}} >Min. BTC Amount is 1.0.</p>
+            <p className='ttu b text-red text-center tc para3000' style={{'display':`${value501}`}} >Min. BTC Amount is 0.002.</p>
             <p className='ttu b text-red text-center tc para3000' style={{'display':`${value1600}`}} >Please Enter a Amount</p>
             </Col>
             </Row>
