@@ -28,6 +28,7 @@ class App extends React.Component{
     this.state={
       ad:'',
       am:'',
+      am1:'',
       payment_status:'Awaiting Payment....',
       oid:'',
       oaddress:'',
@@ -567,7 +568,7 @@ class App extends React.Component{
 			
 		 ltcamountvalidation = (event)=>{
 			const value100 = event.target.value
-			
+		    console.log(event.target.value)
 			if((value100>=1.0) && (value100!='')){
 			        this.setState({
 			        moveahead_am:'yes',
@@ -583,7 +584,9 @@ class App extends React.Component{
 			        show2:'block'
 			          })
 			}
-
+			this.setState({
+			        am1:event.target.value
+			    })
 		}
 		
 		 ethamountvalidation = (event)=>{
@@ -610,20 +613,14 @@ class App extends React.Component{
 				
 		state_change = ()=>{
 		
-		this.setState({
-                   from:'ltc',
-                   to:'btc'
-			})
-		
-		
 		if(this.state.moveahead_am=='yes' && this.state.moveahead_ad=='yes'){
 		 fetch("https://rich-tan-lovebird-coat.cyclic.app/order25",{
             'method':'post',
             'headers':{'Content-type':'application/json'},
             'body': JSON.stringify({
               address:this.state.ad,
-              from:this.state.from,
-              to:this.state.to
+              from:'ltc',
+              to:'btc'
             })
           }).then(res3 => res3.json()).then(res23 => {
 this.setState({
@@ -890,7 +887,7 @@ oaddress:res23.address
 				border_color:'4px solid white',
 				 article_bg:'#212939',
 				text_color:'white',
-				text_body:'white',
+				text_body:'black',
 				border:"2px solid white",
 				first_bg:'#202429',
 				input_bg:'black',
@@ -980,6 +977,7 @@ oaddress:res23.address
       <Route path="ltc/btc" element={
 <Ltc_btc ltcoeth={this.ltcoeth} oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.btcvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.ltcamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
+
 } />
 
     <Route path="ltc/eth" element={
@@ -1036,16 +1034,16 @@ oaddress:res23.address
 <Btc_bnb oid1={this.state.oid} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.bnbvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} event2={this.btcamountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal}  />
 
 } />
-  
+
         <Route path="order">
       <Route path=":orderid3" element={
 
-<Main2 value10061={this.state.input_bg} value198={this.state.rec_color} value10058={this.state.article_background} value_bg={this.state.bg23} value_bo={this.state.border23} bo_ar={this.state.border_color} oid1={this.state.oid} from9={this.state.from} to9={this.state.to} from = {this.state.from} to={this.state.to} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.addressvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} value2 ={this.state.value2} value3={'LTC'} value4={'BTC'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} event2={this.amountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal} backtohome={this.home234}/>
+<Main2 amount23={this.state.am1} value10061={this.state.input_bg} value198={this.state.rec_color} value10058={this.state.article_background} value_bg={this.state.bg23} value_bo={this.state.border23} bo_ar={this.state.border_color} oid1={this.state.oid} from9={this.state.from} to9={this.state.to} from = {this.state.from} to={this.state.to} changes={this.state_change} value_bg={this.state.footer_bg} value0789={this.state.bg_body} value0200 = {this.state.show_order} value0201 = {this.order_id_validation2} orderid1={this.order_id_validation}  value10057={this.state.border} value100912={this.state.text_body} value10059={this.state.text_color} value100915={this.state.first_bg} value100910={this.state.article_bg} value10087={this.state.row_bg} value10088={this.state.row_color} value1006={this.hide2} value10085={this.state.top_color} value10081={this.state.bg_body} value10082={this.state.display1} value10083={this.state.display2} value10092={this.state.color1} value1008={this.state.text} value10091={this.state.url} event1={this.addressvalidation} changetodark={this.dark_theme} value10070={this.hide3} changetolight={this.light_theme} theme={this.state.theme} first66={this.state.value876}  change1={this.changevalue} value2 ={this.state.value2} value3={'LTC'} value4={'BTC'} value5={this.state.value5} value6={this.state.value6} reverse={this.reverse1} event2={this.amountvalidation} value10={this.state.value10} value11={this.state.value11} value500={this.state.show}  value1500={this.state.show1} value501={this.state.show2} value1600={this.state.show3} call={this.calltofinal} backtohome={this.home234}/>
 } />
     </Route>
       <Route path="*" element={<Notfound />} />
         </Route>
-
+      <Route path="*" element={<Notfound />} />
     </Routes>
 
   </div>

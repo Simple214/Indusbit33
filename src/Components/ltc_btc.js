@@ -126,6 +126,11 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
                 <Button className={'btn1 b shadow-3'} style={{'background-color':`${value100912}`, 'color':`${value10059}`, 'border':`${value10057}`} } >Variable Rate</Button>
                 </Col>
                 
+                                <Col className='col-md-5 text-black'>
+                <Button className={'btn1 b shadow-3'} style={{'background-color':`${value100912}`, 'color':`${value10059}`, 'border':`${value10057}`} } >Fixed Rate</Button>
+                </Col>
+                
+                
             </Row>
 
             <Row className='mt-3'>
@@ -159,8 +164,7 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
                 </article>
                 </Col>
             </Row>
-            
-            <Row className='mt-3'>
+                        <Row className='mt-3'>
             <Col className='col-md-12 text-black'>
             <p className='b para258' style={{'color':`${value10059}`}}>Enter the amount that you will send</p>
             <input id="name2" style={{'border-radius':'3px','color':`black`, 'background-color':`#f0f4fa`,'border-left':'3px solid black','border-right':'3px solid black','border-top':'2px solid black','border-bottom':'7px solid black'}} className="b input-reset ba b--black-20 pa3 mb2 db w-100 tc text-center" type="number" aria-describedby="name-desc" onFocus={value10070} onChange={event2} />
@@ -168,6 +172,7 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
             <p className='ttu b text-red text-center tc para3000' style={{'display':`${value1600}`}} >Please Enter a Amount</p>
             </Col>
             </Row>
+
             
             <Row className='mt-3'>
             <Col className='col-md-12 text-black'>

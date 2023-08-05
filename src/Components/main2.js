@@ -28,15 +28,18 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 	const [lgShowe, setLgShowe] = useState('');
 	const [lgShowf, setLgShowf] = useState('');
 	const [lgShowg, setLgShowg] = useState('');
+    const [lgShowp, setLgShowp] = useState('');
+    const [lgShowm, setLgShowm] = useState('');
+    const [lgShown, setLgShown] = useState('');
 	const [show, setShow] = useState(false);
     const { id,orderid3 } = useParams()
 	const target = useRef(null);
 	useEffect(() => {
-	
 			 fetch(`https://rich-tan-lovebird-coat.cyclic.app/id/${orderid3}`,{
             'method':'post',
             'headers':{'Content-type':'application/json'},
           }).then(res3 => res3.json()).then(res23 => {
+          console.log(res23)
           setLgShowa(res23.id)
           setLgShowb(res23.depositAddress)
           setLgShowc(res23.depositCoin)
@@ -44,6 +47,9 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
           setLgShowe(res23.settleAddress)
           setLgShowf((res23.createdAt).replace('T',' ').replace('Z',''))
           setLgShowg(res23.settleCoin)
+          setLgShowp(res23.type)
+          setLgShown(res23.depositMax)
+          setLgShowm(res23.depositMin)
           if(res23.depositCoin=='ETH'){         
           setLgShowh(`ethereum`)
           setLgShowi('eth')
@@ -128,12 +134,20 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
         </Row>
         
         <Row className='d-flex justify-content-center align-items-center mt-0'>
-        <Col className='col-md-12 d-flex justify-content-center align-items-center flex-column'>
+        <Col className='col-md-5 d-flex justify-content-center align-items-center flex-column'>
         <h2  style={{'color':`${value10059}`}}  className='b text-center'>Order ID</h2>
         <h5 style={{'color':`${value10059}`}}  className="b text-center">{lgShowa}</h5>
         </Col>
         
+        <Col className='col-md-5 d-flex justify-content-center align-items-center flex-column'>
+        <h2  style={{'color':`${value10059}`}}  className='b text-center'>Type</h2>
+        <h5 style={{'color':`${value10059}`}}  className="b text-center">{lgShowp}</h5>
+        </Col>
+        
         </Row>
+        
+
+    
 
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-2 m-0'>
@@ -157,9 +171,10 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
             <Row className='d-flex justify-content-center align-items-center mt-4'>
 
                 <Col className='col-md-12'>
-                <h3 style={{'color':`${value10059}`}}  className='b text-center h3_send'>Please send <span style={{'color':`${lgShow566}`}}>{amount23}</span> {lgShowc} </h3>
+                <h3 style={{'color':`${value10059}`}}  className='b text-center h3_send'>Please send <span style={{'color':`black`}}>{amount23}</span> {lgShowc} </h3>
                     <p style={{'color':`${value10059}`}}  className="b text-center para2005">to the following address.....</p>
                 </Col>
+                
 
             </Row>
 
@@ -186,7 +201,17 @@ const Main2 =({value10,value5,value11,value6,value3,value1005,value1009,final56,
 
                 </Col>
             </Row>
-
+                <Row className='d-flex justify-content-center align-items-center mt-0'>
+                <h3>Please send....</h3>
+        <Col className='col-md-12 d-flex justify-content-center align-items-center flex-column'>
+        
+        <h3  style={{'color':`${value10059}`}}  className='text-center'>Min. <span className='b'>{lgShowm}</span></h3>
+        <h3 style={{'color':`${value10059}`}}  className='text-center'>Max. <span className='b'>{lgShown}</span></h3>
+        
+        </Col>
+        
+        
+        </Row>
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col className='col-md-12'>
                 <img src={`https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=${lgShowb}`} />
