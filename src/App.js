@@ -627,7 +627,7 @@ this.setState({
 oid:res23.id,
 oaddress:res23.address
 			})		
-		window.location.href=`http://localhost:3000/en/order/${res23.id}`
+		window.location.href=`https://www.indusbit.org/en/order/${res23.id}`
           })
           }
     if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
@@ -669,7 +669,7 @@ this.setState({
 oid:res23.id,
 oaddress:res23.address
 			})		
-		window.location.href=`http://localhost:3000/en/order/${res23.id}`
+		window.location.href=`https://www.indusbit.org/en/order/${res23.id}`
           })
           }
     if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
@@ -711,7 +711,7 @@ this.setState({
 oid:res23.id,
 oaddress:res23.address
 			})		
-		window.location.href=`http://localhost:3000/en/order/${res23.id}`
+		window.location.href=`https://www.indusbit.org/en/order/${res23.id}`
           })
           }
     if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
@@ -753,7 +753,7 @@ this.setState({
 oid:res23.id,
 oaddress:res23.address
 			})		
-		window.location.href=`http://localhost:3000/en/order/${res23.id}`
+		window.location.href=`https://www.indusbit.org/en/order/${res23.id}`
           })
           }
     if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
@@ -796,7 +796,7 @@ this.setState({
 oid:res23.id,
 oaddress:res23.address
 			})		
-		window.location.href=`http://localhost:3000/en/order/${res23.id}`
+		window.location.href=`https://www.indusbit.org/en/order/${res23.id}`
           })
           }
     if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
@@ -838,7 +838,7 @@ this.setState({
 oid:res23.id,
 oaddress:res23.address
 			})		
-		window.location.href=`http://localhost:3000/en/order/${res23.id}`
+		window.location.href=`https://www.indusbit.org/en/order/${res23.id}`
           })
           }
     if(this.state.moveahead_am=='no' && this.state.moveahead_ad=='yes'){
@@ -906,7 +906,7 @@ oaddress:res23.address
 				 main2_bg:'white',
 			     bg23:'black',
                  main2_bo:'2px solid white',
-                 rec_color:'#d4018f',
+                 rec_color:'#d4018f',  
 				 text:'black',
 				 url:'./green.png',
 				 color1:"#1c840f",
