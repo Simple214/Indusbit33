@@ -392,7 +392,7 @@ class App extends React.Component{
 			fetch(`https://sideshift.ai/api/v2/shifts/${this.state.order_id}`).then(res1 => res1.json()).then(res2 => {
 
 			if(res2.id){
-				window.location.href=`http://localhost:3000/en/order/${this.state.order_id}`
+				window.location.href=`https://www.indusbit.org/en/order/${this.state.order_id}`
 			}
 		    else{
 			   alert('no order found')
