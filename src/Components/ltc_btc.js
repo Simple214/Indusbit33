@@ -85,11 +85,11 @@ const Ltc_btc = ({reverse,value2,change1,value3,value4,value5,value6,value7,valu
                             </Dropdown.Toggle>
                             
                             <Dropdown.Menu style={{'background-color':`${value100910}`,'border':`${value10057}`}}>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="http://indusbit.org/hi/ltc/btc">हिंदी <img src={require(`./images/india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://bitbarter-hindi.vercel.app">हिंदी <img src={require(`./images/india.jpg`)} className='flag1' width='30px' /> </Dropdown.Item>
                             <Dropdown.Item style={{'color':`${value10059}`}} href="https://bitbarter-jp.vercel.app"> 日本語 <img src={require(`./images/japan.png`)} className='flag2' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org/cn/ltc/btc"> 中文 <img src={require(`./images/china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org/ru/ltc/btc"> руский <img src={require(`./images/russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
-                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://www.indusbit.org/en/ltc/btc"> English </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://bitbarter-cny.vercel.app"> 中文 <img src={require(`./images/china.png`)} className='flag3' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://bitbarter-ru.vercel.app"> руский <img src={require(`./images/russia.png`)} className='flag4' width='30px' /> </Dropdown.Item>
+                            <Dropdown.Item style={{'color':`${value10059}`}} href="https://indusbit33.vercel.app/en/ltc/btc"> English </Dropdown.Item>
                             </Dropdown.Menu>
                             
                             </Dropdown>
